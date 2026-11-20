@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f97316">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Hoàn Tiền">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Ví Hoàn Tiền Của Tôi</title>
+<style>
+:root{--or:#f97316;--or2:#ea580c;--or-l:#fff7ed;--or-m:#ffedd5;--tx:#1f2937;--mu:#6b7280;--bd:#e5e7eb;--bg:#f8fafc;--ok:#16a34a;--bl:#2563eb;--rd:#dc2626;--yl:#d97706;
+--st:env(safe-area-inset-top);--sb:env(safe-area-inset-bottom)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif}
+header{position:sticky;top:0;z-index:5;background:linear-gradient(135deg,#fb923c,#ea580c);color:#fff;padding:calc(var(--st) + 12px) 16px 14px}
+header h1{margin:0;font-size:20px;font-weight:700;letter-spacing:.2px}
+header p{margin:2px 0 0;font-size:13px;opacity:.9}
+main{padding:14px 14px calc(84px + var(--sb));max-width:640px;margin:0 auto}
+.screen{display:none}.screen.active{display:block}
+.card{background:#fff;border:1px solid var(--bd);border-radius:16px;padding:14px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.card h2{margin:0 0 10px;font-size:16px}
+label{display:block;font-size:13px;color:var(--mu);margin:10px 0 4px}
+input,select,textarea{width:100%;font-size:16px;padding:11px 12px;border:1px solid var(--bd);border-radius:12px;background:#fff;color:var(--tx);font-family:inherit}
+textarea{resize:vertical;min-height:84px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--or-m);border-color:var(--or)}
+.row{display:flex;gap:8px;align-items:center}.row>*{flex:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:12px;padding:12px 14px;font-size:15px;font-weight:600;background:var(--or);color:#fff;cursor:pointer;min-height:44px}
+.btn:active{transform:scale(.98)}
+.btn.sec{background:var(--or-m);color:var(--or2)}
+.btn.ghost{background:#f3f4f6;color:var(--tx)}
+.btn.danger{background:#fee2e2;color:var(--rd)}
+.btn.sm{padding:8px 10px;min-height:36px;font-size:13px}
+.btns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}.btns .btn{flex:1}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:3px 9px;border-radius:99px;background:#f3f4f6;color:var(--mu)}
+.pf-shopee{background:#fee2e2;color:#c2410c}.pf-lazada{background:#e0e7ff;color:#3730a3}.pf-tiktok{background:#111827;color:#fff}.pf-tiki{background:#dbeafe;color:#1d4ed8}.pf-other{background:#f3f4f6;color:#374151}
+.st-pending{background:#fef3c7;color:#92400e}.st-approved{background:#dbeafe;color:#1e40af}.st-received{background:#dcfce7;color:#166534}.st-cancelled{background:#f3f4f6;color:#6b7280;text-decoration:line-through}
+.out{word-break:break-all;font-size:13px;background:var(--or-l);border:1px dashed #fdba74;border-radius:12px;padding:10px;margin-top:8px;font-family:ui-monospace,Menlo,monospace}
+.note{font-size:13px;color:var(--mu);margin:6px 0 0}
+.warn{font-size:13px;background:#fffbeb;border:1px solid #fde68a;color:#92400e;border-radius:12px;padding:10px;margin-top:10px}
+.err{font-size:13px;background:#fef2f2;border:1px solid #fecaca;color:#991b1b;border-radius:12px;padding:10px;margin-top:10px}
+.hidden{display:none!important}
+.sum{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sum div{background:var(--bg);border-radius:12px;padding:10px}
+.sum b{display:block;font-size:17px;margin-top:2px}
+.sum .k{font-size:12px;color:var(--mu)}
+.sum .total{grid-column:1/-1;background:var(--or-l)}
+.order{padding:12px 0;border-top:1px solid var(--bd)}
+.order:first-child{border-top:0;padding-top:0}
+.order .t{font-weight:600;font-size:15px;margin:4px 0 2px;word-break:break-word}
+.order .m{font-size:13px;color:var(--mu)}
+.order .amt{font-weight:700;color:var(--or2)}
+.empty{text-align:center;color:var(--mu);padding:20px 8px;font-size:14px}
+nav{position:fixed;left:0;right:0;bottom:0;z-index:6;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--bd);display:flex;padding:6px 6px calc(6px + var(--sb))}
+nav button{flex:1;border:0;background:none;padding:6px 0;color:var(--mu);font-size:12px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer}
+nav button svg{width:24px;height:24px}
+nav button.active{color:var(--or2)}
+.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:10;display:none}
+.sheet-bg.open{display:block}
+.sheet{position:fixed;left:0;right:0;bottom:0;max-height:92vh;overflow:auto;background:#fff;border-radius:20px 20px 0 0;padding:16px 16px calc(16px + var(--sb));z-index:11;transform:translateY(105%);transition:transform .22s ease,visibility 0s linear .22s;visibility:hidden;max-width:640px;margin:0 auto}
+.sheet.open{transform:none;visibility:visible;transition:transform .22s ease}
+.sheet h2{margin:0 0 6px;font-size:18px}
+.toast{position:fixed;left:50%;bottom:calc(90px + var(--sb));transform:translateX(-50%);background:#111827;color:#fff;padding:10px 16px;border-radius:99px;font-size:14px;z-index:20;opacity:0;transition:opacity .2s;pointer-events:none;max-width:90vw;text-align:center}
+.toast.show{opacity:1}
+.plat{border-top:1px solid var(--bd);padding-top:12px;margin-top:12px}
+.plat:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.plat h3{margin:0;font-size:15px;display:flex;align-items:center;gap:8px}
+code{font-size:12px;background:#f3f4f6;padding:1px 4px;border-radius:4px}
+.seg{display:flex;background:#f3f4f6;border-radius:12px;padding:3px}
+.seg button{flex:1;border:0;background:none;padding:8px;border-radius:10px;font-weight:600;color:var(--mu);font-size:14px}
+.seg button.on{background:#fff;color:var(--or2);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+details summary{cursor:pointer;font-weight:600;font-size:14px}
+.ccard{border-left:6px solid var(--cc,#f97316);padding:12px 12px 10px;border-radius:14px;background:#fff;border-top:1px solid var(--bd);border-right:1px solid var(--bd);border-bottom:1px solid var(--bd);margin-bottom:10px}
+.ccard.due-soon{background:#fff7ed;border-color:#fdba74}
+.ccard.overdue{background:#fef2f2;border-color:#fca5a5}
+.ccard .hd{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.ccard .nm{font-weight:700;font-size:16px}
+.ccard .bk{font-size:12px;color:var(--mu)}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px;margin-top:8px;font-size:13px}
+.kv span{color:var(--mu)}.kv b{font-weight:600;text-align:right}
+.bar{height:6px;background:#f3f4f6;border-radius:9px;overflow:hidden;margin-top:8px}
+.bar i{display:block;height:100%;background:var(--ok)}
+.bar i.w{background:var(--yl)}.bar i.h{background:var(--rd)}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:3px 8px;border-radius:99px}
+.b-ok{background:#dcfce7;color:#166534}.b-soon{background:#ffedd5;color:#9a3412}.b-over{background:#fee2e2;color:#991b1b}.b-mu{background:#f3f4f6;color:#6b7280}
+.rec{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--bd)}
+.rec:first-child{border-top:0}
+.rec .rk{width:30px;height:30px;border-radius:50%;background:var(--or-m);color:var(--or2);display:flex;align-items:center;justify-content:center;font-weight:800;flex:0 0 auto}
+.rec.top .rk{background:var(--or);color:#fff}
+.rec .dd{margin-left:auto;text-align:right;flex:0 0 auto}
+.rec .dd b{font-size:20px;color:var(--or2)}
+.rec.ex{opacity:.55}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--cc,#f97316);margin-right:6px;vertical-align:middle}
+.ev{display:flex;gap:10px;padding:8px 0;border-top:1px dashed var(--bd);font-size:14px;align-items:center}
+.ev:first-child{border-top:0}
+.ev .dt{width:52px;flex:0 0 auto;font-weight:700;font-size:13px;text-align:center;line-height:1.15}
+.ev .dt small{display:block;font-weight:500;color:var(--mu);font-size:11px}
+.ev .am{margin-left:auto;font-weight:700;flex:0 0 auto}
+.ev.stmt .am{color:var(--mu);font-weight:600}
+.wk{font-size:13px;font-weight:700;color:var(--or2);background:var(--or-l);border-radius:10px;padding:6px 10px;margin:12px 0 4px;display:flex;justify-content:space-between}
+.mon{font-size:15px;font-weight:800;margin:14px 0 2px;display:flex;justify-content:space-between}
+.colors{display:flex;gap:8px;flex-wrap:wrap}
+.colors label{margin:0}
+.colors input{display:none}
+.colors span{display:block;width:32px;height:32px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1px var(--bd)}
+.colors input:checked+span{box-shadow:0 0 0 3px var(--tx)}
+.subseg{margin-bottom:12px;position:sticky;top:calc(var(--st) + 64px);z-index:4}
+.lock{font-size:12px;background:#f0fdf4;border:1px solid #bbf7d0;color:#166534;border-radius:10px;padding:8px 10px;margin-top:8px}
+.tx{display:flex;gap:10px;padding:10px 0;border-top:1px solid var(--bd);align-items:center}
+.tx:first-child{border-top:0}
+.tx .a{margin-left:auto;text-align:right;font-weight:700;flex:0 0 auto}
+.tx .a.pay{color:var(--ok)}
+</style>
+</head>
+<body>
+<header>
+  <h1 id="hdrTitle">Đổi link hoàn tiền</h1>
+  <p id="hdrSub">Dán link sản phẩm → link affiliate của bạn</p>
+</header>
+
+<main>
+<!-- ============ ĐỔI LINK ============ -->
+<section class="screen active" id="scr-convert">
+  <div class="card">
+    <h2>Link sản phẩm</h2>
+    <textarea id="inLink" placeholder="Dán link Shopee, Lazada, TikTok Shop, Tiki…" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+    <div class="btns">
+      <button class="btn sec" id="btnPaste">📋 Dán</button>
+      <button class="btn" id="btnConvert">⚡ Đổi link</button>
+    </div>
+    <div class="btns" style="margin-top:6px">
+      <button class="btn ghost sm" id="btnClear">Xóa ô nhập</button>
+    </div>
+  </div>
+
+  <div class="card hidden" id="resCard">
+    <div class="row" style="justify-content:space-between">
+      <h2 style="margin:0;flex:0 0 auto">Kết quả</h2>
+      <span class="pill" id="resPlat" style="flex:0 0 auto"></span>
+    </div>
+    <label>Link gốc đã làm sạch</label>
+    <div class="out" id="resClean"></div>
+    <label>Link affiliate của bạn</label>
+    <div class="out" id="resAff"></div>
+    <div id="resMsg"></div>
+    <div class="btns">
+      <button class="btn" id="btnCopy">Sao chép</button>
+      <button class="btn sec" id="btnOpen">Mở để mua</button>
+    </div>
+    <div class="btns"><button class="btn ghost" id="btnSaveOrder">📝 Lưu đơn</button></div>
+  </div>
+
+  <div class="card">
+    <h2>Gần đây</h2>
+    <div id="recent"></div>
+  </div>
+</section>
+
+<!-- ============ ĐƠN HÀNG ============ -->
+<section class="screen" id="scr-orders">
+  <div class="card">
+    <div class="row">
+      <select id="monthSel" aria-label="Chọn tháng"></select>
+      <button class="btn" id="btnNewOrder" style="flex:0 0 auto">＋ Thêm đơn</button>
+    </div>
+    <div class="sum" style="margin-top:12px" id="summary"></div>
+  </div>
+  <div class="card">
+    <div class="row" style="margin-bottom:10px">
+      <select id="statusFilter" aria-label="Lọc trạng thái">
+        <option value="">Tất cả trạng thái</option>
+        <option value="pending">Chờ xác nhận</option>
+        <option value="approved">Đã duyệt</option>
+        <option value="received">Đã nhận tiền</option>
+        <option value="cancelled">Hủy</option>
+      </select>
+    </div>
+    <div id="orderList"></div>
+  </div>
+</section>
+
+<!-- ============ CÀI ĐẶT ============ -->
+<section class="screen" id="scr-settings">
+  <div class="card">
+    <h2>Link affiliate theo sàn</h2>
+    <p class="note">Mỗi sàn dùng một <b>mẫu link</b>. Ứng dụng thay các biến sau:
+      <code>{url}</code> link sản phẩm đã mã hóa, <code>{url_raw}</code> link chưa mã hóa,
+      <code>{url_b64}</code> link dạng Base64, <code>{aff_id}</code> ID affiliate/publisher của bạn,
+      <code>{sub_id}</code> mã theo dõi (tùy chọn).</p>
+    <div id="platSettings"></div>
+    <div class="btns"><button class="btn" id="btnSaveSettings">Lưu cài đặt</button></div>
+  </div>
+
+  <div class="card">
+    <h2>Sao lưu dữ liệu</h2>
+    <div class="warn">⚠️ Dữ liệu (cài đặt, đơn hàng, thẻ và giao dịch thẻ) <b>chỉ lưu trên thiết bị này</b>, trong trình duyệt. Xóa dữ liệu Safari, gỡ app khỏi màn hình chính hoặc đổi máy sẽ mất hết. Hãy xuất file sao lưu thường xuyên (lưu vào Tệp/iCloud Drive).</div>
+    <div class="btns">
+      <button class="btn sec" id="btnExport">⬇️ Xuất JSON</button>
+      <button class="btn ghost" id="btnImport">⬆️ Nhập JSON</button>
+    </div>
+    <input type="file" id="fileImport" accept="application/json,.json" class="hidden">
+    <p class="note" id="dataInfo"></p>
+  </div>
+
+  <div class="card">
+    <details>
+      <summary>Hướng dẫn & lưu ý</summary>
+      <ul class="note" style="padding-left:18px">
+        <li><b>Cài như app trên iPhone:</b> mở trang bằng Safari → nút Chia sẻ → “Thêm vào MH chính”.</li>
+        <li><b>Shopee:</b> mẫu <code>s.shopee.vn/an_redir?origin_link=…&amp;affiliate_id=…</code> theo hướng dẫn chính thức của Shopee Tiếp thị liên kết. ID affiliate xem trong trang Shopee Affiliate (là dãy số sau <code>utm_source=an_</code> trong link affiliate của bạn).</li>
+        <li><b>Link rút gọn chính thức</b> dạng <code>s.shopee.vn/xxxx</code> chỉ tạo được trong cổng/ứng dụng Shopee Affiliate hoặc qua API, không tạo được ngoại tuyến trong app này. Link dài từ app này vẫn ghi nhận hoa hồng.</li>
+        <li><b>Link rút gọn dán vào</b> (shp.ee, s.shopee.vn, s.lazada.vn, vt.tiktok.com) không giải mã được trong trình duyệt. Tốt nhất mở link đó, copy link đầy đủ trên thanh địa chỉ rồi dán lại.</li>
+        <li><b>Lazada, TikTok Shop, Tiki:</b> thường đi qua mạng AccessTrade. Vào pub2.accesstrade.vn → Công cụ → Deep Link để lấy Base URL của bạn, rồi dán vào mẫu.</li>
+        <li>Hoa hồng thực tế do sàn/mạng affiliate quyết định. Hãy kiểm tra link bằng cách mở thử và xem báo cáo click trên cổng affiliate.</li>
+      </ul>
+    </details>
+  </div>
+</section>
+<!-- ============ THẺ TÍN DỤNG ============ -->
+<section class="screen" id="scr-cards">
+  <div class="seg subseg" id="cardSeg">
+    <button data-v="overview" class="on">Tổng quan</button>
+    <button data-v="list">Thẻ</button>
+    <button data-v="tx">Giao dịch</button>
+    <button data-v="cal">Lịch</button>
+  </div>
+
+  <div id="cv-overview">
+    <div class="card">
+      <h2>Tổng quan dòng tiền thẻ</h2>
+      <div class="sum" id="cardDash"></div>
+    </div>
+    <div class="card">
+      <h2>💳 Quẹt thẻ nào hôm nay?</h2>
+      <div class="row">
+        <input id="recAmt" inputmode="numeric" placeholder="Số tiền định chi (tùy chọn)">
+        <div style="flex:0 0 112px"><select id="recThr" aria-label="Ngưỡng sử dụng"></select></div>
+      </div>
+      <p class="note">Xếp theo số ngày miễn lãi nếu quẹt hôm nay (đến hạn thanh toán của kỳ sao kê chứa giao dịch). Loại thẻ vượt hạn mức hoặc vượt ngưỡng sử dụng.</p>
+      <div id="recList" style="margin-top:8px"></div>
+    </div>
+    <div class="card">
+      <h2>⏰ Sắp đến hạn (7 ngày)</h2>
+      <div id="dueSoon"></div>
+    </div>
+  </div>
+
+  <div id="cv-list" class="hidden">
+    <div class="btns" style="margin:0 0 12px"><button class="btn" id="btnNewCard">＋ Thêm thẻ</button></div>
+    <div id="cardList"></div>
+  </div>
+
+  <div id="cv-tx" class="hidden">
+    <div class="card">
+      <div class="btns" style="margin-top:0">
+        <button class="btn" id="btnNewSpend">＋ Chi tiêu</button>
+        <button class="btn sec" id="btnNewPay">＋ Thanh toán thẻ</button>
+      </div>
+      <div style="margin-top:10px"><select id="txCardFilter" aria-label="Lọc theo thẻ"></select></div>
+    </div>
+    <div class="card"><div id="txList"></div></div>
+  </div>
+
+  <div id="cv-cal" class="hidden">
+    <div class="card">
+      <h2>Lịch 60 ngày: sao kê & hạn thanh toán</h2>
+      <div id="calSummary"></div>
+      <div class="btns"><button class="btn sec" id="btnIcs">📅 Xuất lịch hạn thanh toán (.ics)</button></div>
+      <p class="note">Mở file .ics trên iPhone để thêm vào ứng dụng Lịch. Mỗi hạn có nhắc trước 3 ngày và 1 ngày (9:00).</p>
+    </div>
+    <div class="card"><div id="calList"></div></div>
+  </div>
+</section>
+</main>
+
+<nav>
+  <button data-tab="convert" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>Đổi link</button>
+  <button data-tab="orders"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Đơn hàng</button>
+  <button data-tab="cards"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg>Thẻ</button>
+  <button data-tab="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Cài đặt</button>
+</nav>
+
+<!-- ============ SHEET: ĐƠN ============ -->
+<div class="sheet-bg" id="sheetBg"></div>
+<div class="sheet" id="orderSheet" role="dialog" aria-modal="true">
+  <h2 id="sheetTitle">Thêm đơn</h2>
+  <form id="orderForm" autocomplete="off">
+    <input type="hidden" id="fId">
+    <div class="row">
+      <div><label for="fDate">Ngày</label><input type="date" id="fDate" required></div>
+      <div><label for="fPlat">Sàn</label><select id="fPlat"></select></div>
+    </div>
+    <label for="fName">Tên sản phẩm</label>
+    <input id="fName" placeholder="VD: Tai nghe Bluetooth">
+    <label for="fLink">Link sản phẩm / affiliate</label>
+    <input id="fLink" inputmode="url" autocapitalize="off" spellcheck="false" placeholder="https://…">
+    <label for="fValue">Giá trị đơn (đ)</label>
+    <input id="fValue" inputmode="numeric" placeholder="0">
+    <label>Tiền hoàn</label>
+    <div class="seg" id="cbSeg"><button type="button" data-v="percent" class="on">Theo %</button><button type="button" data-v="amount">Số tiền</button></div>
+    <div class="row" style="margin-top:8px">
+      <input id="fCb" inputmode="decimal" placeholder="VD: 5">
+      <div class="note" id="cbPreview" style="flex:1.2;margin:0">= 0 đ</div>
+    </div>
+    <label for="fStatus">Trạng thái</label>
+    <select id="fStatus">
+      <option value="pending">Chờ xác nhận</option>
+      <option value="approved">Đã duyệt</option>
+      <option value="received">Đã nhận tiền</option>
+      <option value="cancelled">Hủy</option>
+    </select>
+    <label for="fNote">Ghi chú</label>
+    <input id="fNote" placeholder="Mã đơn, shop…">
+    <div class="btns">
+      <button type="button" class="btn ghost" id="btnCancelSheet">Đóng</button>
+      <button type="submit" class="btn" id="btnSubmitOrder">Lưu</button>
+    </div>
+    <div class="btns"><button type="button" class="btn danger hidden" id="btnDeleteOrder">Xóa đơn này</button></div>
+  </form>
+</div>
+
+<!-- ============ SHEET: THẺ ============ -->
+<div class="sheet" id="cardSheet" role="dialog" aria-modal="true">
+  <h2 id="cardSheetTitle">Thêm thẻ</h2>
+  <div class="lock">🔒 Chỉ lưu <b>4 số cuối</b> để phân biệt thẻ. Không nhập số thẻ đầy đủ, CVV, ngày hết hạn hay mã PIN — app không bao giờ hỏi các thông tin này.</div>
+  <form id="cardForm" autocomplete="off">
+    <input type="hidden" id="cId">
+    <label for="cName">Tên gợi nhớ *</label>
+    <input id="cName" required placeholder="VD: VIB Cash Back">
+    <div class="row">
+      <div><label for="cBank">Ngân hàng</label><select id="cBank"></select></div>
+      <div style="flex:0 0 110px"><label for="cLast4">4 số cuối</label><input id="cLast4" inputmode="numeric" placeholder="1234" autocomplete="off"></div>
+    </div>
+    <div class="note" id="bankHint"></div>
+    <div class="btns hidden" id="bankApplyWrap"><button type="button" class="btn ghost sm" id="btnApplyPreset">Điền gợi ý của ngân hàng này</button></div>
+    <label for="cLimit">Hạn mức (đ) *</label>
+    <input id="cLimit" inputmode="numeric" placeholder="VD: 50.000.000" required>
+    <div class="row">
+      <div><label for="cStmt">Ngày sao kê (1–31) *</label><input id="cStmt" type="number" min="1" max="31" inputmode="numeric" required placeholder="VD: 20"></div>
+      <div><label for="cMin">Thanh toán tối thiểu (%)</label><input id="cMin" inputmode="decimal" placeholder="VD: 5"></div>
+    </div>
+    <p class="note">Tháng không có ngày đó (VD ngày 31 vào tháng 2) sẽ tính là ngày cuối tháng.</p>
+    <label>Hạn thanh toán</label>
+    <div class="seg" id="dueSeg"><button type="button" data-v="after" class="on">N ngày sau sao kê</button><button type="button" data-v="fixed">Ngày cố định</button></div>
+    <div class="row" style="margin-top:8px">
+      <input id="cDueN" type="number" min="1" max="45" inputmode="numeric" placeholder="Số ngày, VD: 25">
+      <input id="cDueDay" type="number" min="1" max="31" inputmode="numeric" placeholder="Ngày trong tháng, VD: 5" class="hidden">
+    </div>
+    <p class="note" id="duePreview"></p>
+    <label for="cReward">Hoàn tiền / ưu đãi (ghi chú)</label>
+    <input id="cReward" placeholder="VD: 5% online, tối đa 600k/kỳ">
+    <label>Màu thẻ</label>
+    <div class="colors" id="cColors"></div>
+    <details style="margin-top:12px"><summary>Phí thường niên (tùy chọn)</summary>
+      <div class="row">
+        <div><label for="cFee">Phí thường niên (đ)</label><input id="cFee" inputmode="numeric" placeholder="0"></div>
+        <div><label for="cFeeMonth">Tháng thu phí</label><select id="cFeeMonth"></select></div>
+      </div>
+      <label for="cWaive">Chi tiêu cần đạt để miễn phí / năm (đ)</label>
+      <input id="cWaive" inputmode="numeric" placeholder="VD: 60.000.000">
+    </details>
+    <div class="btns">
+      <button type="button" class="btn ghost" data-close>Đóng</button>
+      <button type="submit" class="btn">Lưu thẻ</button>
+    </div>
+    <div class="btns"><button type="button" class="btn danger hidden" id="btnDeleteCard">Xóa thẻ (và giao dịch của thẻ)</button></div>
+  </form>
+</div>
+
+<!-- ============ SHEET: GIAO DỊCH ============ -->
+<div class="sheet" id="txSheet" role="dialog" aria-modal="true">
+  <h2 id="txSheetTitle">Thêm giao dịch</h2>
+  <form id="txForm" autocomplete="off">
+    <input type="hidden" id="tId">
+    <div class="seg" id="txTypeSeg"><button type="button" data-v="spend" class="on">Chi tiêu</button><button type="button" data-v="payment">Thanh toán thẻ</button></div>
+    <div class="row">
+      <div><label for="tCard">Thẻ</label><select id="tCard"></select></div>
+      <div><label for="tDate">Ngày</label><input type="date" id="tDate" required></div>
+    </div>
+    <label for="tAmt">Số tiền (đ)</label>
+    <input id="tAmt" inputmode="numeric" placeholder="0" required>
+    <p class="note" id="tCycle"></p>
+    <label for="tNote">Ghi chú</label>
+    <input id="tNote" placeholder="VD: Siêu thị, Shopee…">
+    <div id="tOrderWrap"><label for="tOrder">Liên kết đơn hoàn tiền (tùy chọn)</label><select id="tOrder"></select></div>
+    <div class="btns">
+      <button type="button" class="btn ghost" data-close>Đóng</button>
+      <button type="submit" class="btn">Lưu</button>
+    </div>
+    <div class="btns"><button type="button" class="btn danger hidden" id="btnDeleteTx">Xóa giao dịch</button></div>
+  </form>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+'use strict';
+const $ = s => document.querySelector(s);
+const PLATFORMS = {
+  shopee: {name:'Shopee'}, lazada:{name:'Lazada'}, tiktok:{name:'TikTok Shop'}, tiki:{name:'Tiki'}, other:{name:'Khác'}
+};
+const STATUS = {pending:'Chờ xác nhận', approved:'Đã duyệt', received:'Đã nhận tiền', cancelled:'Hủy'};
+// Mẫu đã kiểm chứng (xem báo cáo/ghi chú trong app)
+const PRESETS = {
+  shopee_official: {label:'Shopee chính thức (an_redir)', tpl:'https://s.shopee.vn/an_redir?origin_link={url}&affiliate_id={aff_id}&sub_id={sub_id}'},
+  accesstrade: {label:'AccessTrade Deep Link', tpl:'https://go.isclix.com/deep_link/{aff_id}?url={url}&utm_source={sub_id}'}
+};
+const DEFAULT_SETTINGS = {
+  platforms: {
+    shopee: {tpl: PRESETS.shopee_official.tpl, aff_id:'', sub_id:''},
+    lazada: {tpl:'', aff_id:'', sub_id:''},
+    tiktok: {tpl:'', aff_id:'', sub_id:''},
+    tiki:   {tpl:'', aff_id:'', sub_id:''},
+    other:  {tpl:'', aff_id:'', sub_id:''}
+  }
+};
+const HINTS = {
+  shopee:'Đã điền sẵn mẫu chính thức của Shopee. Chỉ cần nhập ID affiliate (dãy số sau utm_source=an_).',
+  lazada:'Chưa có mẫu. Nếu chạy qua AccessTrade, chọn mẫu AccessTrade và nhập ID deep link (số trong Base URL ở Công cụ → Deep Link).',
+  tiktok:'Chưa có mẫu. TikTok Shop thường qua AccessTrade; link TikTok Shop affiliate chính thức chỉ tạo trong TikTok Shop Affiliate.',
+  tiki:'Chưa có mẫu. Tiki thường qua AccessTrade: chọn mẫu AccessTrade và nhập ID deep link.',
+  other:'Dùng cho sàn khác: dán mẫu link của mạng affiliate bạn dùng, có chứa {url}.'
+};
+const LS = {settings:'ht_settings_v1', orders:'ht_orders_v1', recent:'ht_recent_v1'};
+function load(k, d){ try{ const v = JSON.parse(localStorage.getItem(k)); return v ?? d; }catch(e){ return d; } }
+function save(k, v){ localStorage.setItem(k, JSON.stringify(v)); }
+let settings = load(LS.settings, null) || structuredClone(DEFAULT_SETTINGS);
+for (const p in DEFAULT_SETTINGS.platforms) if(!settings.platforms[p]) settings.platforms[p] = structuredClone(DEFAULT_SETTINGS.platforms[p]);
+let orders = load(LS.orders, []);
+let recent = load(LS.recent, []);
+
+const fmtVND = n => (Math.round(Number(n)||0)).toLocaleString('vi-VN') + ' đ';
+const parseNum = s => { s = String(s??'').replace(/[^\d]/g,''); return s ? parseInt(s,10) : 0; };
+const parseDec = s => { s = String(s??'').replace(',', '.').replace(/[^\d.]/g,''); return s ? parseFloat(s) : 0; };
+const esc = s => String(s??'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const todayISO = () => { const d = new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,10); };
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
+function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(toast._t); toast._t=setTimeout(()=>t.classList.remove('show'),1900); }
+
+/* ---------- Nhận diện & làm sạch link ---------- */
+const SHORT_HOSTS = ['shp.ee','s.shopee.vn','shope.ee','s.lazada.vn','c.lazada.vn','vt.tiktok.com','vm.tiktok.com','tiki.to','ti.ki'];
+function extractUrl(text){
+  const m = String(text||'').match(/https?:\/\/[^\s<>"'）)]+/i);
+  if (m) return m[0];
+  const t = String(text||'').trim();
+  if (/^[\w.-]+\.[a-z]{2,}(\/|$)/i.test(t)) return 'https://' + t;
+  return null;
+}
+function detectPlatform(host){
+  host = host.toLowerCase().replace(/^www\./,'');
+  const is = d => host === d || host.endsWith('.'+d);
+  if (is('shopee.vn') || is('shp.ee') || is('shope.ee')) return 'shopee';
+  if (is('lazada.vn') || is('lazada.com')) return 'lazada';
+  if (is('tiktok.com') || is('tiktokshop.com')) return 'tiktok';
+  if (is('tiki.vn') || is('tiki.to') || host==='ti.ki') return 'tiki';
+  return 'other';
+}
+const TRACK_PARAMS = /^(utm_\w+|uls_trackid|sp_atk|xptdk|smtt|mmp_pid|af_\w+|pid|c|is_retargeting|deep_and_deferred|gclid|fbclid|ttclid|gad_source|spm|scm|clickTrackInfo|laz_trackid|mkttid|exlaz|trafficFrom|laz_share_info|laz_token|dsource|sub_aff_id|sub_id\d?|aff_\w+|u_code|share_\w+|sec_user_id|_r|_t|checksum|tt_from|timestamp|social_share_type|source|utm|ref|referrer|from|fromItem|isFromShare)$/i;
+const KEEP_PARAMS = /^(sp|skuId|spid|q|keyword|itemid|shopid|product_id|id|promotionId)$/i;
+function cleanUrl(u, platform){
+  const url = new URL(u);
+  url.hash = (platform==='other') ? url.hash : '';
+  const short = SHORT_HOSTS.includes(url.hostname.toLowerCase());
+  if (short) return {url: url.toString(), short:true};
+  const rx = platform==='other' ? /^(utm_\w+|gclid|fbclid|ttclid|gad_source)$/i : TRACK_PARAMS;
+  for (const k of [...url.searchParams.keys()]) {
+    if (KEEP_PARAMS.test(k)) continue;
+    if (rx.test(k)) url.searchParams.delete(k);
+  }
+  if (platform === 'shopee') {
+    // Bỏ hết query trên trang sản phẩm Shopee (giữ đường dẫn -i.<shop>.<item> hoặc /product/<shop>/<item>)
+    if (/-i\.\d+\.\d+/.test(url.pathname) || /^\/product\/\d+\/\d+/.test(url.pathname)) url.search = '';
+  }
+  if (platform === 'tiktok' && /\/(view\/product|product)\//.test(url.pathname)) url.search = '';
+  let s = url.toString();
+  if (s.endsWith('?')) s = s.slice(0,-1);
+  return {url:s, short:false};
+}
+function b64(s){ return btoa(unescape(encodeURIComponent(s))); }
+function buildAff(clean, platform){
+  const cfg = settings.platforms[platform] || {};
+  const tpl = (cfg.tpl||'').trim();
+  if (!tpl) return {err:`Chưa cài mẫu link affiliate cho ${PLATFORMS[platform].name}. Vào Cài đặt để thêm.`};
+  if (!tpl.includes('{url') ) return {err:'Mẫu link phải chứa {url}, {url_raw} hoặc {url_b64}.'};
+  if (tpl.includes('{aff_id}') && !cfg.aff_id) return {err:`Chưa nhập ID affiliate cho ${PLATFORMS[platform].name} trong Cài đặt.`};
+  let out = tpl.replaceAll('{url}', encodeURIComponent(clean))
+    .replaceAll('{url_raw}', clean)
+    .replaceAll('{url_b64}', encodeURIComponent(b64(clean)))
+    .replaceAll('{aff_id}', encodeURIComponent(cfg.aff_id||''))
+    .replaceAll('{sub_id}', encodeURIComponent(cfg.sub_id||''));
+  // Gỡ tham số rỗng (vd sub_id=) cho gọn
+  try { const o = new URL(out); for (const [k,v] of [...o.searchParams]) if (v==='') o.searchParams.delete(k); out = o.toString(); } catch(e){ return {err:'Mẫu link không hợp lệ (phải bắt đầu bằng https://).'}; }
+  return {aff: out};
+}
+function convert(text){
+  const raw = extractUrl(text);
+  if (!raw) return {err:'Không tìm thấy link hợp lệ. Hãy dán link bắt đầu bằng https://'};
+  let host; try { host = new URL(raw).hostname; } catch(e){ return {err:'Link không hợp lệ.'}; }
+  const platform = detectPlatform(host);
+  const {url:clean, short} = cleanUrl(raw, platform);
+  const r = buildAff(clean, platform);
+  return {platform, raw, clean, short, ...r};
+}
+
+/* ---------- Màn Đổi link ---------- */
+let last = null;
+function showResult(r){
+  const card = $('#resCard'); card.classList.remove('hidden');
+  const msg = $('#resMsg'); msg.innerHTML='';
+  if (!r.platform){ $('#resPlat').textContent=''; $('#resClean').textContent='—'; $('#resAff').textContent='—'; msg.innerHTML=`<div class="err">${esc(r.err)}</div>`; toggleResBtns(false); last=null; return; }
+  $('#resPlat').className = 'pill pf-'+r.platform; $('#resPlat').textContent = PLATFORMS[r.platform].name;
+  $('#resClean').textContent = r.clean;
+  $('#resAff').textContent = r.aff || '—';
+  if (r.short) msg.innerHTML += `<div class="warn">Đây là link rút gọn nên không làm sạch được. Nếu link affiliate không chạy, hãy mở link, copy link đầy đủ trên thanh địa chỉ rồi dán lại.</div>`;
+  if (r.err) msg.innerHTML += `<div class="err">${esc(r.err)}</div>`;
+  if (r.platform==='shopee' && r.aff) msg.innerHTML += `<p class="note">Link dài chính thức của Shopee. Link rút gọn s.shopee.vn/… chỉ tạo được trong cổng Shopee Affiliate.</p>`;
+  last = r; toggleResBtns(!!r.aff);
+  if (r.aff){ recent.unshift({t:Date.now(), platform:r.platform, clean:r.clean, aff:r.aff}); recent = dedupeRecent(recent).slice(0,10); save(LS.recent, recent); renderRecent(); }
+}
+function dedupeRecent(a){ const seen=new Set(); return a.filter(x=>!seen.has(x.aff)&&seen.add(x.aff)); }
+function toggleResBtns(on){ ['#btnCopy','#btnOpen'].forEach(s=>$(s).disabled=!on); $('#btnCopy').style.opacity=$('#btnOpen').style.opacity=on?1:.5; }
+async function copyText(t){
+  try { await navigator.clipboard.writeText(t); return true; }
+  catch(e){ const ta=document.createElement('textarea'); ta.value=t; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0,t.length); let ok=false; try{ok=document.execCommand('copy');}catch(_){} ta.remove(); return ok; }
+}
+function renderRecent(){
+  const el=$('#recent');
+  if(!recent.length){ el.innerHTML='<div class="empty">Chưa có link nào. Dán link sản phẩm ở trên để bắt đầu.</div>'; return; }
+  el.innerHTML = recent.map((r,i)=>`<div class="order"><span class="pill pf-${r.platform}">${PLATFORMS[r.platform]?.name||''}</span>
+    <div class="m" style="word-break:break-all;margin-top:4px">${esc(r.clean.length>90?r.clean.slice(0,90)+'…':r.clean)}</div>
+    <div class="btns" style="margin-top:6px"><button class="btn sec sm" data-rc="${i}">Sao chép</button><button class="btn ghost sm" data-ro="${i}">Mở</button><button class="btn ghost sm" data-rs="${i}">Lưu đơn</button></div></div>`).join('');
+}
+$('#recent').addEventListener('click', async e=>{
+  const b=e.target.closest('button'); if(!b) return;
+  if(b.dataset.rc){ const ok=await copyText(recent[b.dataset.rc].aff); toast(ok?'Đã sao chép link':'Không sao chép được'); }
+  if(b.dataset.ro){ window.location.href = recent[b.dataset.ro].aff; }
+  if(b.dataset.rs){ const r=recent[b.dataset.rs]; openSheet(null,{platform:r.platform, link:r.clean}); }
+});
+$('#btnPaste').addEventListener('click', async ()=>{
+  try { const t = await navigator.clipboard.readText(); if(!t){ toast('Bộ nhớ tạm trống'); return; } $('#inLink').value=t; showResult(convert(t)); }
+  catch(e){ toast('Không đọc được bộ nhớ tạm. Hãy chạm giữ ô nhập → Dán.'); $('#inLink').focus(); }
+});
+$('#btnConvert').addEventListener('click', ()=> showResult(convert($('#inLink').value)));
+$('#inLink').addEventListener('paste', ()=> setTimeout(()=>{ if($('#inLink').value.trim()) showResult(convert($('#inLink').value)); },0));
+$('#btnClear').addEventListener('click', ()=>{ $('#inLink').value=''; $('#resCard').classList.add('hidden'); last=null; });
+$('#btnCopy').addEventListener('click', async ()=>{ if(!last?.aff) return; const ok=await copyText(last.aff); toast(ok?'Đã sao chép link affiliate':'Không sao chép được'); });
+$('#btnOpen').addEventListener('click', ()=>{ if(last?.aff) window.location.href = last.aff; });
+$('#btnSaveOrder').addEventListener('click', ()=>{ if(!last) return; openSheet(null,{platform:last.platform, link:last.clean}); });
+
+/* ---------- Đơn hàng ---------- */
+function cbAmount(o){ return o.cbType==='percent' ? Math.round((o.value||0)*(o.cbValue||0)/100) : Math.round(o.cbValue||0); }
+function monthKey(d){ return (d||'').slice(0,7); }
+function monthLabel(k){ if(k==='all') return 'Tất cả các tháng'; const [y,m]=k.split('-'); return `Tháng ${parseInt(m,10)}/${y}`; }
+function renderMonthSel(){
+  const sel=$('#monthSel'); const cur = sel.value || monthKey(todayISO());
+  const keys = new Set(orders.map(o=>monthKey(o.date))); keys.add(monthKey(todayISO()));
+  const arr=[...keys].sort().reverse();
+  sel.innerHTML = arr.map(k=>`<option value="${k}">${monthLabel(k)}</option>`).join('') + `<option value="all">${monthLabel('all')}</option>`;
+  sel.value = (arr.includes(cur)||cur==='all') ? cur : arr[0];
+}
+function totals(list){
+  const t={pending:0,approved:0,received:0,cancelled:0,value:0,count:0};
+  for(const o of list){ t[o.status]+=cbAmount(o); if(o.status!=='cancelled'){ t.value+=o.value||0; t.count++; } }
+  return t;
+}
+function renderOrders(){
+  renderMonthSel();
+  const m=$('#monthSel').value, sf=$('#statusFilter').value;
+  const inMonth = orders.filter(o=> m==='all' || monthKey(o.date)===m);
+  const t = totals(inMonth);
+  $('#summary').innerHTML = `
+    <div><span class="k">⏳ Chờ xác nhận</span><b id="sumPending">${fmtVND(t.pending)}</b></div>
+    <div><span class="k">✅ Đã duyệt</span><b id="sumApproved">${fmtVND(t.approved)}</b></div>
+    <div><span class="k">💰 Đã nhận tiền</span><b id="sumReceived">${fmtVND(t.received)}</b></div>
+    <div><span class="k">🧾 Số đơn / giá trị</span><b id="sumValue">${t.count} · ${fmtVND(t.value)}</b></div>
+    <div class="total"><span class="k">Tổng tiền hoàn (trừ đơn hủy)</span><b id="sumTotal">${fmtVND(t.pending+t.approved+t.received)}</b></div>`;
+  const list = inMonth.filter(o=>!sf||o.status===sf).sort((a,b)=> (b.date||'').localeCompare(a.date||'') || b.created-a.created);
+  $('#orderList').innerHTML = list.length ? list.map(o=>`<div class="order" data-id="${o.id}">
+      <div class="row" style="justify-content:space-between"><span style="flex:0 0 auto"><span class="pill pf-${o.platform}">${PLATFORMS[o.platform]?.name||'Khác'}</span> <span class="pill st-${o.status}">${STATUS[o.status]}</span></span><span class="m" style="flex:0 0 auto">${fmtDate(o.date)}</span></div>
+      <div class="t">${esc(o.name|| (o.link? o.link.replace(/^https?:\/\//,'').slice(0,60)+'…' : '(Không tên)'))}</div>
+      <div class="m">Đơn ${fmtVND(o.value)} · Hoàn <span class="amt">${fmtVND(cbAmount(o))}</span>${o.cbType==='percent'?` (${String(o.cbValue).replace('.',',')}%)`:''}</div>
+      ${o.note?`<div class="m">📝 ${esc(o.note)}</div>`:''}
+      <div class="btns" style="margin-top:6px"><button class="btn ghost sm" data-edit="${o.id}">Sửa</button>${o.link?`<button class="btn ghost sm" data-open="${o.id}">Mở link</button>`:''}<button class="btn danger sm" data-del="${o.id}">Xóa</button></div>
+    </div>`).join('') : '<div class="empty">Chưa có đơn nào trong mục này.</div>';
+}
+function fmtDate(d){ if(!d) return ''; const [y,m,dd]=d.split('-'); return `${dd}/${m}/${y}`; }
+$('#monthSel').addEventListener('change', renderOrders);
+$('#statusFilter').addEventListener('change', renderOrders);
+$('#btnNewOrder').addEventListener('click', ()=>openSheet());
+$('#orderList').addEventListener('click', e=>{
+  const b=e.target.closest('button'); if(!b) return;
+  if(b.dataset.edit) openSheet(orders.find(o=>o.id===b.dataset.edit));
+  if(b.dataset.open){ const o=orders.find(x=>x.id===b.dataset.open); const r=convert(o.link); window.location.href = r.aff || o.link; }
+  if(b.dataset.del) delOrder(b.dataset.del);
+});
+function delOrder(id){ if(!confirm('Xóa đơn này?')) return; orders=orders.filter(o=>o.id!==id); save(LS.orders,orders); closeSheet(); renderOrders(); toast('Đã xóa đơn'); }
+
+/* Sheet */
+let cbType='percent';
+function setCbType(v){ cbType=v; document.querySelectorAll('#cbSeg button').forEach(b=>b.classList.toggle('on', b.dataset.v===v)); $('#fCb').placeholder = v==='percent'?'VD: 5 (%)':'VD: 25.000'; $('#fCb').inputMode = v==='percent'?'decimal':'numeric'; updateCbPreview(); }
+document.querySelectorAll('#cbSeg button').forEach(b=>b.addEventListener('click',()=>{ const val=$('#fCb').value; setCbType(b.dataset.v); if(cbType==='amount') $('#fCb').value = val? parseNum(val).toLocaleString('vi-VN'):''; }));
+function updateCbPreview(){ const v=parseNum($('#fValue').value); const c = cbType==='percent'? parseDec($('#fCb').value) : parseNum($('#fCb').value); $('#cbPreview').textContent = '= ' + fmtVND(cbAmount({value:v,cbType,cbValue:c})); }
+function moneyInput(el){ el.addEventListener('input', ()=>{ const n=parseNum(el.value); el.value = n? n.toLocaleString('vi-VN'):''; updateCbPreview(); }); }
+moneyInput($('#fValue'));
+$('#fCb').addEventListener('input', ()=>{ if(cbType==='amount'){ const n=parseNum($('#fCb').value); $('#fCb').value = n? n.toLocaleString('vi-VN'):''; } updateCbPreview(); });
+$('#fPlat').innerHTML = Object.entries(PLATFORMS).map(([k,v])=>`<option value="${k}">${v.name}</option>`).join('');
+function openSheet(o, prefill){
+  const edit=!!o; o = o || {date:todayISO(), platform:prefill?.platform||'shopee', name:'', link:prefill?.link||'', value:0, cbType:'percent', cbValue:'', status:'pending', note:''};
+  $('#sheetTitle').textContent = edit?'Sửa đơn':'Thêm đơn';
+  $('#fId').value = edit?o.id:''; $('#fDate').value=o.date; $('#fPlat').value=o.platform; $('#fName').value=o.name||''; $('#fLink').value=o.link||'';
+  $('#fValue').value = o.value? Number(o.value).toLocaleString('vi-VN'):''; setCbType(o.cbType||'percent');
+  $('#fCb').value = o.cbValue===''||o.cbValue==null ? '' : (o.cbType==='amount'? Number(o.cbValue).toLocaleString('vi-VN') : String(o.cbValue).replace('.',','));
+  $('#fStatus').value=o.status; $('#fNote').value=o.note||'';
+  $('#btnDeleteOrder').classList.toggle('hidden', !edit);
+  updateCbPreview();
+  $('#sheetBg').classList.add('open'); $('#orderSheet').classList.add('open');
+}
+function closeSheet(){ $('#sheetBg').classList.remove('open'); document.querySelectorAll('.sheet.open').forEach(x=>x.classList.remove('open')); }
+$('#sheetBg').addEventListener('click', closeSheet); $('#btnCancelSheet').addEventListener('click', closeSheet);
+$('#btnDeleteOrder').addEventListener('click', ()=>delOrder($('#fId').value));
+$('#orderForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const id=$('#fId').value;
+  const o = {id:id||uid(), date:$('#fDate').value||todayISO(), platform:$('#fPlat').value, name:$('#fName').value.trim(), link:$('#fLink').value.trim(),
+    value:parseNum($('#fValue').value), cbType, cbValue: cbType==='percent'? parseDec($('#fCb').value) : parseNum($('#fCb').value),
+    status:$('#fStatus').value, note:$('#fNote').value.trim(), created: id ? (orders.find(x=>x.id===id)?.created||Date.now()) : Date.now(), updated:Date.now()};
+  if(id) orders = orders.map(x=>x.id===id?o:x); else orders.push(o);
+  save(LS.orders, orders); closeSheet();
+  $('#monthSel').value = monthKey(o.date); renderOrders();
+  if(!$('#scr-orders').classList.contains('active')) switchTab('orders');
+  toast(id?'Đã cập nhật đơn':'Đã lưu đơn');
+});
+
+/* ---------- Cài đặt ---------- */
+function renderSettings(){
+  $('#platSettings').innerHTML = Object.entries(PLATFORMS).map(([k,v])=>{ const c=settings.platforms[k];
+    return `<div class="plat" data-p="${k}">
+      <h3><span class="pill pf-${k}">${v.name}</span></h3>
+      <label>Mẫu link affiliate</label>
+      <textarea class="s-tpl" rows="3" autocapitalize="off" spellcheck="false" placeholder="Để trống = chưa cấu hình. VD: https://…{url}…">${esc(c.tpl)}</textarea>
+      <div class="btns" style="margin-top:6px">
+        ${k==='shopee'?`<button type="button" class="btn ghost sm" data-preset="shopee_official">Mẫu Shopee chính thức</button>`:''}
+        <button type="button" class="btn ghost sm" data-preset="accesstrade">Mẫu AccessTrade</button>
+        <button type="button" class="btn ghost sm" data-preset="">Xóa mẫu</button>
+      </div>
+      <div class="row">
+        <div><label>${k==='shopee'?'ID affiliate Shopee':'ID affiliate / publisher'} <small>{aff_id}</small></label><input class="s-aff" value="${esc(c.aff_id)}" inputmode="numeric" autocapitalize="off" placeholder="VD: 17xxxxxxxx"></div>
+        <div><label>Sub ID <small>{sub_id}</small></label><input class="s-sub" value="${esc(c.sub_id)}" autocapitalize="off" placeholder="tùy chọn"></div>
+      </div>
+      <p class="note">${HINTS[k]}</p>
+    </div>`; }).join('');
+}
+$('#platSettings').addEventListener('click', e=>{
+  const b=e.target.closest('button[data-preset]'); if(!b) return;
+  const ta=b.closest('.plat').querySelector('.s-tpl'); ta.value = b.dataset.preset ? PRESETS[b.dataset.preset].tpl : '';
+  toast(b.dataset.preset? 'Đã chèn mẫu, nhớ nhập ID rồi bấm Lưu' : 'Đã xóa mẫu');
+});
+$('#btnSaveSettings').addEventListener('click', ()=>{
+  document.querySelectorAll('#platSettings .plat').forEach(el=>{ settings.platforms[el.dataset.p] = {tpl:el.querySelector('.s-tpl').value.trim(), aff_id:el.querySelector('.s-aff').value.trim(), sub_id:el.querySelector('.s-sub').value.trim()}; });
+  save(LS.settings, settings); toast('Đã lưu cài đặt');
+});
+function renderDataInfo(){ $('#dataInfo').textContent = `Đang lưu: ${orders.length} đơn hàng, ${cards.length} thẻ, ${txns.length} giao dịch thẻ, ${recent.length} link gần đây.`; }
+$('#btnExport').addEventListener('click', async ()=>{
+  const data = {app:'vi-hoan-tien', version:2, exported:new Date().toISOString(), settings, orders, recent, cards, txns, cardPrefs};
+  const json = JSON.stringify(data,null,2); const name=`hoan-tien-backup-${todayISO()}.json`;
+  const file = new File([json], name, {type:'application/json'});
+  if (navigator.canShare && navigator.canShare({files:[file]})) { try { await navigator.share({files:[file], title:name}); return; } catch(e){ if(e.name==='AbortError') return; } }
+  const a=document.createElement('a'); a.href=URL.createObjectURL(file); a.download=name; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1000);
+  toast('Đã xuất file sao lưu');
+});
+$('#btnImport').addEventListener('click', ()=>$('#fileImport').click());
+$('#fileImport').addEventListener('change', async e=>{
+  const f=e.target.files[0]; if(!f) return;
+  try{
+    const d=JSON.parse(await f.text());
+    if(!Array.isArray(d.orders)) throw new Error('bad');
+    if(!confirm(`Nhập ${d.orders.length} đơn, ${(d.cards||[]).length} thẻ, ${(d.txns||[]).length} giao dịch từ file? Dữ liệu hiện tại sẽ được thay thế.`)) return;
+    orders=d.orders; if(d.settings?.platforms) settings=d.settings; recent=Array.isArray(d.recent)?d.recent:[];
+    cards=Array.isArray(d.cards)?d.cards:[]; txns=Array.isArray(d.txns)?d.txns:[]; if(d.cardPrefs) cardPrefs=d.cardPrefs; save(LS.cards,cards); save(LS.txns,txns); save(LS.cardPrefs,cardPrefs);
+    for (const p in DEFAULT_SETTINGS.platforms) if(!settings.platforms[p]) settings.platforms[p] = structuredClone(DEFAULT_SETTINGS.platforms[p]);
+    save(LS.orders,orders); save(LS.settings,settings); save(LS.recent,recent);
+    renderAll(); toast('Đã nhập dữ liệu');
+  }catch(err){ alert('File không hợp lệ.'); }
+  e.target.value='';
+});
+
+/* ================= THẺ TÍN DỤNG & DÒNG TIỀN ================= */
+LS.cards='ht_cards_v1'; LS.txns='ht_txns_v1'; LS.cardPrefs='ht_cardprefs_v1';
+let cards = load(LS.cards, []);
+let txns = load(LS.txns, []);
+let cardPrefs = load(LS.cardPrefs, {utilThreshold:70});
+const COLORS = ['#f97316','#dc2626','#db2777','#7c3aed','#2563eb','#0891b2','#059669','#65a30d','#ca8a04','#475569'];
+// Gợi ý theo ngân hàng — chỉ để tham khảo, giá trị bạn nhập luôn được ưu tiên.
+const BANKS = {
+  VIB:{name:'VIB', dueRule:'after', dueN:25, minPct:4, hint:'Hạn thanh toán 25 ngày sau ngày lập sao kê; miễn lãi đến 55 ngày (Super Card), 45 ngày một số dòng khác. Phí chậm trả 4% (tối thiểu 200.000 đ, tối đa 2.000.000 đ). Ngày sao kê tùy dòng thẻ (VD Cash Back ngày 10, Online Plus 2in1 ngày 25, Travel Élite ngày 20; Super Card tự chọn).', src:'https://www.vib.com.vn/vn/the-tin-dung/vib-supercard/bieu-phi-va-dieu-kien'},
+  HSBC:{name:'HSBC', dueRule:'after', dueN:25, minPct:5, hint:'Mọi thẻ HSBC miễn lãi đến 55 ngày (30 ngày chu kỳ + 25 ngày ân hạn). Ví dụ của HSBC: sao kê 28/5, hạn 22/6. Thanh toán tối thiểu 1–5% tùy ngân hàng.', src:'https://www.hsbc.com.vn/en-vn/credit-cards/what-is-credit-card-interest-free-period/'},
+  TCB:{name:'Techcombank', stmtDay:20, minPct:5, hint:'Thanh toán tối thiểu 5% dư nợ (Techcombank). Ngày sao kê thường là 20 (Everyday, Spark, Style), 10 (Visa Classic), 27 (Vietnam Airlines) — nguồn bên thứ ba, hãy kiểm tra sao kê. Hạn thanh toán: chưa xác minh, xem trên sao kê.', src:'https://techcombank.com/thong-tin/blog/thanh-toan-toi-thieu-the-tin-dung'},
+  VPB:{name:'VPBank', dueRule:'after', dueN:15, minPct:5, hint:'Hạn thường 15 ngày sau ngày chốt sao kê, miễn lãi đến 45 ngày. Ngày sao kê tùy dòng (VD Shopee/Platinum Cashback ngày 25, Diamond/Travel Miles ngày 27, Lady ngày 20) — nguồn bên thứ ba.', src:'https://diadiembank.com/ngay-sao-ke-the-tin-dung-vpbank/'},
+  TPB:{name:'TPBank', stmtDay:10, hint:'Ngày sao kê đa số thẻ là 10 (MoMo Visa Platinum ngày 14); nếu trùng cuối tuần/lễ sẽ lùi lên trước 2 ngày làm việc — nguồn bên thứ ba. Hạn thanh toán: chưa xác minh, xem trên sao kê.', src:'https://gobank.vn/ngay-sao-ke-the-tin-dung-tpbank'},
+  VCB:{name:'Vietcombank', minPct:5, hint:'Thẻ Vietcombank Mastercard miễn lãi đến 45 ngày. Thanh toán tối thiểu 5% (theo bảng của Techcombank). Ngày sao kê/hạn: xem sao kê của bạn.', src:'https://www.vietcombank.com.vn/vi-VN/KHCN/SPDV/The/Credit_VCB-Mastercard'},
+  STB:{name:'Sacombank', minPct:6, hint:'Thanh toán tối thiểu 6% (theo bảng của Techcombank). Ngày sao kê/hạn: xem sao kê của bạn.', src:'https://techcombank.com/thong-tin/blog/thanh-toan-toi-thieu-the-tin-dung'},
+  ACB:{name:'ACB', minPct:4, hint:'Thanh toán tối thiểu 4% (theo bảng của Techcombank). Ngày sao kê/hạn: xem sao kê của bạn.', src:'https://techcombank.com/thong-tin/blog/thanh-toan-toi-thieu-the-tin-dung'},
+  BIDV:{name:'BIDV', hint:'Thanh toán tối thiểu 3–5% (theo bảng của Techcombank). Ngày sao kê/hạn: xem sao kê của bạn.', src:'https://techcombank.com/thong-tin/blog/thanh-toan-toi-thieu-the-tin-dung'},
+  MB:{name:'MB', hint:'Chưa xác minh được thông số chung — nhập theo sao kê của bạn.'},
+  SHB:{name:'Shinhan', hint:'Chưa xác minh được thông số chung — nhập theo sao kê của bạn.'},
+  UOB:{name:'UOB (gồm thẻ Citi cũ)', hint:'Chưa xác minh được thông số chung — nhập theo sao kê của bạn.'},
+  OTHER:{name:'Ngân hàng khác', hint:'Thông thường: hạn thanh toán 15–25 ngày sau ngày sao kê, miễn lãi 45–55 ngày, tối thiểu 1–5% (theo HSBC).', src:'https://www.hsbc.com.vn/en-vn/credit-cards/what-is-credit-card-interest-free-period/'}
+};
+
+/* --- Ngày tháng: dùng "số ngày" UTC để tránh lệch múi giờ --- */
+const DAY=864e5;
+const dParse = s => { const [y,m,d]=s.split('-').map(Number); return Date.UTC(y,m-1,d)/DAY; };
+const dFmt = n => new Date(n*DAY).toISOString().slice(0,10);
+const dYMD = n => { const t=new Date(n*DAY); return [t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate()]; };
+const dim = (y,m) => new Date(Date.UTC(y,m+1,0)).getUTCDate();
+const dMake = (y,m,d) => { const t=new Date(Date.UTC(y,m,1)); const Y=t.getUTCFullYear(), M=t.getUTCMonth(); return Date.UTC(Y,M,Math.min(d,dim(Y,M)))/DAY; };
+const dShow = n => { const [y,m,d]=dYMD(n); return `${String(d).padStart(2,'0')}/${String(m+1).padStart(2,'0')}`; };
+const dShowY = n => { const [y,m,d]=dYMD(n); return `${String(d).padStart(2,'0')}/${String(m+1).padStart(2,'0')}/${y}`; };
+const WD = ['CN','T2','T3','T4','T5','T6','T7'];
+const dWd = n => WD[new Date(n*DAY).getUTCDay()];
+function todayN(){ const q=new URLSearchParams(location.search).get('today'); if(q && /^\d{4}-\d{2}-\d{2}$/.test(q)) return dParse(q); return dParse(todayISO()); }
+
+/* --- Kỳ sao kê --- */
+function stmtOnOrAfter(c, n){ const [y,m]=dYMD(n); const s=dMake(y,m,c.stmtDay); return s>=n ? s : dMake(y,m+1,c.stmtDay); }
+function prevStmt(c, S){ const [y,m]=dYMD(S); return dMake(y,m-1,c.stmtDay); }
+function nextStmt(c, S){ const [y,m]=dYMD(S); return dMake(y,m+1,c.stmtDay); }
+function dueFor(c, S){
+  if (c.dueRule==='fixed'){ const [y,m]=dYMD(S); let d=dMake(y,m,c.dueDay); if(d<=S) d=dMake(y,m+1,c.dueDay); return d; }
+  return S + (Number(c.dueN)||0);
+}
+function cardTx(c){ return txns.filter(t=>t.cardId===c.id); }
+function balanceAt(c, n){ let b=0; for(const t of cardTx(c)){ const d=dParse(t.date); if(d<=n) b += t.type==='payment' ? -t.amount : t.amount; } return b; }
+function paidBetween(c, a, b){ let s=0; for(const t of cardTx(c)) if(t.type==='payment'){ const d=dParse(t.date); if(d>a && d<=b) s+=t.amount; } return s; }
+function spendBetween(c, a, b){ let s=0; for(const t of cardTx(c)) if(t.type!=='payment'){ const d=dParse(t.date); if(d>a && d<=b) s+=t.amount; } return s; }
+// Chuỗi kỳ: kỳ đã chốt gần nhất + các kỳ tương lai, với số tiền phải trả (giả định mỗi kỳ được trả đủ đúng hạn)
+function cycles(c, today, untilN){
+  const nextS = stmtOnOrAfter(c, today);
+  const lastS = prevStmt(c, nextS);
+  const out=[]; let paidSum=0;
+  const lastBal = Math.max(0, balanceAt(c,lastS));
+  const lastRemain = Math.max(0, lastBal - paidBetween(c,lastS,today));
+  out.push({S:lastS, due:dueFor(c,lastS), closed:true, billed:lastBal, amount:lastRemain, start:prevStmt(c,lastS)+1});
+  paidSum += lastRemain;
+  let S = nextS;
+  while (S <= untilN || out.length<2){
+    const amt = Math.max(0, balanceAt(c,S) - paidSum);
+    out.push({S, due:dueFor(c,S), closed:false, billed:amt, amount:amt, start:prevStmt(c,S)+1});
+    paidSum += amt; S = nextStmt(c,S);
+  }
+  return out;
+}
+function cardStatus(c, today){
+  const cy = cycles(c, today, today);
+  const last=cy[0], cur=cy[1];
+  const bal = balanceAt(c, today);
+  const limit = Number(c.limit)||0;
+  const util = limit>0 ? bal/limit*100 : 0;
+  let state='ok', label='';
+  if (last.amount>0 && today>last.due){ state='over'; label=`Quá hạn ${today-last.due} ngày`; }
+  else if (last.amount>0 && last.due-today<=7){ state='soon'; label = last.due===today ? 'Đến hạn hôm nay' : `Còn ${last.due-today} ngày đến hạn`; }
+  else if (last.amount>0){ label=`Hạn ${dShow(last.due)}`; state='pend'; }
+  else label = last.billed>0 ? 'Đã trả đủ kỳ trước' : 'Không có dư nợ kỳ trước';
+  return {last, cur, bal, util, limit, avail: limit-bal, freeDays: cur.due - today, cycleSpend: spendBetween(c, cur.start-1, cur.S), state, label,
+    minPay: Math.ceil(last.amount*(Number(c.minPct)||0)/100)};
+}
+function feeProgress(c, today){
+  if(!c.waiveTarget) return null;
+  const [y,m]=dYMD(today); const fm=(Number(c.feeMonth)||1)-1;
+  let start = Date.UTC(m>=fm? y : y-1, fm, 1)/DAY;
+  return {spent: spendBetween(c, start-1, today), target:Number(c.waiveTarget), since:start};
+}
+
+/* --- Gợi ý quẹt thẻ --- */
+function recommend(today, amount, thr){
+  return cards.map(c=>{ const s=cardStatus(c,today); let reason='';
+    if (s.limit<=0) reason='Chưa nhập hạn mức';
+    else if (s.state==='over') reason='Đang quá hạn – có thể mất miễn lãi';
+    else if (amount>0 && amount>s.avail) reason='Vượt hạn mức còn lại';
+    else if ((s.bal+amount)/s.limit*100 > thr) reason=`Vượt ngưỡng ${thr}% hạn mức`;
+    return {c, s, days:s.freeDays, reason, utilAfter: s.limit? (s.bal+amount)/s.limit*100 : 0};
+  }).sort((a,b)=> (!!a.reason - !!b.reason) || (b.days-a.days) || (a.utilAfter-b.utilAfter));
+}
+
+/* --- Sự kiện dòng tiền --- */
+function events(today, days){
+  const end = today+days, ev=[];
+  for (const c of cards){
+    for (const cy of cycles(c, today, end)){
+      if (!cy.closed && cy.S>=today && cy.S<=end) ev.push({type:'stmt', d:cy.S, c, amount:cy.billed, cy});
+      if (cy.due<=end && (cy.due>=today || cy.amount>0)) ev.push({type:'due', d:cy.due, c, amount:cy.amount, cy, overdue: cy.due<today && cy.amount>0});
+    }
+  }
+  return ev.sort((a,b)=>a.d-b.d || (a.type==='due'?-1:1));
+}
+const weekStart = n => { const wd=(new Date(n*DAY).getUTCDay()+6)%7; return n-wd; };
+
+/* --- Render --- */
+let cardView='overview';
+function cardById(id){ return cards.find(c=>c.id===id); }
+function cardLabel(c){ return esc(c.name) + (c.last4? ` ••${esc(c.last4)}`:''); }
+function renderCards(){
+  document.querySelectorAll('#cardSeg button').forEach(b=>b.classList.toggle('on', b.dataset.v===cardView));
+  ['overview','list','tx','cal'].forEach(v=>$('#cv-'+v).classList.toggle('hidden', v!==cardView));
+  const today=todayN();
+  if (cardView==='overview') renderOverview(today);
+  if (cardView==='list') renderCardList(today);
+  if (cardView==='tx') renderTx();
+  if (cardView==='cal') renderCal(today);
+}
+function emptyCards(){ return `<div class="empty">Chưa có thẻ nào. Vào mục <b>Thẻ</b> → “Thêm thẻ” để bắt đầu.</div>`; }
+function renderOverview(today){
+  let lim=0, bal=0; for(const c of cards){ const s=cardStatus(c,today); lim+=s.limit; bal+=Math.max(0,s.bal); }
+  const [y,m]=dYMD(today); const mStart=Date.UTC(y,m,1)/DAY, mEnd=Date.UTC(y,m+1,0)/DAY;
+  const ev = events(today, 62);
+  const dueMonth = ev.filter(e=>e.type==='due' && (e.overdue || (e.d>=mStart && e.d<=mEnd))).reduce((a,e)=>a+e.amount,0);
+  const due7 = ev.filter(e=>e.type==='due' && e.amount>0 && e.d<=today+7).reduce((a,e)=>a+e.amount,0);
+  const util = lim? bal/lim*100 : 0;
+  $('#cardDash').innerHTML = `
+    <div><span class="k">Tổng hạn mức</span><b id="dashLimit">${fmtVND(lim)}</b></div>
+    <div><span class="k">Đã dùng</span><b id="dashUsed">${fmtVND(bal)}</b></div>
+    <div><span class="k">Tỷ lệ sử dụng</span><b id="dashUtil">${util.toLocaleString('vi-VN',{maximumFractionDigits:1})}%</b></div>
+    <div><span class="k">Phải trả 7 ngày tới</span><b id="dashDue7">${fmtVND(due7)}</b></div>
+    <div class="total"><span class="k">Phải trả trong tháng ${m+1}/${y} (gồm quá hạn)</span><b id="dashDueMonth">${fmtVND(dueMonth)}</b></div>`;
+  // recommender
+  const sel=$('#recThr'); if(!sel.options.length){ sel.innerHTML=[30,50,70,80,90,100].map(v=>`<option value="${v}">≤ ${v}%</option>`).join(''); }
+  sel.value = String(cardPrefs.utilThreshold||70);
+  const amt=parseNum($('#recAmt').value), thr=Number(sel.value);
+  const rec = recommend(today, amt, thr);
+  $('#recList').innerHTML = cards.length ? rec.map((r,i)=>`<div class="rec ${r.reason?'ex':(i===0?'top':'')}" data-card="${r.c.id}" style="--cc:${r.c.color}">
+      <div class="rk">${r.reason?'–':i+1}</div>
+      <div><div style="font-weight:700"><span class="dot"></span>${cardLabel(r.c)}</div>
+      <div class="m note" style="margin:0">${r.reason? '⛔ '+esc(r.reason) : `Chốt ${dShow(r.s.cur.S)} → hạn ${dShow(r.s.cur.due)} · dùng ${r.utilAfter.toLocaleString('vi-VN',{maximumFractionDigits:0})}%`}</div></div>
+      <div class="dd"><b>${r.days}</b><div class="note" style="margin:0">ngày</div></div></div>`).join('') : emptyCards();
+  // due soon
+  const soon = ev.filter(e=>e.type==='due' && e.amount>0 && e.d<=today+7);
+  $('#dueSoon').innerHTML = soon.length ? soon.map(e=>evRow(e,today)).join('') : `<div class="empty">Không có khoản nào đến hạn trong 7 ngày tới 🎉</div>`;
+}
+function evRow(e, today){
+  const c=e.c, isDue=e.type==='due';
+  const pct = Number(c.minPct)||0;
+  const zero = isDue && !e.amount;
+  const sub = zero ? (e.cy.billed>0?'đã thanh toán đủ':'không có dư nợ') : isDue ? (e.overdue? `<span class="badge b-over">Quá hạn</span>` : (e.d===today? `<span class="badge b-soon">Hôm nay</span>` : `còn ${e.d-today} ngày`)) + (pct&&e.amount? ` · tối thiểu ${fmtVND(Math.ceil(e.amount*pct/100))}`:'') : `kỳ ${dShow(e.cy.start)}–${dShow(e.cy.S)}`;
+  return `<div class="ev ${isDue?'due':'stmt'}" style="--cc:${c.color}"><div class="dt">${dShow(e.d)}<small>${dWd(e.d)}</small></div>
+    <div><div><span class="dot"></span><b>${cardLabel(c)}</b></div><div class="note" style="margin:0">${isDue?'💸 Hạn thanh toán':'🧾 Chốt sao kê (dự kiến)'} · ${sub}</div></div>
+    <div class="am">${isDue? (e.amount? fmtVND(e.amount): (e.cy.billed>0?'<span class="badge b-ok">Đã trả</span>':'<span class="badge b-mu">0 đ</span>')) : fmtVND(e.amount)}</div></div>`;
+}
+function renderCardList(today){
+  $('#cardList').innerHTML = cards.length ? cards.map(c=>{ const s=cardStatus(c,today); const u=s.util; const fp=feeProgress(c,today);
+    const cls = s.state==='over'?'overdue':(s.state==='soon'?'due-soon':'');
+    const badge = s.state==='over'?'b-over':s.state==='soon'?'b-soon':s.state==='pend'?'b-mu':'b-ok';
+    return `<div class="ccard ${cls}" style="--cc:${c.color}" data-card="${c.id}">
+      <div class="hd"><div><div class="nm">${esc(c.name)}</div><div class="bk">${esc(BANKS[c.bank]?.name||c.bank||'')}${c.last4?' · •••• '+esc(c.last4):''}</div></div><span class="badge ${badge}">${esc(s.label)}</span></div>
+      <div class="bar"><i class="${u>=90?'h':u>=70?'w':''}" style="width:${Math.min(100,Math.max(0,u))}%"></i></div>
+      <div class="kv">
+        <span>Đã dùng / hạn mức</span><b>${fmtVND(s.bal)} / ${fmtVND(s.limit)}</b>
+        <span>Tỷ lệ sử dụng</span><b class="c-util">${u.toLocaleString('vi-VN',{maximumFractionDigits:1})}%</b>
+        <span>Kỳ hiện tại</span><b class="c-cycle">${dShow(s.cur.start)} – ${dShow(s.cur.S)}</b>
+        <span>Chi tiêu kỳ này</span><b class="c-spend">${fmtVND(s.cycleSpend)}</b>
+        <span>Sao kê tới</span><b class="c-next">${dShowY(s.cur.S)}</b>
+        <span>Hạn của kỳ này</span><b class="c-curdue">${dShowY(s.cur.due)}</b>
+        <span>Quẹt hôm nay miễn lãi</span><b class="c-free">${s.freeDays} ngày</b>
+        <span>Kỳ trước (${dShow(s.last.S)}) cần trả</span><b class="c-owe">${fmtVND(s.last.amount)}${s.last.amount?` · hạn ${dShow(s.last.due)}`:''}</b>
+        ${s.minPay?`<span>Tối thiểu (${String(c.minPct).replace('.',',')}%)</span><b>${fmtVND(s.minPay)}</b>`:''}
+        ${fp?`<span>Chi tiêu miễn phí thường niên</span><b>${fmtVND(fp.spent)} / ${fmtVND(fp.target)}</b>`:''}
+      </div>
+      ${c.reward?`<div class="note">🎁 ${esc(c.reward)}</div>`:''}
+      <div class="btns"><button class="btn ghost sm" data-cedit="${c.id}">Sửa</button><button class="btn sec sm" data-cspend="${c.id}">＋ Chi tiêu</button><button class="btn sec sm" data-cpay="${c.id}">＋ Thanh toán</button></div>
+    </div>`; }).join('') : emptyCards();
+}
+function renderTx(){
+  const sel=$('#txCardFilter'); const cur=sel.value;
+  sel.innerHTML = `<option value="">Tất cả thẻ</option>` + cards.map(c=>`<option value="${c.id}">${cardLabel(c)}</option>`).join('');
+  sel.value = cards.some(c=>c.id===cur)?cur:'';
+  const list = txns.filter(t=>!sel.value||t.cardId===sel.value).sort((a,b)=>b.date.localeCompare(a.date)||b.created-a.created).slice(0,200);
+  $('#txList').innerHTML = list.length ? list.map(t=>{ const c=cardById(t.cardId); if(!c) return ''; const S=stmtOnOrAfter(c,dParse(t.date)); const o=t.orderId?orders.find(x=>x.id===t.orderId):null;
+    return `<div class="tx" style="--cc:${c.color}" data-tx="${t.id}"><div class="dt" style="width:46px;font-weight:700;font-size:13px;text-align:center">${dShow(dParse(t.date))}</div>
+      <div style="min-width:0"><div><span class="dot"></span><b>${cardLabel(c)}</b></div>
+      <div class="note" style="margin:0">${t.type==='payment'?'Thanh toán thẻ':'Kỳ sao kê '+dShow(S)+' · hạn '+dShow(dueFor(c,S))}${t.note?' · '+esc(t.note):''}${o?' · 🔗 '+esc(o.name||'đơn'):''}</div></div>
+      <div class="a ${t.type==='payment'?'pay':''}">${t.type==='payment'?'−':''}${fmtVND(t.amount)}<div><button class="btn ghost sm" data-tedit="${t.id}" style="margin-top:4px">Sửa</button></div></div></div>`; }).join('') : `<div class="empty">Chưa có giao dịch.</div>`;
+}
+function renderCal(today){
+  const ev = events(today, 60);
+  const dues = ev.filter(e=>e.type==='due');
+  const byMonth={}; for(const e of dues){ const [y,m]=dYMD(Math.max(e.d,today)); const k=`${y}-${m}`; byMonth[k]=(byMonth[k]||0)+e.amount; }
+  $('#calSummary').innerHTML = `<div class="sum">${Object.entries(byMonth).map(([k,v])=>{const [y,m]=k.split('-').map(Number);return `<div><span class="k">Phải trả tháng ${m+1}/${y}</span><b class="cal-month" data-m="${y}-${String(m+1).padStart(2,'0')}">${fmtVND(v)}</b></div>`;}).join('') || '<div class="total"><span class="k">Không có khoản nào phải trả trong 60 ngày tới</span><b>0 đ</b></div>'}</div>`;
+  if(!ev.length){ $('#calList').innerHTML = cards.length? `<div class="empty">Không có sự kiện trong 60 ngày tới.</div>` : emptyCards(); return; }
+  let html='', curM='', curW=null;
+  const weekTotals={}; for(const e of dues){ const w=weekStart(Math.max(e.d,today)); weekTotals[w]=(weekTotals[w]||0)+e.amount; }
+  for (const e of ev){
+    const d=Math.max(e.d,today); const [y,m]=dYMD(d); const mk=`${y}-${m}`;
+    if (mk!==curM){ curM=mk; curW=null; html += `<div class="mon"><span>Tháng ${m+1}/${y}</span><span>${fmtVND(byMonth[mk]||0)}</span></div>`; }
+    const w=weekStart(d); if (w!==curW){ curW=w; html += `<div class="wk"><span>Tuần ${dShow(w)} – ${dShow(w+6)}</span><span class="wk-total">Phải trả ${fmtVND(weekTotals[w]||0)}</span></div>`; }
+    html += evRow(e, today);
+  }
+  $('#calList').innerHTML = html;
+}
+
+/* --- ICS --- */
+function icsEscape(s){ return String(s).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n'); }
+function icsDate(n){ return dFmt(n).replace(/-/g,''); }
+function buildIcs(today, months=6){
+  const end = today + months*31; const now=new Date().toISOString().replace(/[-:]/g,'').slice(0,15)+'Z';
+  const L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Vi Hoan Tien//The tin dung//VI','CALSCALE:GREGORIAN','METHOD:PUBLISH','X-WR-CALNAME:Hạn thanh toán thẻ'];
+  for (const c of cards) for (const cy of cycles(c, today, end)){
+    if (cy.due < today || cy.due > end) continue;
+    const amt = cy.amount ? ` – ${fmtVND(cy.amount)}${cy.closed?'':' (dự kiến)'}` : '';
+    L.push('BEGIN:VEVENT', `UID:due-${c.id}-${icsDate(cy.S)}@vi-hoan-tien`, `DTSTAMP:${now}`,
+      `DTSTART;VALUE=DATE:${icsDate(cy.due)}`, `DTEND;VALUE=DATE:${icsDate(cy.due+1)}`,
+      `SUMMARY:${icsEscape('💳 Hạn thanh toán '+c.name+(c.last4?' ••'+c.last4:'')+amt)}`,
+      `DESCRIPTION:${icsEscape('Kỳ sao kê '+dShowY(cy.S)+'. Thanh toán đủ dư nợ sao kê trước hạn để được miễn lãi.')}`,
+      'TRANSP:TRANSPARENT',
+      'BEGIN:VALARM','ACTION:DISPLAY',`DESCRIPTION:${icsEscape('Còn 3 ngày: hạn thanh toán '+c.name)}`,'TRIGGER:-P2DT15H','END:VALARM',
+      'BEGIN:VALARM','ACTION:DISPLAY',`DESCRIPTION:${icsEscape('Ngày mai: hạn thanh toán '+c.name)}`,'TRIGGER:-PT15H','END:VALARM',
+      'END:VEVENT');
+  }
+  L.push('END:VCALENDAR');
+  return L.join('\r\n')+'\r\n';
+}
+async function shareOrDownload(content, name, type){
+  const file = new File([content], name, {type});
+  if (navigator.canShare && navigator.canShare({files:[file]})) { try { await navigator.share({files:[file], title:name}); return; } catch(e){ if(e.name==='AbortError') return; } }
+  const a=document.createElement('a'); a.href=URL.createObjectURL(file); a.download=name; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1000);
+}
+$('#btnIcs').addEventListener('click', ()=>{ if(!cards.length){ toast('Chưa có thẻ'); return; } shareOrDownload(buildIcs(todayN()), `han-thanh-toan-the-${todayISO()}.ics`, 'text/calendar'); toast('Đã xuất lịch .ics'); });
+
+/* --- Sheets: thẻ --- */
+function openSheetEl(id){ $('#sheetBg').classList.add('open'); $(id).classList.add('open'); }
+let dueRule='after';
+function setDueRule(v){ dueRule=v; document.querySelectorAll('#dueSeg button').forEach(b=>b.classList.toggle('on',b.dataset.v===v)); $('#cDueN').classList.toggle('hidden',v!=='after'); $('#cDueDay').classList.toggle('hidden',v!=='fixed'); updDuePreview(); }
+document.querySelectorAll('#dueSeg button').forEach(b=>b.addEventListener('click',()=>setDueRule(b.dataset.v)));
+$('#cBank').innerHTML = Object.entries(BANKS).map(([k,v])=>`<option value="${k}">${esc(v.name)}</option>`).join('');
+$('#cFeeMonth').innerHTML = Array.from({length:12},(_,i)=>`<option value="${i+1}">Tháng ${i+1}</option>`).join('');
+$('#cColors').innerHTML = COLORS.map((c,i)=>`<label><input type="radio" name="cColor" value="${c}" ${i===0?'checked':''}><span style="background:${c}"></span></label>`).join('');
+function updBankHint(){ const b=BANKS[$('#cBank').value]; $('#bankHint').innerHTML = b ? `ℹ️ ${esc(b.hint)}${b.src?` <a href="${b.src}" target="_blank" rel="noopener">Nguồn</a>`:''} <i>Thông số của bạn trên sao kê luôn được ưu tiên.</i>` : ''; $('#bankApplyWrap').classList.toggle('hidden', !(b && (b.dueN||b.minPct||b.stmtDay))); }
+$('#cBank').addEventListener('change', updBankHint);
+$('#btnApplyPreset').addEventListener('click', ()=>{ const b=BANKS[$('#cBank').value]; if(!b) return;
+  if(b.stmtDay && !$('#cStmt').value) $('#cStmt').value=b.stmtDay;
+  if(b.dueRule){ setDueRule(b.dueRule); if(b.dueN) $('#cDueN').value=b.dueN; }
+  if(b.minPct) $('#cMin').value=String(b.minPct).replace('.',',');
+  updDuePreview(); toast('Đã điền gợi ý, hãy đối chiếu với sao kê'); });
+['#cLimit','#cFee','#cWaive','#tAmt','#recAmt'].forEach(s=>{ const el=$(s); el.addEventListener('input',()=>{ const n=parseNum(el.value); el.value=n?n.toLocaleString('vi-VN'):''; if(s==='#recAmt') renderOverview(todayN()); if(s==='#tAmt') updTxCycle(); }); });
+$('#cLast4').addEventListener('input', e=>{ const d=e.target.value.replace(/\D/g,''); if(d.length>4) toast('Chỉ cần 4 số cuối'); e.target.value=d.slice(-4); });
+['#cStmt','#cDueN','#cDueDay'].forEach(s=>$(s).addEventListener('input',updDuePreview));
+function formCard(){ return {stmtDay:Number($('#cStmt').value)||0, dueRule, dueN:Number($('#cDueN').value)||0, dueDay:Number($('#cDueDay').value)||0}; }
+function updDuePreview(){ const c=formCard(); if(!(c.stmtDay>=1&&c.stmtDay<=31) || (dueRule==='after'?!(c.dueN>0):!(c.dueDay>=1&&c.dueDay<=31))){ $('#duePreview').textContent=''; return; }
+  const t=todayN(), S=stmtOnOrAfter(c,t), D=dueFor(c,S), P=prevStmt(c,S);
+  $('#duePreview').textContent = `Kỳ hiện tại ${dShow(P+1)} – ${dShow(S)}, hạn ${dShowY(D)}. Quẹt hôm nay được miễn lãi ${D-t} ngày; tối đa khoảng ${D-P-1} ngày.`; }
+function openCardSheet(c){
+  const edit=!!c; c = c || {name:'',bank:'OTHER',last4:'',limit:'',stmtDay:'',dueRule:'after',dueN:'',dueDay:'',minPct:'',reward:'',color:COLORS[cards.length%COLORS.length],annualFee:'',feeMonth:1,waiveTarget:''};
+  $('#cardSheetTitle').textContent = edit?'Sửa thẻ':'Thêm thẻ';
+  $('#cId').value=edit?c.id:''; $('#cName').value=c.name; $('#cBank').value=BANKS[c.bank]?c.bank:'OTHER'; $('#cLast4').value=c.last4||'';
+  $('#cLimit').value=c.limit?Number(c.limit).toLocaleString('vi-VN'):''; $('#cStmt').value=c.stmtDay||''; setDueRule(c.dueRule||'after');
+  $('#cDueN').value=c.dueN||''; $('#cDueDay').value=c.dueDay||''; $('#cMin').value=c.minPct!==''&&c.minPct!=null?String(c.minPct).replace('.',','):'';
+  $('#cReward').value=c.reward||''; const r=document.querySelector(`#cColors input[value="${c.color}"]`); if(r) r.checked=true;
+  $('#cFee').value=c.annualFee?Number(c.annualFee).toLocaleString('vi-VN'):''; $('#cFeeMonth').value=c.feeMonth||1; $('#cWaive').value=c.waiveTarget?Number(c.waiveTarget).toLocaleString('vi-VN'):'';
+  $('#btnDeleteCard').classList.toggle('hidden',!edit); updBankHint(); updDuePreview(); openSheetEl('#cardSheet');
+}
+$('#btnNewCard').addEventListener('click',()=>openCardSheet());
+$('#cardForm').addEventListener('submit', e=>{ e.preventDefault();
+  const f=formCard();
+  if(!(f.stmtDay>=1&&f.stmtDay<=31)){ alert('Ngày sao kê phải từ 1 đến 31.'); return; }
+  if(dueRule==='after' && !(f.dueN>=1&&f.dueN<=45)){ alert('Số ngày sau sao kê phải từ 1 đến 45.'); return; }
+  if(dueRule==='fixed' && !(f.dueDay>=1&&f.dueDay<=31)){ alert('Ngày đến hạn phải từ 1 đến 31.'); return; }
+  const id=$('#cId').value;
+  const c={id:id||uid(), name:$('#cName').value.trim(), bank:$('#cBank').value, last4:$('#cLast4').value.replace(/\D/g,'').slice(-4),
+    limit:parseNum($('#cLimit').value), ...f, minPct:parseDec($('#cMin').value), reward:$('#cReward').value.trim(),
+    color:(document.querySelector('#cColors input:checked')||{}).value||COLORS[0], annualFee:parseNum($('#cFee').value), feeMonth:Number($('#cFeeMonth').value)||1, waiveTarget:parseNum($('#cWaive').value),
+    created: id?(cardById(id)?.created||Date.now()):Date.now()};
+  if(!c.name){ alert('Nhập tên gợi nhớ cho thẻ.'); return; }
+  if(id) cards=cards.map(x=>x.id===id?c:x); else cards.push(c);
+  save(LS.cards,cards); closeSheet(); renderCards(); toast(id?'Đã cập nhật thẻ':'Đã thêm thẻ');
+});
+$('#btnDeleteCard').addEventListener('click',()=>{ const id=$('#cId').value; if(!confirm('Xóa thẻ này và toàn bộ giao dịch của thẻ?')) return; cards=cards.filter(c=>c.id!==id); txns=txns.filter(t=>t.cardId!==id); save(LS.cards,cards); save(LS.txns,txns); closeSheet(); renderCards(); toast('Đã xóa thẻ'); });
+
+/* --- Sheets: giao dịch --- */
+let txType='spend';
+function setTxType(v){ txType=v; document.querySelectorAll('#txTypeSeg button').forEach(b=>b.classList.toggle('on',b.dataset.v===v)); $('#tOrderWrap').classList.toggle('hidden',v!=='spend'); updTxCycle(); }
+document.querySelectorAll('#txTypeSeg button').forEach(b=>b.addEventListener('click',()=>setTxType(b.dataset.v)));
+function updTxCycle(){ const c=cardById($('#tCard').value); const d=$('#tDate').value; if(!c||!d){ $('#tCycle').textContent=''; return; }
+  const n=dParse(d), S=stmtOnOrAfter(c,n);
+  if (txType==='spend') $('#tCycle').textContent = `→ Thuộc kỳ sao kê ${dShowY(S)}, hạn thanh toán ${dShowY(dueFor(c,S))} (${dueFor(c,S)-n} ngày miễn lãi).`;
+  else { const st=cardStatus(c, todayN()); $('#tCycle').textContent = st.last.amount? `Kỳ ${dShow(st.last.S)} còn phải trả ${fmtVND(st.last.amount)} (hạn ${dShow(st.last.due)}). Tổng dư nợ ${fmtVND(st.bal)}.` : `Tổng dư nợ hiện tại ${fmtVND(st.bal)}.`; } }
+$('#tCard').addEventListener('change',updTxCycle); $('#tDate').addEventListener('input',updTxCycle);
+function openTxSheet(t, pre){
+  if(!cards.length){ toast('Hãy thêm thẻ trước'); cardView='list'; renderCards(); return; }
+  const edit=!!t; t = t || {type:pre?.type||'spend', cardId:pre?.cardId||cards[0].id, date:todayISO(), amount:'', note:'', orderId:''};
+  $('#txSheetTitle').textContent = edit?'Sửa giao dịch':(t.type==='payment'?'Thanh toán thẻ':'Thêm chi tiêu');
+  $('#tCard').innerHTML = cards.map(c=>`<option value="${c.id}">${cardLabel(c)}</option>`).join('');
+  $('#tOrder').innerHTML = `<option value="">— Không liên kết —</option>` + [...orders].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).map(o=>`<option value="${o.id}">${fmtDate(o.date)} · ${esc((o.name||'Đơn').slice(0,40))} · ${fmtVND(o.value)}</option>`).join('');
+  $('#tId').value=edit?t.id:''; $('#tCard').value=t.cardId; $('#tDate').value=t.date; $('#tAmt').value=t.amount?Number(t.amount).toLocaleString('vi-VN'):''; $('#tNote').value=t.note||''; $('#tOrder').value=t.orderId||'';
+  $('#btnDeleteTx').classList.toggle('hidden',!edit); setTxType(t.type); openSheetEl('#txSheet');
+}
+$('#tOrder').addEventListener('change',()=>{ const o=orders.find(x=>x.id===$('#tOrder').value); if(o){ if(!parseNum($('#tAmt').value)) $('#tAmt').value=Number(o.value||0).toLocaleString('vi-VN'); if(!$('#tNote').value) $('#tNote').value=o.name||''; if(o.date) $('#tDate').value=o.date; updTxCycle(); } });
+$('#btnNewSpend').addEventListener('click',()=>openTxSheet(null,{type:'spend', cardId:$('#txCardFilter').value||undefined}));
+$('#btnNewPay').addEventListener('click',()=>openTxSheet(null,{type:'payment', cardId:$('#txCardFilter').value||undefined}));
+$('#txForm').addEventListener('submit', e=>{ e.preventDefault();
+  const amt=parseNum($('#tAmt').value); if(!amt){ alert('Nhập số tiền.'); return; }
+  const id=$('#tId').value;
+  const t={id:id||uid(), type:txType, cardId:$('#tCard').value, date:$('#tDate').value||todayISO(), amount:amt, note:$('#tNote').value.trim(), orderId: txType==='spend'? $('#tOrder').value : '', created: id?(txns.find(x=>x.id===id)?.created||Date.now()):Date.now()};
+  if(id) txns=txns.map(x=>x.id===id?t:x); else txns.push(t);
+  save(LS.txns,txns); closeSheet(); renderCards(); toast(t.type==='payment'?'Đã ghi thanh toán':'Đã ghi chi tiêu');
+});
+$('#btnDeleteTx').addEventListener('click',()=>{ const id=$('#tId').value; if(!confirm('Xóa giao dịch này?')) return; txns=txns.filter(t=>t.id!==id); save(LS.txns,txns); closeSheet(); renderCards(); toast('Đã xóa giao dịch'); });
+
+/* --- Sự kiện chung --- */
+document.querySelectorAll('#cardSeg button').forEach(b=>b.addEventListener('click',()=>{ cardView=b.dataset.v; renderCards(); }));
+$('#recThr').addEventListener('change',()=>{ cardPrefs.utilThreshold=Number($('#recThr').value); save(LS.cardPrefs,cardPrefs); renderOverview(todayN()); });
+$('#txCardFilter').addEventListener('change',renderTx);
+$('#scr-cards').addEventListener('click', e=>{ const b=e.target.closest('button'); if(!b) return;
+  if(b.dataset.cedit) openCardSheet(cardById(b.dataset.cedit));
+  if(b.dataset.cspend) openTxSheet(null,{type:'spend',cardId:b.dataset.cspend});
+  if(b.dataset.cpay) openTxSheet(null,{type:'payment',cardId:b.dataset.cpay});
+  if(b.dataset.tedit) openTxSheet(txns.find(t=>t.id===b.dataset.tedit));
+});
+document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',closeSheet));
+
+/* ---------- Điều hướng ---------- */
+const TITLES = {convert:['Đổi link hoàn tiền','Dán link sản phẩm → link affiliate của bạn'], orders:['Đơn hàng & tiền hoàn','Theo dõi tiền hoàn theo tháng'], settings:['Cài đặt','Link affiliate & sao lưu dữ liệu'], cards:['Thẻ tín dụng','Kỳ sao kê, hạn thanh toán & dòng tiền']};
+function switchTab(t){
+  document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active', b.dataset.tab===t));
+  document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active', s.id==='scr-'+t));
+  $('#hdrTitle').textContent=TITLES[t][0]; $('#hdrSub').textContent=TITLES[t][1];
+  if(t==='orders') renderOrders(); if(t==='cards') renderCards(); if(t==='settings'){ renderSettings(); renderDataInfo(); }
+  window.scrollTo(0,0);
+}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
+function renderAll(){ renderRecent(); renderOrders(); renderSettings(); renderDataInfo(); renderCards(); }
+renderAll();
+if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+</body>
+</html>
