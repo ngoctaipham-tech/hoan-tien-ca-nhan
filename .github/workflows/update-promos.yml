@@ -1,0 +1,54 @@
+name: Cập nhật ưu đãi thẻ
+
+on:
+  schedule:
+    - cron: "0 23 * * *"   # 06:00 giờ Việt Nam
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-promos
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Cài thư viện
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Lấy ưu đãi từ trang ngân hàng
+        env:
+          TZ: Asia/Ho_Chi_Minh
+        run: python scripts/update_promos.py
+      - name: Tóm tắt
+        if: always()
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          s = json.load(open("data/update_status.json"))
+          print("| Ngân hàng | Trạng thái | Số ưu đãi | Ghi chú |\n|---|---|---|---|")
+          for k, v in s["banks"].items():
+              print(f"| {v.get('bank', k)} | {v.get('status')} | {v.get('count', '')} | {(v.get('message') or '').replace('|', '/')[:120]} |")
+          PY
+      - name: Commit nếu dữ liệu thay đổi
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/promos.json data/update_status.json
+          if git diff --cached --quiet; then
+            echo "Không có thay đổi"
+          else
+            git commit -m "Cập nhật ưu đãi thẻ $(TZ=Asia/Ho_Chi_Minh date +'%Y-%m-%d %H:%M')"
+            git pull --rebase origin main
+            git push
+          fi

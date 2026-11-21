@@ -1,0 +1,1679 @@
+{
+ "updated_at": "2026-11-21T10:32:00+07:00",
+ "count": 102,
+ "promos": [
+  {
+   "id": "techcombank-6f114f15fa",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Giảm đến 5 triệu khi mua dòng iPhone 18/ iPhone Duo bằng thẻ tín dụng Techcombank",
+   "category": "shopee",
+   "merchant": "CellphoneS, Hoàng Hà Mobile, FPT Shop, Thế giới di động, Shopee",
+   "discount_desc_vi": "Giảm đến 5 triệu khi mua dòng iPhone 18/ iPhone Duo bằng thẻ tín dụng Techcombank",
+   "valid_from": "2026-09-12",
+   "valid_to": "2026-11-30",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/giam-den-3-trieu-khi-mua-dong-iphone-18-bang-the-tin-dung-techcombank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-19f64c271b",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Giao dịch tháng 11, nhận quà liền tay",
+   "category": "khac",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "nhận quà liền tay",
+   "valid_from": "2026-11-03",
+   "valid_to": "2026-11-30",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/chuong-trinh-giao-dich-thang-11-nhan-qua-lien-tay",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-b7e043ec7b",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Ưu đãi thẻ One Card - Giảm 300.000 VNĐ tại chuỗi nhà hàng Golden Gate",
+   "category": "an_uong",
+   "merchant": null,
+   "discount_desc_vi": "Ưu đãi thẻ One Card - Giảm 300.000 VNĐ tại chuỗi nhà hàng Golden Gate",
+   "valid_from": "2026-08-07",
+   "valid_to": "2026-11-30",
+   "url": "https://www.vib.com.vn/vn/promotion/details/uu-dai-the-one-card-giam-300000-vnd-tai-chuoi-nha-hang-golden-gate",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "hdbank-055862245d",
+   "bank": "HDBank",
+   "bank_key": "hdbank",
+   "card_ids": [
+    "hdbank-petrolimex-4in1"
+   ],
+   "title_vi": "NGÀY HỘI HDAY HƯỞNG TRỌN ĐẶC QUYỀN THẺ",
+   "category": "tra_gop",
+   "merchant": null,
+   "discount_desc_vi": "Trả góp 0% lãi suất",
+   "valid_from": "2026-01-04",
+   "valid_to": "2026-12-05",
+   "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/ngay-hoi-hday-huong-tron-dac-quyen-the",
+   "fetched_at": "2026-11-21T10:32:00+07:00"
+  },
+  {
+   "id": "vpbank-9f70823eb8",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "VPBank Travel Day - Deal hời thẻ tín dụng",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "VPBank Travel Day - Deal hời thẻ tín dụng",
+   "valid_from": "2026-02-10",
+   "valid_to": "2026-12-11",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/vpbank-travel-day-2026",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-ef6cd18763",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Giảm đến 100 USD khi mua vé Singapore Airlines bằng thẻ tín dụng Techcombank",
+   "category": "ve_may_bay",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "Giảm đến 100 USD khi mua vé Singapore Airlines bằng thẻ tín dụng Techcombank",
+   "valid_from": "2026-09-16",
+   "valid_to": "2026-12-15",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/giam-den-100-usd-khi-mua-ve-singapore-airlines-bang-the-tin-dung-techcombank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-7ea201c731",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Ngày hội chi tiêu thẻ tín dụng VIB 2026",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Ngày hội chi tiêu thẻ tín dụng VIB 2026",
+   "valid_from": "2026-01-16",
+   "valid_to": "2026-12-20",
+   "url": "https://www.vib.com.vn/vn/promotion/details/ngay-hoi-chi-tieu-the-tin-dung-2026",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "mbbank-91741fc33d",
+   "bank": "MB",
+   "bank_key": "mbbank",
+   "card_ids": [
+    "mb-priority-visa-signature"
+   ],
+   "title_vi": "Giảm ngay đến 5 triệu khi mua iPhone 18 Pro Series, Iphone Duo dành cho chủ thẻ tín dụng MB",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "tặng ưu đãi giảm ngay đến 5 triệu đồng cho khách hàng tại các cửa hàng đối tác chính thức và thanh toán bằng thẻ tín dụng MB",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://www.mbbank.com.vn/ca-nhan/khach-hang-ca-nhan/uu-dai/the/giam-ngay-den-5-trieu-khi-mua-iphone-18-pro-series-iphone-duo-danh-cho-chu-the-tin-dung-mb",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "tpbank-62311e0ae2",
+   "bank": "TPBank",
+   "bank_key": "tpbank",
+   "card_ids": [
+    "tpbank-evo"
+   ],
+   "title_vi": "Giảm 500.000 VNĐ cho hóa đơn từ 2.000.000 VNĐ với Thẻ TPBank",
+   "category": "an_uong",
+   "merchant": "Golden Gate",
+   "discount_desc_vi": "Giảm 500.000 VNĐ cho hóa đơn từ 2.000.000 VNĐ với Thẻ TPBank",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-12-31",
+   "url": "https://tpb.vn/khuyen-mai/the-tin-dung/giam-500000-vnd-cho-hoa-don-tu-2000000-vnd-voi-the-tpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "tpbank-3122ddc264",
+   "bank": "TPBank",
+   "bank_key": "tpbank",
+   "card_ids": [
+    "tpbank-evo"
+   ],
+   "title_vi": "Chương trình Miễn phí sử dụng Phòng Chờ dành cho thẻ tín dụng TPBank 2026",
+   "category": "du_lich",
+   "merchant": null,
+   "discount_desc_vi": "Miễn phí sử dụng Phòng Chờ dành cho thẻ tín dụng TPBank 2026",
+   "valid_from": "2026-01-01",
+   "valid_to": "2026-12-31",
+   "url": "https://tpb.vn/khuyen-mai/the-tin-dung/chuong-trinh-mien-phi-su-dung-phong-cho-danh-cho-the-tin-dung-tpbank-2026",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "tpbank-fb4c714205",
+   "bank": "TPBank",
+   "bank_key": "tpbank",
+   "card_ids": [
+    "tpbank-evo"
+   ],
+   "title_vi": "Giảm 1 triệu khi mua iPhone Duo & iPhone 18 với thẻ TPBank",
+   "category": "khac",
+   "merchant": "FPT store",
+   "discount_desc_vi": "Giảm 1 triệu khi mua iPhone Duo & iPhone 18 với thẻ TPBank",
+   "valid_from": "2026-10-16",
+   "valid_to": "2026-12-31",
+   "url": "https://tpb.vn/khuyen-mai/the-tin-dung/giam-6-trieu-khi-mua-iphone-duo-voi-the-tpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "tpbank-6c3417feb3",
+   "bank": "TPBank",
+   "bank_key": "tpbank",
+   "card_ids": [
+    "tpbank-evo"
+   ],
+   "title_vi": "Giảm đến 2 TRIỆU cùng thẻ TPBank",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm đến 2 TRIỆU cùng thẻ TPBank",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://tpb.vn/khuyen-mai/the-tin-dung/giam-den-2-trieu-cung-the-tpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "tpbank-88349f9f7d",
+   "bank": "TPBank",
+   "bank_key": "tpbank",
+   "card_ids": [
+    "tpbank-evo"
+   ],
+   "title_vi": "Viettel Digital Services | Hoàn 50% khi thanh toán tiện ích điện, nước & gas",
+   "category": "khac",
+   "merchant": "Viettel Digital Service",
+   "discount_desc_vi": "Hoàn 50% khi thanh toán tiện ích điện, nước & gas",
+   "valid_from": "2026-01-01",
+   "valid_to": "2026-12-31",
+   "url": "https://tpb.vn/khuyen-mai/the-tin-dung/viettel-evo-2026",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "tpbank-1ee480e717",
+   "bank": "TPBank",
+   "bank_key": "tpbank",
+   "card_ids": [
+    "tpbank-evo"
+   ],
+   "title_vi": "Thế giới di động | Ưu đãi tới 700.000 VND khi thanh toán với thẻ tín dụng TPBank EVO",
+   "category": "khac",
+   "merchant": "Thế giới di động",
+   "discount_desc_vi": "Ưu đãi tới 700.000 VND khi thanh toán với thẻ tín dụng TPBank EVO",
+   "valid_from": "2026-01-01",
+   "valid_to": "2026-12-31",
+   "url": "https://tpb.vn/khuyen-mai/the-tin-dung/evo-tgdd-2026",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "tpbank-5aed60756e",
+   "bank": "TPBank",
+   "bank_key": "tpbank",
+   "card_ids": [
+    "tpbank-evo"
+   ],
+   "title_vi": "FPT Shop | Bộ đôi ưu đãi khi giao dịch với thẻ tín dụng TPBank EVO",
+   "category": "khac",
+   "merchant": "FPT Shop",
+   "discount_desc_vi": "ưu đãi khi giao dịch với thẻ tín dụng TPBank EVO",
+   "valid_from": "2026-01-01",
+   "valid_to": "2026-12-31",
+   "url": "https://tpb.vn/khuyen-mai/the-tin-dung/the-evo-fpt-shop-2026",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "tpbank-fe633909ad",
+   "bank": "TPBank",
+   "bank_key": "tpbank",
+   "card_ids": [
+    "tpbank-evo"
+   ],
+   "title_vi": "Thẻ tín dụng TPBank Visa | Tổng hợp ưu đãi hấp dẫn",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "ưu đãi hấp dẫn",
+   "valid_from": "2026-01-01",
+   "valid_to": "2026-12-31",
+   "url": "https://tpb.vn/khuyen-mai/the-tin-dung/thecredit-tpbank-visa",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "tpbank-b622be9755",
+   "bank": "TPBank",
+   "bank_key": "tpbank",
+   "card_ids": [
+    "tpbank-evo"
+   ],
+   "title_vi": "Ticketbox | Giảm tới 50% mua vé Concert & Nghệ thuật",
+   "category": "giai_tri",
+   "merchant": "Ticketbox",
+   "discount_desc_vi": "Giảm tới 50% mua vé Concert & Nghệ thuật",
+   "valid_from": "2026-01-01",
+   "valid_to": "2026-12-31",
+   "url": "https://tpb.vn/khuyen-mai/the-tin-dung/ticketbox-giam-50-voi-the-mastercard-fest",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-78e26ebed7",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "0đ phí giao dịch ngoại tệ khi chi tiêu tại Châu Á",
+   "category": "khac",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "0đ phí giao dịch ngoại tệ khi chi tiêu tại Châu Á",
+   "valid_from": "2026-06-08",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/0-dong-phi-giao-dich-ngoai-te-khi-chi-tieu-tai-chau-a",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-f240a97006",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Ưu đãi tới 30% khi tận hưởng mua sắm, làm đẹp, giải trí, ăn uống tại Hàn Quốc",
+   "category": "an_uong",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "Ưu đãi tới 30% khi tận hưởng mua sắm, làm đẹp, giải trí, ăn uống tại Hàn Quốc",
+   "valid_from": "2026-04-24",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-khi-lam-dep-mua-sam-tai-han-quoc",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-dc783317af",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Ưu đãi tới 15% cùng thẻ Techcombank cho mua sắm, ăn uống tại Nhật Bản",
+   "category": "an_uong",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "Ưu đãi tới 15% cùng thẻ Techcombank cho mua sắm, ăn uống tại Nhật Bản",
+   "valid_from": "2026-04-24",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-cung-the-techcombank-cho-mua-sam-an-uong-tai-nhat-ban",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-43b73370e7",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Chương trình Mở mới tài khoản, Mua sắm hoàn điểm thưởng",
+   "category": "khac",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "hoàn điểm thưởng",
+   "valid_from": "2026-11-18",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-moi-tai-khoan-mua-sam-hoan-diem-thuong",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-bbacdcfdd2",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Giảm ngay 1,000,000 VND khi trả góp tại Điện Máy Xanh, Thế Giới Di Động và TopZone bằng thẻ tín dụng Techcombank",
+   "category": "tra_gop",
+   "merchant": "Điện Máy Xanh, Thế giới di động",
+   "discount_desc_vi": "Giảm ngay 1,000,000 VND khi trả góp tại Điện Máy Xanh, Thế Giới Di Động và TopZone bằng thẻ tín dụng Techcombank",
+   "valid_from": "2026-10-21",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-khi-tra-gop-tai-dien-may-xanh-the-gioi-di-dong-topzone-bang-the-tin-dung-techcombank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-a4ad04c14b",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Giảm ngay 500,000 VND khi trả góp bằng thẻ tín dụng Techcombank tại CellphoneS",
+   "category": "tra_gop",
+   "merchant": "CellphoneS",
+   "discount_desc_vi": "Giảm ngay 500,000 VND khi trả góp bằng thẻ tín dụng Techcombank tại CellphoneS",
+   "valid_from": "2026-10-14",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/giam-ngay-500000-vnd-khi-tra-gop-bang-the-tin-dung-techcombank-tai-cellphones",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-e3b15762b5",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Nhận ưu đãi đến 700,000 VND khi trả góp trên Shopee bằng thẻ tín dụng Techcombank",
+   "category": "shopee",
+   "merchant": "Shopee",
+   "discount_desc_vi": "Nhận ưu đãi đến 700,000 VND khi trả góp trên Shopee bằng thẻ tín dụng Techcombank",
+   "valid_from": "2026-09-30",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/nhan-uu-dai-den-700000d-khi-tra-gop-tren-shopee-bang-the-tin-dung-techcombank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-d312f7748d",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "​Du lịch Trung Quốc - Siêu ưu đãi Thứ Ba tại Trip.com",
+   "category": "du_lich",
+   "merchant": "Trip",
+   "discount_desc_vi": "ưu đãi Thứ Ba tại Trip",
+   "valid_from": "2026-09-08",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/du-lich-trung-quoc-sieu-uu-dai-thu-ba",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-855ea7052e",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Ưu đãi trả góp 0% lãi suất 0% phí tại đối tác Shopee",
+   "category": "shopee",
+   "merchant": "Shopee",
+   "discount_desc_vi": "Ưu đãi trả góp 0% lãi suất 0% phí tại đối tác Shopee",
+   "valid_from": "2026-07-31",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tra-gop-tai-doi-tac-shopee-cho-chu-the-tin-dung-techcombank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-a531a5098c",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Giảm 15% khi mua vé máy bay tại China Airlines",
+   "category": "ve_may_bay",
+   "merchant": "China Airlines",
+   "discount_desc_vi": "Giảm 15% khi mua vé máy bay tại China Airlines",
+   "valid_from": "2026-07-21",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-techcombank-khi-mua-ve-may-bay-tai-china-airlines-072026",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-1d334a919d",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Thúc đẩy chi tiêu – Gia tăng gắn kết",
+   "category": "khac",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "Thúc đẩy chi tiêu – Gia tăng gắn kết",
+   "valid_from": "2026-07-16",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/chuong-trinh-thuc-day-chi-tieu-gia-tang-gan-ket",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-589513c3f0",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Trả góp lãi suất 0%, miễn phí phí chuyển đổi trả góp cho chủ thẻ tín dụng Techcombank tại Panasonic",
+   "category": "tra_gop",
+   "merchant": "Panasonic",
+   "discount_desc_vi": "Trả góp lãi suất 0%, miễn phí phí chuyển đổi trả góp cho chủ thẻ tín dụng Techcombank tại Panasonic",
+   "valid_from": "2026-06-08",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/mien-phi-phi-chuyen-doi-tra-gop-cho-chu-the-tin-dung-techcombank-tai-panasonic",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-6e18d2f924",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Trả góp lãi suất 0%, miễn phí phí chuyển đổi trả góp cho chủ thẻ tín dụng Techcombank tại Oneway Mobile",
+   "category": "tra_gop",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "Trả góp lãi suất 0%, miễn phí phí chuyển đổi trả góp cho chủ thẻ tín dụng Techcombank tại Oneway Mobile",
+   "valid_from": "2026-06-08",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-chuyen-doi-tra-gop-tai-oneway-mobile",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-d46e4d9d53",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Hoàn 1% phí chuyển đổi trả góp, nhận đến 1 triệu U-Point dành cho hội viên Inspire",
+   "category": "tra_gop",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "Hoàn 1% phí chuyển đổi trả góp, nhận đến 1 triệu U-Point dành cho hội viên Inspire",
+   "valid_from": "2026-06-08",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/hoan-phi-chuyen-doi-tra-gop-nhan-trieu-u-point-danh-cho-hoi-vien-inspire",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-7c9144467a",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Mở thẻ tín dụng nhận hoàn điểm U-Point",
+   "category": "khac",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "nhận hoàn điểm U-Point",
+   "valid_from": "2026-06-08",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/mo-the-tin-dung-nhan-hoan-diem-upoint-072026",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-91ec96cd6b",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Trả góp lãi suất 0%, miễn phí phí chuyển đổi trả góp cho chủ thẻ tín dụng Techcombank tại FUJI LUXURY",
+   "category": "tra_gop",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "Trả góp lãi suất 0%, miễn phí phí chuyển đổi trả góp cho chủ thẻ tín dụng Techcombank tại FUJI LUXURY",
+   "valid_from": "2026-05-20",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-phi-chuyen-doi-tra-gop-cho-chu-the-tin-dung-techcombank-tai-fuji-luxury",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-bc0b97bbd8",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Trả góp lãi suất 0%, miễn phí phí chuyển đổi trả góp cho chủ thẻ tín dụng Techcombank tại GALLE WATCH",
+   "category": "tra_gop",
+   "merchant": "Galle Watch",
+   "discount_desc_vi": "Trả góp lãi suất 0%, miễn phí phí chuyển đổi trả góp cho chủ thẻ tín dụng Techcombank tại GALLE WATCH",
+   "valid_from": "2026-05-20",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-phi-chuyen-doi-tra-gop-cho-chu-the-tin-dung-techcombank-tai-galle-watch",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-358e0a0f40",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Ăn chơi Singapore - Tiết kiệm siêu hời",
+   "category": "khac",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "Ăn chơi Singapore - Tiết kiệm siêu hời",
+   "valid_from": "2026-05-06",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-cung-the-techcombank-cho-mua-sam-an-uong-tai-singapore",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-e75693b704",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Trả góp lãi suất 0%, miễn phí phí chuyển đổi trả góp cho chủ thẻ tín dụng Techcombank tại SHOPDUNK",
+   "category": "tra_gop",
+   "merchant": "Shopdunk",
+   "discount_desc_vi": "Trả góp lãi suất 0%, miễn phí phí chuyển đổi trả góp cho chủ thẻ tín dụng Techcombank tại SHOPDUNK",
+   "valid_from": "2026-04-29",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/shopdunk-tra-gop-lai-suat-0-mien-phi-phi-chuyen-doi-tra-gop-cho-chu-the-tin-dung-techcombank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-02885ddae9",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Ăn ngon - Mua chất, giảm đến 30% tại Trung Quốc, Đài Loan, Hongkong",
+   "category": "khac",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "giảm đến 30% tại Trung Quốc, Đài Loan, Hongkong",
+   "valid_from": "2026-04-24",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-cung-the-techcombank-cho-mua-sam-an-uong-tai-trung-quoc-dai-loan-hong-kong",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-fb5d41d0b3",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Du hí Thái Lan - Giảm đến 30% mọi trải nghiệm",
+   "category": "khac",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "Giảm đến 30% mọi trải nghiệm",
+   "valid_from": "2026-04-24",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tai-thai-lan-cho-di-chuyen-spa-an-uong-bang-the-techcombank-visa",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-56e8a535ca",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Trả góp lãi suất 0% và miễn phí chuyển đổi tại phòng khám Nguyễn Mai Châu",
+   "category": "y_te",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "Trả góp lãi suất 0% và miễn phí chuyển đổi tại phòng khám Nguyễn Mai Châu",
+   "valid_from": "2026-03-24",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/mien-phi-tra-gop-va-chuyen-doi-tai-phong-kham-nguyen-mai-chau",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-aebbc9b877",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "STARLUX AIRLINES giảm không giới hạn 5% khi đặt vé máy bay tại Starlux Airlines",
+   "category": "ve_may_bay",
+   "merchant": "Starlux Airlines",
+   "discount_desc_vi": "giảm không giới hạn 5% khi đặt vé máy bay tại Starlux Airlines",
+   "valid_from": "2026-01-21",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/giam-khong-gioi-han-5-khi-dat-ve-may-bay-tai-starlux-airlines",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-608b3e4e2d",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Ưu đãi trả góp 0% lãi suất 0% phí tại đối tác Digibox",
+   "category": "tra_gop",
+   "merchant": "Digibox",
+   "discount_desc_vi": "Ưu đãi trả góp 0% lãi suất 0% phí tại đối tác Digibox",
+   "valid_from": "2025-11-26",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tra-gop-0-phan-tram-lai-suat-0-phan-tram-phi-tai-doi-tac-digibox",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-38e728d3aa",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Ưu đãi trả góp 0% lãi suất 0% phí tại đối tác Apollo",
+   "category": "giao_duc",
+   "merchant": "Apollo",
+   "discount_desc_vi": "Ưu đãi trả góp 0% lãi suất 0% phí tại đối tác Apollo",
+   "valid_from": "2025-11-22",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tra-gop-0-phan-tram-lai-suat-0-phan-tram-phi-tai-doi-tac-apollo",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-97b0c590b4",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Ưu đãi trả góp 0% lãi suất 0% phí tại đối tác Lazada",
+   "category": "mua_online",
+   "merchant": "Lazada",
+   "discount_desc_vi": "Ưu đãi trả góp 0% lãi suất 0% phí tại đối tác Lazada",
+   "valid_from": "2025-11-22",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tra-gop-0-phan-tram-lai-suat-0-phan-tram-phi-tai-doi-tac-lazada",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-3c63f8373d",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Ưu đãi trả góp 0% lãi suất 0% phí tại đối tác CellphoneS",
+   "category": "tra_gop",
+   "merchant": "CellphoneS",
+   "discount_desc_vi": "Ưu đãi trả góp 0% lãi suất 0% phí tại đối tác CellphoneS",
+   "valid_from": "2025-11-22",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tra-gop-0-phan-tram-lai-suat-0-phan-tram-phi-tai-doi-tac-cellphones",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-9a1bcb0d01",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Ưu đãi trả góp 0% lãi suất 0% phí tại đối tác Điện máy Chợ Lớn",
+   "category": "tra_gop",
+   "merchant": "Điện máy Chợ Lớn",
+   "discount_desc_vi": "Ưu đãi trả góp 0% lãi suất 0% phí tại đối tác Điện máy Chợ Lớn",
+   "valid_from": "2025-11-20",
+   "valid_to": "2026-12-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tra-gop-0-phan-tram-lai-suat-0-phan-tram-phi-tai-doi-tac-dien-may-cho-lon",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-e317010667",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Mua 1 tặng 1 vé xem phim trên MyVIB cùng VIB x VNPAY",
+   "category": "giai_tri",
+   "merchant": null,
+   "discount_desc_vi": "tặng 1 vé xem phim trên MyVIB cùng VIB x VNPAY",
+   "valid_from": "2026-10-09",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/mua-1-tang-1-ve-xem-phim-tren-myvib-cung-vib-x-vnpay",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-118b3c05e1",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Giao dịch quốc tế 0% phí với thẻ VIB",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giao dịch quốc tế 0% phí với thẻ VIB",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/giao-dich-quoc-te-0-phi-voi-the-vib",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-06ccd1bfec",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Giảm đến 2 triệu đồng khi mua iPhone 18 Pro, iPhone 18 Pro Max và iPhone Duo bằng thẻ tín dụng VIB",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm đến 2 triệu đồng khi mua iPhone 18 Pro, iPhone 18 Pro Max và iPhone Duo bằng thẻ tín dụng VIB",
+   "valid_from": "2026-09-12",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/giam-den-2-trieu-dong-khi-mua-iphone-18-series-bang-the-tin-dung-vib",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-0a8e4bf948",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Chi tiêu thẻ tín dụng VIB, nhận hoàn tiền đến 2.500.000 VNĐ",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "nhận hoàn tiền đến 2.500.000 VNĐ",
+   "valid_from": "2026-08-04",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/chi-tieu-the-tin-dung-vib-nhan-hoan-tien-den-2500000-vnd",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-9ea8626697",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Liên kết ví, thanh toán không chạm cùng thẻ VIB, hoàn tiền đến 300.000 VNĐ",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "hoàn tiền đến 300.000 VNĐ",
+   "valid_from": "2026-07-01",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/lien-ket-vi-thanh-toan-khong-cham-cung-the-vib-hoan-tien-den-300000-vnd",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-41efcfda79",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Giảm đến 30% khi thanh toán dịch vụ Green SM bằng thẻ tín dụng VIB",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm đến 30% khi thanh toán dịch vụ Green SM bằng thẻ tín dụng VIB",
+   "valid_from": "2026-06-01",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/giam-den-30-khi-thanh-toan-dich-vu-green-sm-bang-the-tin-dung-vib",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-74025fbf30",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Giảm 50.000 VNĐ trên ShopeeFood cho thẻ tín dụng VIB",
+   "category": "an_uong",
+   "merchant": null,
+   "discount_desc_vi": "Giảm 50.000 VNĐ trên ShopeeFood cho thẻ tín dụng VIB",
+   "valid_from": "2026-05-29",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/giam-50000-vnd-tren-shopeefood-cho-the-tin-dung-vib",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-329402f246",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Giảm 20% khi mua sắm trên Shopee 2026 bằng thẻ tín dụng VIB",
+   "category": "shopee",
+   "merchant": null,
+   "discount_desc_vi": "Giảm 20% khi mua sắm trên Shopee 2026 bằng thẻ tín dụng VIB",
+   "valid_from": "2026-04-03",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/giam-20-phan-tram-khi-mua-sam-tren-shopee-2026-bang-the-tin-dung-vib",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-ed53100331",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Hội thẻ VIB - Kết nối Thẻ, kết đặc quyền",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Hội thẻ VIB - Kết nối Thẻ, kết đặc quyền",
+   "valid_from": "2025-02-05",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/4394318",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-6b01ffedb7",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Trả góp rẻ hơn trả thẳng - Giảm 1.000.000đ cho đơn hàng Trả góp từ 30.000.000đ cùng thẻ tín dụng VPBank",
+   "category": "tra_gop",
+   "merchant": null,
+   "discount_desc_vi": "Trả góp rẻ hơn trả thẳng - Giảm 1.000.000đ cho đơn hàng Trả góp từ 30.000.000đ cùng thẻ tín dụng VPBank",
+   "valid_from": "2026-09-22",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/tra-gop-re-hon-tra-thang-giam-1000000d-cho-don-hang-tra-gop-tu-30000000d-cung-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-71dfe61758",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "CHIA NHỎ ĐỂ CHILL TO: TRẢ GÓP 0% LÃI SUẤT & GIẢM TRỰC TIẾP ĐẾN 2.000.000Đ CÙNG THẺ TÍN DỤNG VPBANK",
+   "category": "tra_gop",
+   "merchant": null,
+   "discount_desc_vi": "CHIA NHỎ ĐỂ CHILL TO: TRẢ GÓP 0% LÃI SUẤT & GIẢM TRỰC TIẾP ĐẾN 2.000.000Đ CÙNG THẺ TÍN DỤNG VPBANK",
+   "valid_from": "2026-09-22",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/chia-nho-de-chill-to-tra-gop-0-lai-suat-giam-truc-tiep-den-2000000d-cung-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-83b8af8fc5",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Lên đời iPhone Duo và iPhone 18 Series tại Thế Giới Di Động, Điện Máy Xanh, TopZone, FPT Shop, Viettel Store, CellphoneS, ShopDunk, Hoàng Hà Mobile, Shopee và Lazada cùng thẻ tín dụng VPBank",
+   "category": "shopee",
+   "merchant": null,
+   "discount_desc_vi": "Hoàng Hà Mobile, Shopee và Lazada cùng thẻ tín dụng VPBank",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/cham-tay-sieu-pham-iphone-18-pro-18-pro-max-tai-the-gioi-di-dong-dien-may-xanh-topzone-fpt-shop-viettel-store-cellphones-shopdunk-hoang-ha-mobile-shopee-va-lazada-cung-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-b7d6e0840e",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Lên đời đẳng cấp iPhone 18 Pro|iPhone 18 Pro Max với ưu đãi hấp dẫn tại Hoàng Hà Mobile cùng thẻ tín dụng VPBank",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "ưu đãi hấp dẫn tại Hoàng Hà Mobile cùng thẻ tín dụng VPBank",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/len-doi-dang-cap-iphone-18-pro-iphone-18-pro-max-voi-uu-dai-hap-dan-tai-hoang-ha-mobile-cung-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-4e7a5a0f0d",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Sở hữu iPhone 18 Pro | iPhone 18 Pro Max tại FPT Shop – Đặc quyền dành riêng cho chủ thẻ tín dụng VPBank",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Sở hữu iPhone 18 Pro | iPhone 18 Pro Max tại FPT Shop – Đặc quyền dành riêng cho chủ thẻ tín dụng VPBank",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/so-huu-iphone-18-pro-iphone-18-pro-max-tai-fpt-shop-dac-quyen-danh-rieng-cho-chu-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-8ecd9909c0",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Săn iPhone 18 Pro | iPhone 18 Pro Max tại Viettel Store nhận ưu đãi ngay cùng thẻ tín dụng VPBank",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "nhận ưu đãi ngay cùng thẻ tín dụng VPBank",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/san-iphone-18-pro-iphone-18-pro-max-tai-viettel-store-nhan-uu-dai-ngay-cung-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-80bc3f29d9",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Giảm đến 4.500.000 VNĐ và trả góp 0% lãi suất khi mua iPhone 18 Pro | iPhone 18 Pro Max tại ShopDunk cùng thẻ tín dụng VPBank",
+   "category": "tra_gop",
+   "merchant": null,
+   "discount_desc_vi": "Giảm đến 4.500.000 VNĐ và trả góp 0% lãi suất khi mua iPhone 18 Pro | iPhone 18 Pro Max tại ShopDunk cùng thẻ tín dụng VPBank",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/so-huu-sieu-pham-cong-nghe-iphone-18-tai-shopdunk-cung-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-0f8dd6b7e4",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Lên đời iPhone 18 tại Thế Giới Di Động, Điện Máy Xanh, TopZone cùng thẻ tín dụng VPBank",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Lên đời iPhone 18 tại Thế Giới Di Động, Điện Máy Xanh, TopZone cùng thẻ tín dụng VPBank",
+   "valid_from": "2026-09-12",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/len-doi-iphone-18-tai-the-gioi-di-dong-dien-may-xanh-topzone-cung-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-09189f7746",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Đặc quyền ưu đãi iPhone 18 Pro | iPhone 18 Pro Max tại CellphoneS cùng thẻ tín dụng VPBank",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "ưu đãi iPhone 18 Pro | iPhone 18 Pro Max tại CellphoneS cùng thẻ tín dụng VPBank",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/dac-quyen-uu-dai-iphone-18-series-tai-cellphones-cung-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-e67a3710db",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "TẬN HƯỞNG TRỌN VẸN MỌI HÀNH TRÌNH CÙNG THẺ TÍN DỤNG VPBANK TRÊN BE",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "TẬN HƯỞNG TRỌN VẸN MỌI HÀNH TRÌNH CÙNG THẺ TÍN DỤNG VPBANK TRÊN BE",
+   "valid_from": "2026-08-20",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/exclusive/tan-huong-tron-ven-moi-hanh-trinh-cung-the-tin-dung-vpbank-tren-be",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-6813d1b4c5",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Ưu đãi chi tiêu thẻ tín dụng VPBank Shopee",
+   "category": "shopee",
+   "merchant": null,
+   "discount_desc_vi": "Ưu đãi chi tiêu thẻ tín dụng VPBank Shopee",
+   "valid_from": "2026-06-01",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/other/uu-dai-the-tin-dung-vpbank-shopee-2026",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vietinbank-617d4b1f21",
+   "bank": "VietinBank",
+   "bank_key": "vietinbank",
+   "card_ids": [
+    "vietinbank-jcb-ultimate-saviy"
+   ],
+   "title_vi": "90 ngày đầu tiên – Hành trình mở khóa đặc quyền hoàn tiền đến 3 triệu đồng cùng chủ thẻ VietinBank JCB Ultimate",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "hoàn tiền đến 3 triệu đồng cùng chủ thẻ VietinBank JCB Ultimate",
+   "valid_from": "2026-07-15",
+   "valid_to": "2026-12-31",
+   "url": "https://www.vietinbank.vn/ca-nhan/uu-dai/90-ngay-dau-tien-hanh-trinh-mo-khoa-dac-quyen-hoan-tien-den-3-trieu-dong-cung-chu-the-vietinbank-jcb-ultimate-10-html",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vietinbank-5376e63e28",
+   "bank": "VietinBank",
+   "bank_key": "vietinbank",
+   "card_ids": [
+    "vietinbank-jcb-ultimate-saviy"
+   ],
+   "title_vi": "VIETINBANK ƯU ĐÃI PHÍ CHUYỂN ĐỔI TRẢ GÓP, NHẸ GÁNH CHI TIÊU",
+   "category": "tra_gop",
+   "merchant": null,
+   "discount_desc_vi": "Ưu đãi áp dụng cho các giao dịch thuộc nhóm ngành hàng theo thể lệ chương trình, trải rộng từ giáo dục, mua sắm, du lịch đến bảo hiểm, giúp khách hàng linh hoạt hơn trước nhiều nhu cầu chi tiêu lớn tr",
+   "valid_from": null,
+   "valid_to": "2026-12-31",
+   "url": "https://www.vietinbank.vn/ca-nhan/uu-dai/vietinbank-uu-dai-phi-chuyen-doi-tra-gop-nhe-ganh-chi-tieu-10-html",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vikki-0c8fe21f8d",
+   "bank": "Vikki Bank",
+   "bank_key": "vikki",
+   "card_ids": [
+    "vikkigo-credit",
+    "vikki-skyjoy-credit"
+   ],
+   "title_vi": "CHẠM THẺ VIKKI - IPHONE 18 GIẢM NGAY 2 TRIỆU",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm 2.000.000 đồng mua trực tiếp sản phẩm điện thoại mới của Apple ra mắt từ Tháng 9/2026 & thanh toán bằng thẻ Mastercard Vikki Digital Bank",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://vikkibank.vn/wp-content/uploads/2026/09/260826_Vikki_TnC_iPhone18_updated-reviewed-by-Vikki-v2.pdf",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vikki-0c08219aa4",
+   "bank": "Vikki Bank",
+   "bank_key": "vikki",
+   "card_ids": [
+    "vikkigo-credit",
+    "vikki-skyjoy-credit"
+   ],
+   "title_vi": "Giảm giá 400.000 đồng khi thanh toán tại Viettel Store",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm 400.000 đồng cho hóa đơn trị giá 4.000.000 đồng khi thanh toán bằng thẻ Vikki Digital Bank qua Payoo POS",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://vikkibank.vn/wp-content/uploads/2026/10/Vikki_TnC_Viettel_Store_PY-comment.pdf",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vikki-63972ece59",
+   "bank": "Vikki Bank",
+   "bank_key": "vikki",
+   "card_ids": [
+    "vikkigo-credit",
+    "vikki-skyjoy-credit"
+   ],
+   "title_vi": "Giảm giá 300.000 đồng khi thanh toán tại FPT Shop",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm 300.000 đồng cho hóa đơn trị giá 3.000.000 đồng khi thanh toán bằng thẻ Vikki Digital Bank qua Payoo POS",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://vikkibank.vn/wp-content/uploads/2026/10/Vikki_TnC_FPT-Shop_PY-comment.pdf",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vikki-5f57239202",
+   "bank": "Vikki Bank",
+   "bank_key": "vikki",
+   "card_ids": [
+    "vikkigo-credit",
+    "vikki-skyjoy-credit"
+   ],
+   "title_vi": "Giảm giá 600.000 đồng khi thanh toán tại CellphoneS",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm 600.000 đồng cho hóa đơn trị giá 4.000.000 đồng khi thanh toán bằng thẻ Vikki Digital Bank qua Payoo POS",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://vikkibank.vn/wp-content/uploads/2026/09/Vikki_TnC_Cellphones_PY-comment.pdf",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vikki-e6b65f302e",
+   "bank": "Vikki Bank",
+   "bank_key": "vikki",
+   "card_ids": [
+    "vikkigo-credit",
+    "vikki-skyjoy-credit"
+   ],
+   "title_vi": "Giảm giá 500.000 đồng khi thanh toán tại Hoàng Hà Mobile",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm 500.000 đồng cho hóa đơn trị giá 4.000.000 đồng khi thanh toán bằng thẻ Vikki Digital Bank qua Payoo POS",
+   "valid_from": "2026-09-18",
+   "valid_to": "2026-12-31",
+   "url": "https://vikkibank.vn/wp-content/uploads/2026/10/Vikki_TnC_Hoang-Ha-Mobile_PY-comment.pdf",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-62679ce2ab",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Giảm ngay 500.000 VNĐ khi mua sắm tại Điện Máy Chợ Lớn cùng thẻ VIB Visa",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm ngay 500.000 VNĐ khi mua sắm tại Điện Máy Chợ Lớn cùng thẻ VIB Visa",
+   "valid_from": "2026-11-16",
+   "valid_to": "2027-01-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/uu-dai-giam-gia-khi-mua-sam-tai-dien-may-cho-lon-cung-the-vib-visa",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-3b71cfce33",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Giảm đến 500.000 VNĐ tại Traveloka cùng thẻ VIB Visa",
+   "category": "du_lich",
+   "merchant": null,
+   "discount_desc_vi": "Giảm đến 500.000 VNĐ tại Traveloka cùng thẻ VIB Visa",
+   "valid_from": "2026-11-03",
+   "valid_to": "2027-01-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/uu-dai-giam-gia-tai-traveloka-cung-the-vib-visa",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-a470b5ac4d",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Giảm ngay 500.000 VNĐ khi mua sắm tại Điện Máy Xanh cùng thẻ VIB Visa",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm ngay 500.000 VNĐ khi mua sắm tại Điện Máy Xanh cùng thẻ VIB Visa",
+   "valid_from": "2026-11-03",
+   "valid_to": "2027-01-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/uu-dai-giam-gia-khi-mua-sam-tai-dien-may-xanh-cung-the-vib-visa",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-c35c820042",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Hoàn đến 500.000 VNĐ khi đặt vé tại Vietnam Airlines cùng thẻ VIB Visa",
+   "category": "ve_may_bay",
+   "merchant": null,
+   "discount_desc_vi": "Hoàn đến 500.000 VNĐ khi đặt vé tại Vietnam Airlines cùng thẻ VIB Visa",
+   "valid_from": "2026-11-01",
+   "valid_to": "2027-01-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/hoan-den-500000-vnd-khi-dat-ve-tai-vietnam-airlines-cung-the-vib-visa",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-ff546b26eb",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Ưu đãi mùa lễ hội đến 800K khi đặt vé máy bay, khách sạn trên MyVIB",
+   "category": "ve_may_bay",
+   "merchant": null,
+   "discount_desc_vi": "Ưu đãi mùa lễ hội đến 800K khi đặt vé máy bay, khách sạn trên MyVIB",
+   "valid_from": "2026-10-16",
+   "valid_to": "2027-01-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/uu-dai-dat-ve-may-bay-khach-san-tren-myvib",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-ef0d181168",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Mua sắm thả ga tại M.O.I Cosmetics cùng thẻ tín dụng VPBank",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Mua sắm thả ga tại M.O.I Cosmetics cùng thẻ tín dụng VPBank",
+   "valid_from": "2026-08-10",
+   "valid_to": "2027-02-09",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/health-and-beauty/mua-sam-tha-ga-tai-moi-cosmetics-cung-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-942bd6eeeb",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Giới thiệu mở thẻ - Nhận ngay ưu đãi",
+   "category": "khac",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "Nhận ngay ưu đãi",
+   "valid_from": "2026-05-28",
+   "valid_to": "2027-02-25",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/gioi-thieu-mo-the-nhan-ngay-uu-dai",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vib-ec09c4b971",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Siêu Tiệc Đáng Giá - Mua sắm giá tốt với thẻ VIB",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Siêu Tiệc Đáng Giá - Mua sắm giá tốt với thẻ VIB",
+   "valid_from": "2026-11-02",
+   "valid_to": "2027-02-28",
+   "url": "https://www.vib.com.vn/vn/promotion/details/sieu-tiec-dang-gia-mua-sam-gia-tot-voi-the-vib",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-57ddaf039a",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "SIÊU HỘI MUA SẮM ONLINE: SĂN DEAL GIẢM ĐẾN 2.000.000 VNĐ & TRẢ GÓP 0% CÙNG THẺ TÍN DỤNG VPBANK",
+   "category": "mua_online",
+   "merchant": null,
+   "discount_desc_vi": "SIÊU HỘI MUA SẮM ONLINE: SĂN DEAL GIẢM ĐẾN 2.000.000 VNĐ & TRẢ GÓP 0% CÙNG THẺ TÍN DỤNG VPBANK",
+   "valid_from": "2026-06-01",
+   "valid_to": "2027-02-28",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/sieu-hoi-mua-sam-online-san-deal-giam-den-2000000-vnd-tra-gop-0-cung-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-5dfd7d1b91",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Giảm thêm đến 2.000.000 đồng khi chi tiêu tại Lazada bằng thẻ tín dụng VPBank",
+   "category": "mua_online",
+   "merchant": null,
+   "discount_desc_vi": "Giảm thêm đến 2.000.000 đồng khi chi tiêu tại Lazada bằng thẻ tín dụng VPBank",
+   "valid_from": "2026-09-07",
+   "valid_to": "2027-02-28",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/giam-them-den-2000000-dong-khi-chi-tieu-tai-lazada-bang-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-7159cd1106",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Giảm đến 10% các chuyến bay quốc tế tại Emirates cùng thẻ tín dụng VPBank",
+   "category": "ve_may_bay",
+   "merchant": null,
+   "discount_desc_vi": "Giảm đến 10% các chuyến bay quốc tế tại Emirates cùng thẻ tín dụng VPBank",
+   "valid_from": "2026-10-01",
+   "valid_to": "2027-03-13",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/giam-den-10-cac-chuyen-bay-quoc-te-tai-emirates-cung-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-c5677a1f90",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Tặng món Wagyu Signature miễn phí khi thanh toán bằng thẻ tín dụng Techcombank tại Nikusho & Ushinokura",
+   "category": "khac",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "Tặng món Wagyu Signature miễn phí khi thanh toán bằng thẻ tín dụng Techcombank tại Nikusho & Ushinokura",
+   "valid_from": "2026-11-08",
+   "valid_to": "2027-03-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-danh-cho-chu-the-techcombank-khi-thanh-toan-tai-nha-hang-nikusho-va-ushinokura",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-78cfed3c61",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Chương trình ưu đãi dành cho chủ thẻ Visa Techcombank khi chi tiêu đặt phòng Khách sạn tại Agoda",
+   "category": "khach_san",
+   "merchant": "Techcombank",
+   "discount_desc_vi": "ưu đãi dành cho chủ thẻ Visa Techcombank khi chi tiêu đặt phòng Khách sạn tại Agoda",
+   "valid_from": "2026-10-23",
+   "valid_to": "2027-03-31",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-danh-cho-chu-the-visa-techcombank-khi-chi-tieu-dat-phong-khach-san-tai-agoda",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-8604e48ae6",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Ưu đãi chi tiêu thẻ tín dụng VPBank tại các phòng chờ sân bay Nhật Bản của SMBC",
+   "category": "du_lich",
+   "merchant": null,
+   "discount_desc_vi": "Ưu đãi chi tiêu thẻ tín dụng VPBank tại các phòng chờ sân bay Nhật Bản của SMBC",
+   "valid_from": "2026-06-25",
+   "valid_to": "2027-03-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/other/uu-dai-smcc-2026",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-285c495546",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Nâng tầm trải nghiệm – Trọn vẹn mọi hành trình cùng thẻ tín dụng VPBank",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Nâng tầm trải nghiệm – Trọn vẹn mọi hành trình cùng thẻ tín dụng VPBank",
+   "valid_from": "2026-01-01",
+   "valid_to": "2027-03-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/nang-tam-trai-nghiem-tron-ven-moi-hanh-trinh-cung-the-tin-dung-vpbank",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "techcombank-ab5f2dad4c",
+   "bank": "Techcombank",
+   "bank_key": "techcombank",
+   "card_ids": [
+    "techcombank-everyday"
+   ],
+   "title_vi": "Giảm đến 12% cho chủ Thẻ Techcombank khi mua hàng tại Galle Watch",
+   "category": "khac",
+   "merchant": "Galle Watch",
+   "discount_desc_vi": "Giảm đến 12% cho chủ Thẻ Techcombank khi mua hàng tại Galle Watch",
+   "valid_from": "2026-07-23",
+   "valid_to": "2027-05-07",
+   "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-giam-gia-cho-chu-the-techcombank-khi-mua-hang-tai-galle-watch",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-21d513ef1b",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Ưu đãi chi tiêu thẻ tín dụng VPBank tại Bay Hotel",
+   "category": "khach_san",
+   "merchant": null,
+   "discount_desc_vi": "Ưu đãi chi tiêu thẻ tín dụng VPBank tại Bay Hotel",
+   "valid_from": "2025-06-20",
+   "valid_to": "2027-06-20",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/bay-hotel-2025",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "hdbank-b98eb722f9",
+   "bank": "HDBank",
+   "bank_key": "hdbank",
+   "card_ids": [
+    "hdbank-petrolimex-4in1"
+   ],
+   "title_vi": "HỆ THỐNG LE MONDE STEAK GIẢM 100.000Đ CHO HÓA ĐƠN TỪ 500.000Đ",
+   "category": "an_uong",
+   "merchant": null,
+   "discount_desc_vi": "Giảm 100.000đ cho hóa đơn từ 500.000đ tại hệ thống Le Monde Steak khi khách hàng thanh toán bằng thẻ tín dụng HDBank",
+   "valid_from": null,
+   "valid_to": "2027-12-31",
+   "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/he-thong-le-monde-steak-giam-100000d-cho-hoa-don-tu-500000d",
+   "fetched_at": "2026-11-21T10:32:00+07:00"
+  },
+  {
+   "id": "hdbank-10c8fa6739",
+   "bank": "HDBank",
+   "bank_key": "hdbank",
+   "card_ids": [
+    "hdbank-petrolimex-4in1"
+   ],
+   "title_vi": "HỆ THỐNG SHANGCHI GIẢM 100.000Đ CHO HÓA ĐƠN TỪ 500.000Đ",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm 100.000đ cho hóa đơn từ 500.000đ tại hệ thống ShangChi - Lẩu Đài Loan - Băng chuyền siêu tốc khi khách hàng thanh toán bằng thẻ tín dụng HDBank",
+   "valid_from": null,
+   "valid_to": "2027-12-31",
+   "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/he-thong-shangchi-giam-100000d-cho-hoa-don-tu-500000d",
+   "fetched_at": "2026-11-21T10:32:00+07:00"
+  },
+  {
+   "id": "hdbank-58cead7695",
+   "bank": "HDBank",
+   "bank_key": "hdbank",
+   "card_ids": [
+    "hdbank-petrolimex-4in1"
+   ],
+   "title_vi": "HỆ THỐNG SSAMJANG GIẢM 100.000Đ CHO HÓA ĐƠN TỪ 500.000Đ",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm 100.000đ cho hóa đơn từ 500.000đ tại hệ thống SSamjang - Nướng & Cuốn Chợ Hàn Quốc khi khách hàng thanh toán bằng thẻ tín dụng HDBank",
+   "valid_from": null,
+   "valid_to": "2027-12-31",
+   "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/he-thong-ssamjang-giam-100000d-cho-hoa-don-tu-500000d",
+   "fetched_at": "2026-11-21T10:32:00+07:00"
+  },
+  {
+   "id": "hdbank-0cbf195089",
+   "bank": "HDBank",
+   "bank_key": "hdbank",
+   "card_ids": [
+    "hdbank-petrolimex-4in1"
+   ],
+   "title_vi": "HỆ THỐNG YAKIMONO GIẢM 100.000Đ CHO HÓA ĐƠN TỪ 500.000Đ",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm 100.000đ cho hóa đơn từ 500.000đ tại hệ thống Yakimono - Quán nướng Nhật Bản khi khách hàng thanh toán bằng thẻ tín dụng HDBank",
+   "valid_from": null,
+   "valid_to": "2027-12-31",
+   "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/he-thong-yakimono-giam-100000d-cho-hoa-don-tu-500000d",
+   "fetched_at": "2026-11-21T10:32:00+07:00"
+  },
+  {
+   "id": "hdbank-fbc7eea3aa",
+   "bank": "HDBank",
+   "bank_key": "hdbank",
+   "card_ids": [
+    "hdbank-petrolimex-4in1"
+   ],
+   "title_vi": "ILA VIETNAM GIẢM THÊM 5% KHI THANH TOÁN KHÓA HỌC",
+   "category": "giao_duc",
+   "merchant": null,
+   "discount_desc_vi": "Giảm thêm 5% khi thanh toán các hóa học tại Trung tâm Anh ngữ ILA VietNam bằng thẻ tín dụng HDBank",
+   "valid_from": null,
+   "valid_to": "2027-12-31",
+   "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/ila-vietnam-giam-them-5-khi-thanh-toan-khoa-hoc",
+   "fetched_at": "2026-11-21T10:32:00+07:00"
+  },
+  {
+   "id": "vib-b3d8ca52f3",
+   "bank": "VIB",
+   "bank_key": "vib",
+   "card_ids": [
+    "vib-onecard-gold",
+    "vib-onecard-platinum",
+    "vib-onecard-signature"
+   ],
+   "title_vi": "Miễn phí thường niên năm tiếp theo dành cho Thẻ tín dụng VIB",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Miễn phí thường niên năm tiếp theo dành cho Thẻ tín dụng VIB",
+   "valid_from": "2025-12-31",
+   "valid_to": "2027-12-31",
+   "url": "https://www.vib.com.vn/vn/promotion/details/mien-phi-thuong-nien-nam-tiep-theo-danh-cho-the-tin-dung-vib",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "vpbank-e0603bad98",
+   "bank": "VPBank",
+   "bank_key": "vpbank",
+   "card_ids": [
+    "vpbank-super-shopee-platinum"
+   ],
+   "title_vi": "Ưu đãi thẻ VPBank Visa: Săn deal du lịch, mua sắm và giải trí toàn cầu",
+   "category": "du_lich",
+   "merchant": null,
+   "discount_desc_vi": "Ưu đãi thẻ VPBank Visa: Săn deal du lịch, mua sắm và giải trí toàn cầu",
+   "valid_from": "2026-01-08",
+   "valid_to": "2027-12-31",
+   "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/bat-mode-xe-dich-toi-uu-trai-nghiem-cham-the-vpbank-visa-giam-toi-20",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "hdbank-7db69fdf9c",
+   "bank": "HDBank",
+   "bank_key": "hdbank",
+   "card_ids": [
+    "hdbank-petrolimex-4in1"
+   ],
+   "title_vi": "GIẢM ĐẾN 30% TẠI FURAMA RESORT & VILLAS DANANG",
+   "category": "khach_san",
+   "merchant": null,
+   "discount_desc_vi": "Giảm đến 30% cho hóa đơn giá phòng và dịch vụ tại Furama Resort & Villas Đà Nẵng khi khách hàng thanh toán bằng thẻ tín dụng HDBank",
+   "valid_from": null,
+   "valid_to": "2029-08-30",
+   "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/giam-den-30-tai-furama-resort-villas-danang",
+   "fetched_at": "2026-11-21T10:32:00+07:00"
+  },
+  {
+   "id": "hdbank-f8ff1065a5",
+   "bank": "HDBank",
+   "bank_key": "hdbank",
+   "card_ids": [
+    "hdbank-petrolimex-4in1"
+   ],
+   "title_vi": "TRẢ GÓP 0% LÃI SUẤT",
+   "category": "tra_gop",
+   "merchant": null,
+   "discount_desc_vi": "Trả góp linh hoạt, 0% lãi suất",
+   "valid_from": null,
+   "valid_to": null,
+   "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/tra-gop-0-lai-suat",
+   "fetched_at": "2026-11-21T10:32:00+07:00"
+  },
+  {
+   "id": "hdbank-8e71908400",
+   "bank": "HDBank",
+   "bank_key": "hdbank",
+   "card_ids": [
+    "hdbank-petrolimex-4in1"
+   ],
+   "title_vi": "GIẢM TRỰC TIẾP 15% TẠI L'ALYA NINH VÂN BAY",
+   "category": "khach_san",
+   "merchant": null,
+   "discount_desc_vi": "Giảm 15% dịch vụ lưu trú với mã HDB_LALYA",
+   "valid_from": null,
+   "valid_to": null,
+   "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/giam-truc-tiep-15-tai-lalya-ninh-van-bay",
+   "fetched_at": "2026-11-21T10:32:00+07:00"
+  },
+  {
+   "id": "mbbank-95787dfcd3",
+   "bank": "MB",
+   "bank_key": "mbbank",
+   "card_ids": [
+    "mb-priority-visa-signature"
+   ],
+   "title_vi": "Nhận voucher 100K dành cho chủ thẻ MB Visa",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "nhận được thông báo mời tham gia chương trình khuyến mãi này qua kênh Zalo Dịch Vụ Thẻ MBBank trong thời gian diễn ra chương trình",
+   "valid_from": "2026-11-06",
+   "valid_to": null,
+   "url": "https://www.mbbank.com.vn/ca-nhan/khach-hang-ca-nhan/uu-dai/the/nhan-voucher-100k-danh-cho-chu-the-mb-visa",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "mbbank-1d4be64636",
+   "bank": "MB",
+   "bank_key": "mbbank",
+   "card_ids": [
+    "mb-priority-visa-signature"
+   ],
+   "title_vi": "+ 1 triệu đồng voucher dành cho chủ thẻ MB Visa cao cấp",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "nhận được thông báo mời tham gia chương trình khuyến mãi này qua kênh Zalo Dịch Vụ Thẻ MBBank trong thời gian diễn ra chương trình",
+   "valid_from": "2026-11-06",
+   "valid_to": null,
+   "url": "https://www.mbbank.com.vn/ca-nhan/khach-hang-ca-nhan/uu-dai/the/1-trieu-dong-voucher-danh-cho-chu-the-mb-visa-cao-cap",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  },
+  {
+   "id": "mbbank-d5ce90a313",
+   "bank": "MB",
+   "bank_key": "mbbank",
+   "card_ids": [
+    "mb-priority-visa-signature"
+   ],
+   "title_vi": "Nhận phòng chờ sân bay miễn phí với thẻ MB Visa",
+   "category": "du_lich",
+   "merchant": null,
+   "discount_desc_vi": "nhận được thông báo mời tham gia chương trình khuyến mãi này qua kênh Zalo Dịch Vụ Thẻ MBBank trong thời gian diễn ra chương trình",
+   "valid_from": "2026-11-06",
+   "valid_to": null,
+   "url": "https://www.mbbank.com.vn/ca-nhan/khach-hang-ca-nhan/uu-dai/the/nhan-phong-cho-san-bay-mien-phi-voi-the-mb-visa",
+   "fetched_at": "2026-11-21T10:26:01+07:00"
+  }
+ ]
+}

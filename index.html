@@ -115,6 +115,39 @@ details summary{cursor:pointer;font-weight:600;font-size:14px}
 .tx:first-child{border-top:0}
 .tx .a{margin-left:auto;text-align:right;font-weight:700;flex:0 0 auto}
 .tx .a.pay{color:var(--ok)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--bd);background:#fff;border-radius:99px;padding:7px 11px;font-size:14px;font-weight:600;color:var(--tx);cursor:pointer}
+.chip.on{background:var(--or);color:#fff;border-color:var(--or)}
+.deal{border-left:6px solid var(--cc,#f97316);border-radius:14px;border-top:1px solid var(--bd);border-right:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:10px 12px;margin-bottom:10px;background:#fff}
+.deal.top{background:var(--or-l);border-color:#fdba74}
+.deal.ex{opacity:.6}
+.deal .hd{display:flex;gap:10px;align-items:center}
+.deal .rk{width:30px;height:30px;border-radius:50%;background:var(--or-m);color:var(--or2);display:flex;align-items:center;justify-content:center;font-weight:800;flex:0 0 auto}
+.deal.top .rk{background:var(--or);color:#fff}
+.deal .nm{font-weight:700;font-size:15px;min-width:0;flex:1}
+.deal .nm small{display:block;font-weight:500;color:var(--mu);font-size:12px}
+.deal .val{text-align:right;flex:0 0 auto}
+.deal .val b{display:block;font-size:18px;color:var(--or2)}
+.deal .val small{font-size:12px;color:var(--mu)}
+.why{margin:8px 0 0;padding-left:18px;font-size:13px;color:#374151}
+.why li{margin:2px 0}
+.why li.w{color:#92400e}.why li.x{color:var(--rd)}
+.promo{padding:10px 0;border-top:1px solid var(--bd)}
+.promo:first-child{border-top:0;padding-top:0}
+.promo .t{font-weight:600;font-size:15px;margin:4px 0 2px;word-break:break-word}
+.promo .m{font-size:13px;color:var(--mu)}
+.promo a{font-size:13px;color:var(--bl);text-decoration:none;font-weight:600}
+.bn{display:inline-block;font-size:11px;font-weight:700;padding:2px 7px;border-radius:6px;background:#eef2ff;color:#3730a3;margin-right:4px}
+.ben{padding:9px 0;border-top:1px dashed var(--bd);font-size:14px}
+.ben:first-child{border-top:0}
+.ben .tags{margin-top:3px}
+.uv{background:#fef3c7;color:#92400e}
+.mine{padding:10px 0;border-top:1px solid var(--bd)}
+.mine:first-child{border-top:0;padding-top:0}
+.mine .row{margin-top:6px}
+.chk{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--tx);margin:6px 0}
+.chk input{width:20px;height:20px;flex:0 0 auto}
+.srcs a{display:block;font-size:12px;color:var(--bl);word-break:break-all;margin-top:3px}
 </style>
 </head>
 <body>
@@ -276,12 +309,57 @@ details summary{cursor:pointer;font-weight:600;font-size:14px}
     <div class="card"><div id="calList"></div></div>
   </div>
 </section>
+<!-- ============ ƯU ĐÃI THẺ ============ -->
+<section class="screen" id="scr-deals">
+  <div class="seg subseg" id="dealSeg">
+    <button data-v="need" class="on">Tôi cần chi</button>
+    <button data-v="mine">Thẻ của tôi</button>
+    <button data-v="feed">Ưu đãi</button>
+  </div>
+  <div id="dataErr" class="err hidden"></div>
+
+  <div id="dv-need">
+    <div class="card">
+      <h2>🧭 Tôi cần chi cho…</h2>
+      <div class="chips" id="needCats"></div>
+      <div class="row" style="margin-top:10px">
+        <input id="needAmt" inputmode="numeric" placeholder="Số tiền (tùy chọn)">
+        <input id="needMerchant" placeholder="Nơi chi (tùy chọn)" autocapitalize="off">
+      </div>
+      <p class="note">Ước tính = số tiền × tỷ lệ hoàn, giới hạn bởi phần trần còn lại trong kỳ, cộng ưu đãi đang chạy nếu đủ điều kiện. Thẻ đã nhập trong tab <b>Thẻ</b> còn được xét số ngày miễn lãi và hạn mức.</p>
+    </div>
+    <div class="card"><div id="needList"></div></div>
+  </div>
+
+  <div id="dv-mine" class="hidden">
+    <div class="card">
+      <h2>💳 Thẻ của tôi</h2>
+      <p class="note" style="margin-top:0">Liên kết từng dòng thẻ với thẻ trong ví (tab Thẻ) để app tính trần hoàn tiền theo kỳ sao kê và hạn thanh toán. Thẻ có danh mục tự chọn (EVO, VIB One Card, MB Priority): mở <b>Quyền lợi</b> để đánh dấu danh mục bạn đã đăng ký.</p>
+      <div id="mineList" style="margin-top:8px"></div>
+      <label for="mineAdd">Thêm dòng thẻ khác</label>
+      <select id="mineAdd"></select>
+    </div>
+  </div>
+
+  <div id="dv-feed" class="hidden">
+    <div class="card">
+      <div class="row">
+        <select id="feedCard" aria-label="Lọc theo thẻ"></select>
+        <select id="feedCat" aria-label="Lọc theo nhóm"></select>
+      </div>
+      <p class="note" id="feedUpdated"></p>
+      <div id="feedStatus"></div>
+    </div>
+    <div class="card"><div id="feedList"></div></div>
+  </div>
+</section>
 </main>
 
 <nav>
   <button data-tab="convert" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>Đổi link</button>
   <button data-tab="orders"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Đơn hàng</button>
   <button data-tab="cards"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg>Thẻ</button>
+  <button data-tab="deals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>Ưu đãi</button>
   <button data-tab="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Cài đặt</button>
 </nav>
 
@@ -337,6 +415,8 @@ details summary{cursor:pointer;font-weight:600;font-size:14px}
       <div style="flex:0 0 110px"><label for="cLast4">4 số cuối</label><input id="cLast4" inputmode="numeric" placeholder="1234" autocomplete="off"></div>
     </div>
     <div class="note" id="bankHint"></div>
+    <label for="cCatalog">Dòng thẻ (để tra quyền lợi & ưu đãi)</label>
+    <select id="cCatalog"></select>
     <div class="btns hidden" id="bankApplyWrap"><button type="button" class="btn ghost sm" id="btnApplyPreset">Điền gợi ý của ngân hàng này</button></div>
     <label for="cLimit">Hạn mức (đ) *</label>
     <input id="cLimit" inputmode="numeric" placeholder="VD: 50.000.000" required>
@@ -372,6 +452,13 @@ details summary{cursor:pointer;font-weight:600;font-size:14px}
   </form>
 </div>
 
+<!-- ============ SHEET: QUYỀN LỢI THẺ ============ -->
+<div class="sheet" id="benefitSheet" role="dialog" aria-modal="true">
+  <h2 id="bsTitle">Quyền lợi thẻ</h2>
+  <div id="bsBody"></div>
+  <div class="btns"><button type="button" class="btn ghost" data-close>Đóng</button></div>
+</div>
+
 <!-- ============ SHEET: GIAO DỊCH ============ -->
 <div class="sheet" id="txSheet" role="dialog" aria-modal="true">
   <h2 id="txSheetTitle">Thêm giao dịch</h2>
@@ -387,6 +474,7 @@ details summary{cursor:pointer;font-weight:600;font-size:14px}
     <p class="note" id="tCycle"></p>
     <label for="tNote">Ghi chú</label>
     <input id="tNote" placeholder="VD: Siêu thị, Shopee…">
+    <div id="tCatWrap"><label for="tCat">Nhóm chi tiêu (để tính trần hoàn tiền)</label><select id="tCat"></select></div>
     <div id="tOrderWrap"><label for="tOrder">Liên kết đơn hoàn tiền (tùy chọn)</label><select id="tOrder"></select></div>
     <div class="btns">
       <button type="button" class="btn ghost" data-close>Đóng</button>
@@ -666,7 +754,7 @@ $('#btnSaveSettings').addEventListener('click', ()=>{
 });
 function renderDataInfo(){ $('#dataInfo').textContent = `Đang lưu: ${orders.length} đơn hàng, ${cards.length} thẻ, ${txns.length} giao dịch thẻ, ${recent.length} link gần đây.`; }
 $('#btnExport').addEventListener('click', async ()=>{
-  const data = {app:'vi-hoan-tien', version:2, exported:new Date().toISOString(), settings, orders, recent, cards, txns, cardPrefs};
+  const data = {app:'vi-hoan-tien', version:2, exported:new Date().toISOString(), settings, orders, recent, cards, txns, cardPrefs, dealPrefs};
   const json = JSON.stringify(data,null,2); const name=`hoan-tien-backup-${todayISO()}.json`;
   const file = new File([json], name, {type:'application/json'});
   if (navigator.canShare && navigator.canShare({files:[file]})) { try { await navigator.share({files:[file], title:name}); return; } catch(e){ if(e.name==='AbortError') return; } }
@@ -681,7 +769,7 @@ $('#fileImport').addEventListener('change', async e=>{
     if(!Array.isArray(d.orders)) throw new Error('bad');
     if(!confirm(`Nhập ${d.orders.length} đơn, ${(d.cards||[]).length} thẻ, ${(d.txns||[]).length} giao dịch từ file? Dữ liệu hiện tại sẽ được thay thế.`)) return;
     orders=d.orders; if(d.settings?.platforms) settings=d.settings; recent=Array.isArray(d.recent)?d.recent:[];
-    cards=Array.isArray(d.cards)?d.cards:[]; txns=Array.isArray(d.txns)?d.txns:[]; if(d.cardPrefs) cardPrefs=d.cardPrefs; save(LS.cards,cards); save(LS.txns,txns); save(LS.cardPrefs,cardPrefs);
+    cards=Array.isArray(d.cards)?d.cards:[]; txns=Array.isArray(d.txns)?d.txns:[]; if(d.cardPrefs) cardPrefs=d.cardPrefs; if(d.dealPrefs){ dealPrefs=d.dealPrefs; saveDeal(); } save(LS.cards,cards); save(LS.txns,txns); save(LS.cardPrefs,cardPrefs);
     for (const p in DEFAULT_SETTINGS.platforms) if(!settings.platforms[p]) settings.platforms[p] = structuredClone(DEFAULT_SETTINGS.platforms[p]);
     save(LS.orders,orders); save(LS.settings,settings); save(LS.recent,recent);
     renderAll(); toast('Đã nhập dữ liệu');
@@ -709,6 +797,9 @@ const BANKS = {
   MB:{name:'MB', hint:'Chưa xác minh được thông số chung — nhập theo sao kê của bạn.'},
   SHB:{name:'Shinhan', hint:'Chưa xác minh được thông số chung — nhập theo sao kê của bạn.'},
   UOB:{name:'UOB (gồm thẻ Citi cũ)', hint:'Chưa xác minh được thông số chung — nhập theo sao kê của bạn.'},
+  HDB:{name:'HDBank', minPct:3, hint:'HDBank Petrolimex 4in1: miễn lãi tối đa 45 ngày, thanh toán tối thiểu 3% (trang HDBank). Ngày sao kê/hạn: xem sao kê của bạn.', src:'https://hdbank.com.vn/vi/personal/product/detail/the/the-tin-dung/hdbank-petrolimex-4in1'},
+  VIKKI:{name:'Vikki Bank', hint:'VikkiGO: miễn lãi đến 45 ngày, miễn phí thường niên (vikkibank.vn). Ngày sao kê/hạn: xem sao kê của bạn.', src:'https://vikkibank.vn/the-tin-dung-vikkigo/'},
+  CTG:{name:'VietinBank', hint:'Chưa xác minh ngày sao kê/hạn thanh toán chung — nhập theo sao kê của bạn.', src:'https://www.vietinbank.vn/ca-nhan/cong-cu-tien-ich/bieu-phi-va-bieu-mau/bieu-phi-dich-vu-ap-dung-cho-san-pham-the-tin-dung-quoc-te-40-html'},
   OTHER:{name:'Ngân hàng khác', hint:'Thông thường: hạn thanh toán 15–25 ngày sau ngày sao kê, miễn lãi 45–55 ngày, tối thiểu 1–5% (theo HSBC).', src:'https://www.hsbc.com.vn/en-vn/credit-cards/what-is-credit-card-interest-free-period/'}
 };
 
@@ -880,7 +971,7 @@ function renderTx(){
   $('#txList').innerHTML = list.length ? list.map(t=>{ const c=cardById(t.cardId); if(!c) return ''; const S=stmtOnOrAfter(c,dParse(t.date)); const o=t.orderId?orders.find(x=>x.id===t.orderId):null;
     return `<div class="tx" style="--cc:${c.color}" data-tx="${t.id}"><div class="dt" style="width:46px;font-weight:700;font-size:13px;text-align:center">${dShow(dParse(t.date))}</div>
       <div style="min-width:0"><div><span class="dot"></span><b>${cardLabel(c)}</b></div>
-      <div class="note" style="margin:0">${t.type==='payment'?'Thanh toán thẻ':'Kỳ sao kê '+dShow(S)+' · hạn '+dShow(dueFor(c,S))}${t.note?' · '+esc(t.note):''}${o?' · 🔗 '+esc(o.name||'đơn'):''}</div></div>
+      <div class="note" style="margin:0">${t.type==='payment'?'Thanh toán thẻ':'Kỳ sao kê '+dShow(S)+' · hạn '+dShow(dueFor(c,S))}${t.category&&CATS[t.category]?' · '+CATS[t.category]:''}${t.note?' · '+esc(t.note):''}${o?' · 🔗 '+esc(o.name||'đơn'):''}</div></div>
       <div class="a ${t.type==='payment'?'pay':''}">${t.type==='payment'?'−':''}${fmtVND(t.amount)}<div><button class="btn ghost sm" data-tedit="${t.id}" style="margin-top:4px">Sửa</button></div></div></div>`; }).join('') : `<div class="empty">Chưa có giao dịch.</div>`;
 }
 function renderCal(today){
@@ -950,8 +1041,9 @@ function formCard(){ return {stmtDay:Number($('#cStmt').value)||0, dueRule, dueN
 function updDuePreview(){ const c=formCard(); if(!(c.stmtDay>=1&&c.stmtDay<=31) || (dueRule==='after'?!(c.dueN>0):!(c.dueDay>=1&&c.dueDay<=31))){ $('#duePreview').textContent=''; return; }
   const t=todayN(), S=stmtOnOrAfter(c,t), D=dueFor(c,S), P=prevStmt(c,S);
   $('#duePreview').textContent = `Kỳ hiện tại ${dShow(P+1)} – ${dShow(S)}, hạn ${dShowY(D)}. Quẹt hôm nay được miễn lãi ${D-t} ngày; tối đa khoảng ${D-P-1} ngày.`; }
-function openCardSheet(c){
-  const edit=!!c; c = c || {name:'',bank:'OTHER',last4:'',limit:'',stmtDay:'',dueRule:'after',dueN:'',dueDay:'',minPct:'',reward:'',color:COLORS[cards.length%COLORS.length],annualFee:'',feeMonth:1,waiveTarget:''};
+function openCardSheet(c, pre){
+  const edit=!!c; c = c || {name:'',bank:'OTHER',last4:'',limit:'',stmtDay:'',dueRule:'after',dueN:'',dueDay:'',minPct:'',reward:'',color:COLORS[cards.length%COLORS.length],annualFee:'',feeMonth:1,waiveTarget:'',catalogId:'', ...(pre||{})};
+  setCatalogValue(c.catalogId||'');
   $('#cardSheetTitle').textContent = edit?'Sửa thẻ':'Thêm thẻ';
   $('#cId').value=edit?c.id:''; $('#cName').value=c.name; $('#cBank').value=BANKS[c.bank]?c.bank:'OTHER'; $('#cLast4').value=c.last4||'';
   $('#cLimit').value=c.limit?Number(c.limit).toLocaleString('vi-VN'):''; $('#cStmt').value=c.stmtDay||''; setDueRule(c.dueRule||'after');
@@ -967,7 +1059,7 @@ $('#cardForm').addEventListener('submit', e=>{ e.preventDefault();
   if(dueRule==='after' && !(f.dueN>=1&&f.dueN<=45)){ alert('Số ngày sau sao kê phải từ 1 đến 45.'); return; }
   if(dueRule==='fixed' && !(f.dueDay>=1&&f.dueDay<=31)){ alert('Ngày đến hạn phải từ 1 đến 31.'); return; }
   const id=$('#cId').value;
-  const c={id:id||uid(), name:$('#cName').value.trim(), bank:$('#cBank').value, last4:$('#cLast4').value.replace(/\D/g,'').slice(-4),
+  const c={...(id?cardById(id):{}), id:id||uid(), catalogId:$('#cCatalog').value||'', name:$('#cName').value.trim(), bank:$('#cBank').value, last4:$('#cLast4').value.replace(/\D/g,'').slice(-4),
     limit:parseNum($('#cLimit').value), ...f, minPct:parseDec($('#cMin').value), reward:$('#cReward').value.trim(),
     color:(document.querySelector('#cColors input:checked')||{}).value||COLORS[0], annualFee:parseNum($('#cFee').value), feeMonth:Number($('#cFeeMonth').value)||1, waiveTarget:parseNum($('#cWaive').value),
     created: id?(cardById(id)?.created||Date.now()):Date.now()};
@@ -979,7 +1071,7 @@ $('#btnDeleteCard').addEventListener('click',()=>{ const id=$('#cId').value; if(
 
 /* --- Sheets: giao dịch --- */
 let txType='spend';
-function setTxType(v){ txType=v; document.querySelectorAll('#txTypeSeg button').forEach(b=>b.classList.toggle('on',b.dataset.v===v)); $('#tOrderWrap').classList.toggle('hidden',v!=='spend'); updTxCycle(); }
+function setTxType(v){ txType=v; document.querySelectorAll('#txTypeSeg button').forEach(b=>b.classList.toggle('on',b.dataset.v===v)); $('#tOrderWrap').classList.toggle('hidden',v!=='spend'); $('#tCatWrap').classList.toggle('hidden',v!=='spend'); updTxCycle(); }
 document.querySelectorAll('#txTypeSeg button').forEach(b=>b.addEventListener('click',()=>setTxType(b.dataset.v)));
 function updTxCycle(){ const c=cardById($('#tCard').value); const d=$('#tDate').value; if(!c||!d){ $('#tCycle').textContent=''; return; }
   const n=dParse(d), S=stmtOnOrAfter(c,n);
@@ -993,6 +1085,7 @@ function openTxSheet(t, pre){
   $('#tCard').innerHTML = cards.map(c=>`<option value="${c.id}">${cardLabel(c)}</option>`).join('');
   $('#tOrder').innerHTML = `<option value="">— Không liên kết —</option>` + [...orders].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).map(o=>`<option value="${o.id}">${fmtDate(o.date)} · ${esc((o.name||'Đơn').slice(0,40))} · ${fmtVND(o.value)}</option>`).join('');
   $('#tId').value=edit?t.id:''; $('#tCard').value=t.cardId; $('#tDate').value=t.date; $('#tAmt').value=t.amount?Number(t.amount).toLocaleString('vi-VN'):''; $('#tNote').value=t.note||''; $('#tOrder').value=t.orderId||'';
+  $('#tCat').innerHTML = `<option value="">— Không phân loại —</option>` + Object.entries(CATS).map(([k,v])=>`<option value="${k}">${v}</option>`).join(''); $('#tCat').value=t.category||'';
   $('#btnDeleteTx').classList.toggle('hidden',!edit); setTxType(t.type); openSheetEl('#txSheet');
 }
 $('#tOrder').addEventListener('change',()=>{ const o=orders.find(x=>x.id===$('#tOrder').value); if(o){ if(!parseNum($('#tAmt').value)) $('#tAmt').value=Number(o.value||0).toLocaleString('vi-VN'); if(!$('#tNote').value) $('#tNote').value=o.name||''; if(o.date) $('#tDate').value=o.date; updTxCycle(); } });
@@ -1001,7 +1094,7 @@ $('#btnNewPay').addEventListener('click',()=>openTxSheet(null,{type:'payment', c
 $('#txForm').addEventListener('submit', e=>{ e.preventDefault();
   const amt=parseNum($('#tAmt').value); if(!amt){ alert('Nhập số tiền.'); return; }
   const id=$('#tId').value;
-  const t={id:id||uid(), type:txType, cardId:$('#tCard').value, date:$('#tDate').value||todayISO(), amount:amt, note:$('#tNote').value.trim(), orderId: txType==='spend'? $('#tOrder').value : '', created: id?(txns.find(x=>x.id===id)?.created||Date.now()):Date.now()};
+  const t={id:id||uid(), type:txType, cardId:$('#tCard').value, date:$('#tDate').value||todayISO(), amount:amt, note:$('#tNote').value.trim(), orderId: txType==='spend'? $('#tOrder').value : '', category: txType==='spend'? $('#tCat').value : '', created: id?(txns.find(x=>x.id===id)?.created||Date.now()):Date.now()};
   if(id) txns=txns.map(x=>x.id===id?t:x); else txns.push(t);
   save(LS.txns,txns); closeSheet(); renderCards(); toast(t.type==='payment'?'Đã ghi thanh toán':'Đã ghi chi tiêu');
 });
@@ -1019,18 +1112,302 @@ $('#scr-cards').addEventListener('click', e=>{ const b=e.target.closest('button'
 });
 document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',closeSheet));
 
+/* ================= ƯU ĐÃI THẺ: danh mục quyền lợi, gợi ý theo nhu cầu, tin ưu đãi ================= */
+LS.dealPrefs='ht_dealprefs_v1';
+let dealPrefs = load(LS.dealPrefs, {});
+let CATALOG=null, PROMOS=null, UPSTATUS=null, dealView='need', needCat='shopee';
+const CATS = {an_uong:'🍜 Ăn uống', sieu_thi:'🛒 Siêu thị', xang_dau:'⛽ Xăng dầu', du_lich:'🧳 Du lịch', ve_may_bay:'✈️ Vé máy bay', khach_san:'🏨 Khách sạn',
+  mua_online:'🛍️ Mua online', shopee:'🧡 Shopee', giao_duc:'🎓 Giáo dục', y_te:'🏥 Y tế', hoa_don:'🧾 Hóa đơn', giai_tri:'🎬 Giải trí', tra_gop:'💳 Trả góp', khac:'✨ Khác'};
+const CAT_ALIAS = {shopee:['shopee','mua_online'], ve_may_bay:['ve_may_bay','du_lich'], khach_san:['khach_san','du_lich'], du_lich:['du_lich','ve_may_bay','khach_san']};
+const catSet = k => CAT_ALIAS[k] || [k];
+const fmtPct = r => String(r).replace('.',',')+'%';
+function saveDeal(){ save(LS.dealPrefs, dealPrefs); }
+function catById(id){ return CATALOG?.cards.find(c=>c.id===id); }
+function mineIds(){ if(!CATALOG) return []; if(!Array.isArray(dealPrefs.mine)) dealPrefs.mine=[...CATALOG.my_card_ids]; return dealPrefs.mine.filter(id=>catById(id)); }
+function walletFor(catId){ return cards.find(c=>c.catalogId===catId); }
+function vnTime(iso){ if(!iso) return '—'; try{ return new Date(iso).toLocaleString('vi-VN',{timeZone:'Asia/Ho_Chi_Minh',hour:'2-digit',minute:'2-digit',day:'2-digit',month:'2-digit',year:'numeric'}); }catch(e){ return iso; } }
+const isoShow = s => s ? s.split('-').reverse().join('/') : '';
+function daysLeft(p){ return p.valid_to ? dParse(p.valid_to) - todayN() : null; }
+function choicesOf(catId){ return (dealPrefs.choices||{})[catId] || {}; }
+
+async function loadDealData(){
+  const get = async f => { const r = await fetch('data/'+f, {cache:'no-cache'}); if(!r.ok) throw new Error(f+': HTTP '+r.status); return r.json(); };
+  try {
+    const [c,p,s] = await Promise.all([get('cards.json'), get('promos.json'), get('update_status.json').catch(()=>null)]);
+    CATALOG=c; PROMOS=p; UPSTATUS=s; $('#dataErr').classList.add('hidden');
+    fillCatalogSelect(); ensureLinks(); renderDeals();
+  } catch(e){ const el=$('#dataErr'); el.textContent='Không tải được dữ liệu ưu đãi ('+e.message+'). Hãy mở app khi có mạng ít nhất một lần.'; el.classList.remove('hidden'); }
+}
+
+/* Tự liên kết thẻ trong ví với dòng thẻ theo ngân hàng/tên; VIB One Card chọn hạng theo hạn mức */
+function ensureLinks(){
+  if(!CATALOG) return; let changed=false; const mine=mineIds();
+  const KW = {'vpbank-super-shopee-platinum':'shopee','techcombank-everyday':'everyday','tpbank-evo':'evo','mb-priority-visa-signature':'priority','vikkigo-credit':'vikki','hdbank-petrolimex-4in1':'petrolimex','vietinbank-jcb-ultimate-saviy':'saviy'};
+  for (const id of mine){
+    if (walletFor(id)) continue; const cat=catById(id);
+    const cand = cards.filter(c=>!catById(c.catalogId||'') && c.bank===cat.bank_code);
+    let pick = cand.length===1 ? cand[0] : null;
+    if (!pick && cand.length>1){ const kw=KW[id] || (id.startsWith('vib-onecard')?'one':''); pick = cand.find(c=>kw && (c.name||'').toLowerCase().includes(kw)) || null; }
+    if (pick){ pick.catalogId=id; changed=true; }
+  }
+  // VIB One Card: hạng theo hạn mức (≤50tr Gold, ≤100tr Platinum, >100tr Signature) nếu bạn chưa tự chọn
+  if (!dealPrefs.vibManual){
+    const i = mine.findIndex(id=>id.startsWith('vib-onecard-')); const w = i>=0 ? walletFor(mine[i]) : null;
+    if (w && Number(w.limit)>0){ const lim=Number(w.limit); const want = lim<=50e6?'vib-onecard-gold':lim<=100e6?'vib-onecard-platinum':'vib-onecard-signature';
+      if (want!==mine[i]){ dealPrefs.mine[dealPrefs.mine.indexOf(mine[i])]=want; w.catalogId=want; changed=true; saveDeal(); } }
+  }
+  if (changed){ save(LS.cards, cards); }
+  saveDeal();
+}
+
+/* --- Tính quyền lợi --- */
+function benefitApplies(b, catId){
+  if(!b.choice) return {ok:true};
+  const [g,opt] = b.choice.split(':'); const ch = choicesOf(catId)[g];
+  const cat = catById(catId); const grp = (cat.choices||[]).find(x=>x.id===g); const optLabel = grp?.options.find(o=>o.id===opt)?.label_vi || opt;
+  if (Array.isArray(ch) && ch.length) return ch.includes(opt) ? {ok:true, chosen:true} : {ok:false};
+  return {ok:true, warn:`Chỉ áp dụng nếu bạn đã chọn “${optLabel}” (chưa đánh dấu trong app)`};
+}
+function capKey(b){ return b.cap_group || (b.category+':'+(b.choice||'')); }
+function periodStart(w, b, today){
+  if (b.cap_period==='thang'){ const [y,m]=dYMD(today); return Date.UTC(y,m,1)/DAY; }
+  return cardStatus(w,today).cur.start;
+}
+function bestRateFor(cat, catKey, catId, merchant){
+  const set = catSet(catKey); let best=null;
+  if ((cat.exclude_categories||[]).includes(catKey)) return null;
+  for (const b of cat.benefits){
+    if (b.rate_pct==null) continue;
+    const kwHit = merchant && (b.keywords||[]).some(k=>merchant.includes(k.trim()));
+    if (!set.includes(b.category) && !kwHit && !b.fallback) continue;
+    const ap = benefitApplies(b, catId); if(!ap.ok) continue;
+    const score = (b.fallback?0:1000) + b.rate_pct;
+    if (!best || score>best.score) best={b, ap, score};
+  }
+  return best;
+}
+// Đã dùng bao nhiêu trần trong kỳ (từ giao dịch có gắn nhóm chi tiêu)
+function capUsed(w, cat, key, b, today){
+  if(!w) return 0; const from=periodStart(w,b,today); let used=0;
+  for (const t of cardTx(w)){ if (t.type==='payment' || !t.category) continue; const d=dParse(t.date); if (d<from || d>today) continue;
+    const bb = bestRateFor(cat, t.category, cat.id, (t.note||'').toLowerCase()); if(!bb || capKey(bb.b)!==key) continue;
+    used += t.amount * effRate(bb.b, w, today).rate/100; }
+  return used;
+}
+function effRate(b, w, today, amount=0){
+  if (b.min_cycle_spend_vnd){
+    const spend = w ? cardStatus(w,today).cycleSpend + amount : null;
+    if (spend!=null && spend >= b.min_cycle_spend_vnd) return {rate:b.rate_pct, note:`đạt mốc ${fmtVND(b.min_cycle_spend_vnd)}/kỳ`};
+    const r=b.rate_below_min_pct ?? 0;
+    return {rate:r, note: spend==null ? `${fmtPct(b.rate_pct)} nếu chi tiêu kỳ ≥ ${fmtVND(b.min_cycle_spend_vnd)}, chưa nhập kỳ nên tạm tính ${fmtPct(r)}` : `kỳ này mới chi ${fmtVND(spend)} < ${fmtVND(b.min_cycle_spend_vnd)} nên tính ${fmtPct(r)} (đạt mốc sẽ được ${fmtPct(b.rate_pct)})`};
+  }
+  return {rate:b.rate_pct, note:''};
+}
+function parseMoney(num, unit){
+  let n = String(num).trim(); unit=(unit||'').toLowerCase();
+  if (/triệu|tr\b/.test(unit)) return parseFloat(n.replace(/\./g,'').replace(',','.'))*1e6;
+  if (/^k|nghìn|ngàn/.test(unit)) return parseFloat(n.replace(',','.'))*1e3;
+  const v = Number(n.replace(/[.,](?=\d{3}\b)/g,'').replace(',','.')); return v;
+}
+const MONEY = '([\\d]+(?:[.,]\\d+)*)\\s*(triệu|tr\\b|k\\b|nghìn|ngàn|đồng|đ|vnđ|vnd)?';
+function promoValue(p, amount){
+  const t = ((p.title_vi||'')+' . '+(p.discount_desc_vi||'')).toLowerCase();
+  if (/usd|\$/.test(t)) return {v:0};
+  const minM = t.match(new RegExp('(?:hóa đơn|hoá đơn|đơn hàng|giao dịch|đơn)[^\\d]{0,12}(?:từ|tối thiểu)\\s*'+MONEY));
+  const min = minM ? parseMoney(minM[1], minM[2]) : 0;
+  const pct = t.match(/(?:giảm|hoàn)(?: ngay| thêm| trực tiếp)?\s*(đến|tới|lên đến)?\s*(\d{1,2}(?:[.,]\d)?)\s*%/);
+  if (pct){ const capM = t.match(new RegExp('tối đa\\s*'+MONEY)); const cap = capM? parseMoney(capM[1],capM[2]) : null;
+    if (pct[1] || !amount) return {v:0, upto:true};
+    if (min && amount<min) return {v:0, need:min};
+    if (!cap) return {v:0, upto:true}; // không rõ mức tối đa → không cộng vào ước tính
+    return {v: Math.min(amount*parseFloat(pct[2].replace(',','.'))/100, cap)}; }
+  const fx = t.match(new RegExp('(?:giảm|hoàn|tặng)(?: ngay| thêm| trực tiếp| giá)?\\s*(đến|tới|lên đến|tối đa)?\\s*'+MONEY));
+  if (fx && fx[3]){ const v=parseMoney(fx[2],fx[3]); if(!(v>=1000)) return {v:0};
+    if (fx[1]) return {v:0, upto:true, max:v};
+    if (!amount) return {v:0, fixed:v, need:min};
+    if (min && amount<min) return {v:0, need:min, fixed:v};
+    return {v: Math.min(v, amount)}; }
+  return {v:0};
+}
+function promosFor(catId, catKey, merchant){
+  if(!PROMOS) return [];
+  const set = catKey ? catSet(catKey) : null; const m = (merchant||'').toLowerCase().trim();
+  return PROMOS.promos.filter(p=>p.card_ids.includes(catId) && (daysLeft(p)==null || daysLeft(p)>=0) && (
+    !set || set.includes(p.category) || (m.length>=3 && ((p.title_vi||'')+' '+(p.merchant||'')).toLowerCase().includes(m))));
+}
+function rankNeed(catKey, amount, merchant){
+  const today=todayN(); const thr=Number(cardPrefs.utilThreshold||70);
+  const recMap = Object.fromEntries(recommend(today, amount, thr).map(r=>[r.c.id, r]));
+  const m = (merchant||'').toLowerCase();
+  return mineIds().map(id=>{
+    const cat=catById(id), w=walletFor(id), why=[]; let value=0, rate=0, x='';
+    const bb = bestRateFor(cat, catKey, id, m);
+    if (bb){
+      const b=bb.b, er=effRate(b, w, today, amount); rate=er.rate;
+      const unit = b.reward==='diem' ? ' (điểm thưởng)' : '';
+      let line = `${b.fallback?'Ngoài danh mục ưu đãi: ':''}${b.reward==='diem'?'Tích':'Hoàn'} ${fmtPct(er.rate)}${unit}`;
+      if (b.cap_vnd){ const used=capUsed(w,cat,capKey(b),b,today); const left=Math.max(0,b.cap_vnd-used);
+        line += ` · trần ${fmtVND(b.cap_vnd)}/${b.cap_period==='thang'?'tháng':'kỳ'}` + (w? `, còn ${fmtVND(left)}`:'');
+        value = amount ? Math.min(amount*er.rate/100, left) : 0; if (amount && amount*er.rate/100>left) why.push({w:1,t:`Chạm trần: chỉ hoàn thêm ${fmtVND(left)} trong kỳ này`}); }
+      else value = amount ? amount*er.rate/100 : 0;
+      if (b.min_txn_vnd && amount && amount<b.min_txn_vnd){ value=0; why.push({w:1,t:`Giao dịch cần từ ${fmtVND(b.min_txn_vnd)} mới được tính`}); }
+      why.unshift({t:line + (b.desc_vi?` — ${b.desc_vi}`:'')});
+      if (er.note) why.push({w: er.rate<b.rate_pct?1:0, t:er.note});
+      if (bb.ap.warn) why.push({w:1, t:bb.ap.warn});
+      if (b.condition_vi) why.push({t:b.condition_vi});
+      if (b.unverified) why.push({w:1,t:'Tỷ lệ chưa xác minh trên trang ngân hàng'});
+    } else {
+      const ex = (cat.exclude_categories||[]).includes(catKey);
+      const info = cat.benefits.find(b=>catSet(catKey).includes(b.category) && b.rate_pct==null);
+      why.push({w:1, t: ex ? 'Nhóm chi này không được hoàn tiền theo thể lệ thẻ' : info ? info.desc_vi : 'Không có tỷ lệ hoàn tiền đã xác minh cho nhóm này'});
+    }
+    if (cat.program_valid_to && cat.program_valid_to >= dFmt(today)){ const dl=dParse(cat.program_valid_to)-today; if (dl<=45) why.push({w:1,t:`Chương trình hoàn tiền hiện tại kết thúc ${isoShow(cat.program_valid_to)} (còn ${dl} ngày)`}); }
+    // ưu đãi đang chạy
+    const ps = promosFor(id, catKey, merchant); let bestP=null, bestPV=0;
+    for (const p of ps){ const pv=promoValue(p, amount); if (pv.v>bestPV){ bestPV=pv.v; bestP=p; } }
+    if (bestP){ value += bestPV; why.push({t:`🎟️ Ưu đãi: ${bestP.title_vi} (≈ ${fmtVND(bestPV)}${daysLeft(bestP)!=null?`, còn ${daysLeft(bestP)} ngày`:''})`}); }
+    else if (ps.length) why.push({t:`🎟️ ${ps.length} ưu đãi liên quan: ${ps[0].title_vi}${ps.length>1?'…':''}`});
+    // chu kỳ thẻ
+    const r = w ? recMap[w.id] : null;
+    if (w && r){ if (r.reason) x=r.reason; else why.push({t:`🗓️ Quẹt hôm nay miễn lãi ${r.days} ngày (chốt ${dShow(r.s.cur.S)}, hạn ${dShow(r.s.cur.due)}) · dùng ${r.utilAfter.toLocaleString('vi-VN',{maximumFractionDigits:0})}% hạn mức`}); }
+    else why.push({w:1, t:'Chưa nhập thẻ này trong ví nên chưa xét kỳ sao kê, hạn mức'});
+    if (x) why.push({x:1, t:'⛔ '+x});
+    return {id, cat, w, value, rate, why, x, days: r? r.days : -1, promoCount: ps.length};
+  }).sort((a,b)=> (!!a.x - !!b.x) || (amount ? b.value-a.value : 0) || (b.rate-a.rate) || (b.promoCount>0)-(a.promoCount>0) || (b.days-a.days));
+}
+
+/* --- Render --- */
+function renderDeals(){
+  document.querySelectorAll('#dealSeg button').forEach(b=>b.classList.toggle('on', b.dataset.v===dealView));
+  ['need','mine','feed'].forEach(v=>$('#dv-'+v).classList.toggle('hidden', v!==dealView));
+  if (!CATALOG) return;
+  if (dealView==='need') renderNeed(); if (dealView==='mine') renderMine(); if (dealView==='feed') renderFeed();
+}
+function cardTitle(cat, w){ return w ? cardLabel(w) : esc(cat.name); }
+function renderNeed(){
+  const box=$('#needCats'); if(!box.children.length) box.innerHTML = Object.entries(CATS).map(([k,v])=>`<button type="button" class="chip" data-cat="${k}">${v}</button>`).join('');
+  box.querySelectorAll('.chip').forEach(b=>b.classList.toggle('on', b.dataset.cat===needCat));
+  const amount=parseNum($('#needAmt').value), merchant=$('#needMerchant').value.trim();
+  const list = rankNeed(needCat, amount, merchant);
+  $('#needList').innerHTML = list.length ? list.map((r,i)=>`<div class="deal ${r.x?'ex':(i===0?'top':'')}" style="--cc:${r.w?.color||'#94a3b8'}" data-deal="${r.id}">
+    <div class="hd"><div class="rk">${r.x?'–':i+1}</div>
+      <div class="nm">${cardTitle(r.cat,r.w)}<small>${esc(r.cat.bank)}${r.cat.network?' · '+esc(r.cat.network):''}${r.w?'':' · chưa có trong ví'}</small></div>
+      <div class="val">${amount? `<b>≈ ${fmtVND(Math.round(r.value))}</b><small>${r.rate?fmtPct(r.rate):'—'}</small>` : `<b>${r.rate?fmtPct(r.rate):'—'}</b><small>tỷ lệ</small>`}</div></div>
+    <ul class="why">${r.why.map(y=>`<li class="${y.x?'x':y.w?'w':''}">${esc(y.t)}</li>`).join('')}</ul>
+    <div class="btns"><button class="btn ghost sm" data-bsheet="${r.id}">Quyền lợi</button>${r.w?'':`<button class="btn sec sm" data-addwallet="${r.id}">＋ Thêm vào ví</button>`}</div>
+  </div>`).join('') : `<div class="empty">Chưa có thẻ nào trong “Thẻ của tôi”.</div>`;
+}
+function renderMine(){
+  const mine=mineIds();
+  $('#mineList').innerHTML = mine.map(id=>{ const cat=catById(id), w=walletFor(id);
+    const variants = CATALOG.cards.filter(c=>c.bank===cat.bank);
+    const pc = promosFor(id).length;
+    const ch = (cat.choices||[]).map(g=>{ const sel=choicesOf(id)[g.id]||[]; return sel.length? sel.map(o=>g.options.find(x=>x.id===o)?.label_vi).join(', ') : null; }).filter(Boolean);
+    return `<div class="mine" data-mine="${id}">
+      <div style="font-weight:700">${esc(cat.name)} <span class="bn">${esc(cat.network||'?')}</span></div>
+      <div class="note" style="margin:2px 0 0">${esc(cat.bank)} · ${pc} ưu đãi đang chạy · kiểm tra ${isoShow(cat.checked_at)}${cat.choices? ' · '+(ch.length? 'đã chọn: '+esc(ch.join(' | ')) : '<b style="color:#92400e">chưa chọn danh mục</b>'):''}</div>
+      ${variants.length>1?`<div class="row"><select data-variant="${id}" aria-label="Dòng thẻ">${variants.map(v=>`<option value="${v.id}" ${v.id===id?'selected':''}>${esc(v.name)}</option>`).join('')}</select></div>`:''}
+      <div class="row"><select data-link="${id}" aria-label="Thẻ trong ví"><option value="">— Chưa liên kết thẻ trong ví —</option>${cards.map(c=>`<option value="${c.id}" ${w&&w.id===c.id?'selected':''}>${cardLabel(c)}</option>`).join('')}</select></div>
+      <div class="btns"><button class="btn sec sm" data-bsheet="${id}">Quyền lợi</button>${w?'':`<button class="btn ghost sm" data-addwallet="${id}">＋ Thêm vào ví</button>`}<button class="btn ghost sm" data-unmine="${id}">Bỏ</button></div>
+    </div>`; }).join('') || `<div class="empty">Chưa có dòng thẻ nào.</div>`;
+  $('#mineAdd').innerHTML = `<option value="">＋ Chọn dòng thẻ…</option>` + CATALOG.cards.filter(c=>!mine.includes(c.id)).map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('');
+}
+function renderFeed(){
+  const mine=mineIds(); const fc=$('#feedCard'), cur=fc.value; const fcat=$('#feedCat'), curC=fcat.value;
+  fc.innerHTML = `<option value="">Tất cả thẻ của tôi</option>` + mine.map(id=>`<option value="${id}">${esc(catById(id).name)}</option>`).join('');
+  fc.value = mine.includes(cur)?cur:'';
+  fcat.innerHTML = `<option value="">Mọi nhóm chi</option>` + Object.entries(CATS).map(([k,v])=>`<option value="${k}">${v}</option>`).join(''); fcat.value=curC||'';
+  $('#feedUpdated').textContent = `Cập nhật lúc ${vnTime(PROMOS.updated_at)} (giờ VN) · tự động mỗi ngày 06:00 từ trang ưu đãi chính thức của ngân hàng.`;
+  const st = UPSTATUS?.banks ? Object.values(UPSTATUS.banks) : [];
+  const bad = st.filter(s=>s.status==='error');
+  $('#feedStatus').innerHTML = bad.length ? `<div class="warn">⚠️ Lần cập nhật gần nhất không đọc được: ${bad.map(s=>esc(s.bank)).join(', ')}. Đang hiển thị ưu đãi đã lưu trước đó của ngân hàng này.</div>` : '';
+  const ids = fc.value ? [fc.value] : mine;
+  const list = PROMOS.promos.filter(p=>p.card_ids.some(i=>ids.includes(i)) && (!fcat.value || catSet(fcat.value).includes(p.category)) && (daysLeft(p)==null || daysLeft(p)>=0))
+    .sort((a,b)=>(daysLeft(a)??9999)-(daysLeft(b)??9999));
+  $('#feedList').innerHTML = list.length ? `<p class="note" style="margin:0 0 8px">${list.length} ưu đãi</p>` + list.map(p=>{ const dl=daysLeft(p);
+    const badge = dl==null ? '<span class="badge b-mu">Không ghi hạn</span>' : dl===0 ? '<span class="badge b-over">Hết hạn hôm nay</span>' : `<span class="badge ${dl<=7?'b-soon':'b-ok'}">Còn ${dl} ngày</span>`;
+    return `<div class="promo"><div><span class="bn">${esc(p.bank)}</span><span class="pill">${CATS[p.category]||p.category}</span> ${badge}</div>
+      <div class="t">${esc(p.title_vi)}</div>
+      ${p.discount_desc_vi && !p.title_vi.toLowerCase().includes(p.discount_desc_vi.toLowerCase().slice(0,40))?`<div class="m">${esc(p.discount_desc_vi)}</div>`:''}
+      <div class="m">${p.valid_from||p.valid_to?`${isoShow(p.valid_from)||'…'} → ${isoShow(p.valid_to)||'…'} · `:''}Áp dụng: ${p.card_ids.filter(i=>ids.includes(i)).map(i=>esc(catById(i)?.name||i)).join(', ')}</div>
+      <a href="${esc(p.url)}" target="_blank" rel="noopener">Xem thể lệ trên trang ${esc(p.bank)} ↗</a></div>`; }).join('') : `<div class="empty">Không có ưu đãi phù hợp bộ lọc.</div>`;
+}
+function openBenefitSheet(id){
+  const cat=catById(id); if(!cat) return; const ch=choicesOf(id);
+  $('#bsTitle').textContent = cat.name;
+  const choices = (cat.choices||[]).map(g=>`<div class="card" style="margin:10px 0"><b style="font-size:14px">${esc(g.label_vi)}</b>
+    ${g.options.map(o=>`<label class="chk"><input type="checkbox" data-choice="${id}|${g.id}|${o.id}" ${(ch[g.id]||[]).includes(o.id)?'checked':''}>${esc(o.label_vi)}</label>`).join('')}
+    <p class="note">Chọn tối đa ${g.pick}. Đánh dấu đúng như bạn đã đăng ký trong app ngân hàng.</p></div>`).join('');
+  const bens = cat.benefits.map(b=>`<div class="ben">${CATS[b.category]||b.category} · ${esc(b.desc_vi)}
+    <div class="tags">${b.rate_pct!=null?`<span class="pill">${b.reward==='diem'?'Tích':'Hoàn'} ${fmtPct(b.rate_pct)}</span> `:''}${b.rate_below_min_pct!=null?`<span class="pill">${fmtPct(b.rate_below_min_pct)} nếu kỳ < ${fmtVND(b.min_cycle_spend_vnd)}</span> `:''}${b.cap_vnd?`<span class="pill">Trần ${fmtVND(b.cap_vnd)}/${b.cap_period==='thang'?'tháng':'kỳ'}</span> `:''}${b.unverified?'<span class="pill uv">chưa xác minh</span>':''}</div>
+    ${b.condition_vi?`<div class="note">${esc(b.condition_vi)}</div>`:''}</div>`).join('');
+  const fee = cat.fees||{};
+  $('#bsBody').innerHTML = `<div class="note" style="margin-top:0">${esc(cat.bank)}${cat.network?' · '+esc(cat.network):''}${cat.tier?' · '+esc(cat.tier):''} · Đối chiếu nguồn chính thức ngày ${isoShow(cat.checked_at)}</div>
+    ${choices}
+    <div class="card" style="margin:10px 0"><h2>Quyền lợi</h2>${bens}</div>
+    ${cat.excluded_vi?`<div class="warn">🚫 ${esc(cat.excluded_vi)}</div>`:''}
+    <div class="card" style="margin:10px 0"><h2>Phí & lưu ý</h2>
+      <div class="kv"><span>Phí thường niên</span><b>${fee.annual_vnd!=null? (fee.annual_vnd? fmtVND(fee.annual_vnd):'Miễn phí') : 'chưa xác minh'}</b>${cat.interest_free_days?`<span>Miễn lãi tối đa</span><b>${cat.interest_free_days} ngày</b>`:''}</div>
+      ${fee.waiver_vi?`<p class="note">${esc(fee.waiver_vi)}</p>`:''}${cat.stmt_hint_vi?`<p class="note">${esc(cat.stmt_hint_vi)}</p>`:''}${cat.notes_vi?`<p class="note">${esc(cat.notes_vi)}</p>`:''}</div>
+    <div class="srcs"><b style="font-size:13px">Nguồn</b>${cat.sources.map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}</a>`).join('')}</div>
+    <div class="btns"><button class="btn sec sm" data-feedfor="${id}">Xem ${promosFor(id).length} ưu đãi của thẻ này</button></div>`;
+  openSheetEl('#benefitSheet');
+}
+function addToWallet(id){
+  const cat=catById(id); if(!cat) return;
+  closeSheet(); switchTab('cards'); cardView='list'; renderCards();
+  const rw = cat.benefits.filter(b=>b.rate_pct!=null && !b.fallback).slice(0,2).map(b=>`${fmtPct(b.rate_pct)} ${(CATS[b.category]||'').replace(/^\S+\s/,'')}`).join(', ');
+  openCardSheet(null, {name:cat.name, bank: BANKS[cat.bank_code]?cat.bank_code:'OTHER', catalogId:id, reward:rw, annualFee: cat.fees?.annual_vnd||''});
+}
+function fillCatalogSelect(){
+  const sel=$('#cCatalog'); const cur=sel.value;
+  sel.innerHTML = `<option value="">— Không chọn —</option>` + (CATALOG? CATALOG.cards.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('') : '');
+  if (cur) setCatalogValue(cur);
+}
+function setCatalogValue(v){ const sel=$('#cCatalog'); if (v && ![...sel.options].some(o=>o.value===v)) sel.insertAdjacentHTML('beforeend', `<option value="${esc(v)}">${esc(v)}</option>`); sel.value=v||''; }
+
+/* --- Sự kiện --- */
+document.querySelectorAll('#dealSeg button').forEach(b=>b.addEventListener('click',()=>{ dealView=b.dataset.v; renderDeals(); window.scrollTo(0,0); }));
+$('#needCats').addEventListener('click', e=>{ const b=e.target.closest('[data-cat]'); if(!b) return; needCat=b.dataset.cat; renderNeed(); });
+$('#needAmt').addEventListener('input', ()=>{ const el=$('#needAmt'); const n=parseNum(el.value); el.value=n?n.toLocaleString('vi-VN'):''; renderNeed(); });
+$('#needMerchant').addEventListener('input', ()=>renderNeed());
+$('#feedCard').addEventListener('change', renderFeed); $('#feedCat').addEventListener('change', renderFeed);
+$('#mineAdd').addEventListener('change', e=>{ const v=e.target.value; if(!v) return; mineIds(); dealPrefs.mine.push(v); saveDeal(); ensureLinks(); renderMine(); toast('Đã thêm dòng thẻ'); });
+function dealClick(e){
+  const t=e.target.closest('button'); if(!t) return;
+  if (t.dataset.bsheet) openBenefitSheet(t.dataset.bsheet);
+  if (t.dataset.addwallet) addToWallet(t.dataset.addwallet);
+  if (t.dataset.unmine){ if(!confirm('Bỏ dòng thẻ này khỏi “Thẻ của tôi”? (Không xóa thẻ trong ví)')) return; dealPrefs.mine=mineIds().filter(i=>i!==t.dataset.unmine); saveDeal(); renderMine(); }
+  if (t.dataset.feedfor){ closeSheet(); dealView='feed'; switchTab('deals'); $('#feedCard').value=t.dataset.feedfor; renderFeed(); }
+}
+$('#scr-deals').addEventListener('click', dealClick); $('#benefitSheet').addEventListener('click', dealClick);
+$('#scr-deals').addEventListener('change', e=>{ const s=e.target;
+  if (s.dataset.link!==undefined && s.dataset.link){ const id=s.dataset.link; cards.forEach(c=>{ if(c.catalogId===id) delete c.catalogId; }); const w=cardById(s.value); if(w) w.catalogId=id; save(LS.cards,cards); renderMine(); toast(w?'Đã liên kết':'Đã bỏ liên kết'); }
+  if (s.dataset.variant){ const old=s.dataset.variant, nv=s.value; const m=mineIds(); dealPrefs.mine = m.map(i=>i===old?nv:i); if(old.startsWith('vib-onecard')) dealPrefs.vibManual=true; const w=walletFor(old); if(w){ w.catalogId=nv; save(LS.cards,cards); } saveDeal(); renderMine(); toast('Đã đổi dòng thẻ'); }
+});
+$('#benefitSheet').addEventListener('change', e=>{ const s=e.target; if(!s.dataset.choice) return; const [id,g,o]=s.dataset.choice.split('|');
+  dealPrefs.choices = dealPrefs.choices||{}; const cc = dealPrefs.choices[id] = dealPrefs.choices[id]||{}; let arr = cc[g]||[];
+  arr = s.checked ? [...new Set([...arr,o])] : arr.filter(x=>x!==o);
+  const grp=(catById(id).choices||[]).find(x=>x.id===g); if (grp && arr.length>grp.pick){ s.checked=false; toast(`Chỉ chọn tối đa ${grp.pick}`); return; }
+  cc[g]=arr; saveDeal(); toast('Đã lưu danh mục'); if(dealView==='need') renderNeed(); if(dealView==='mine') renderMine(); });
+$('#cCatalog').addEventListener('change', ()=>{ const cat=catById($('#cCatalog').value); if(!cat) return;
+  if (BANKS[cat.bank_code] && ($('#cBank').value==='OTHER' || !$('#cBank').value)){ $('#cBank').value=cat.bank_code; updBankHint(); }
+  if (!$('#cName').value) $('#cName').value=cat.name;
+  if (!parseNum($('#cFee').value) && cat.fees?.annual_vnd) $('#cFee').value=Number(cat.fees.annual_vnd).toLocaleString('vi-VN'); });
+
 /* ---------- Điều hướng ---------- */
-const TITLES = {convert:['Đổi link hoàn tiền','Dán link sản phẩm → link affiliate của bạn'], orders:['Đơn hàng & tiền hoàn','Theo dõi tiền hoàn theo tháng'], settings:['Cài đặt','Link affiliate & sao lưu dữ liệu'], cards:['Thẻ tín dụng','Kỳ sao kê, hạn thanh toán & dòng tiền']};
+const TITLES = {convert:['Đổi link hoàn tiền','Dán link sản phẩm → link affiliate của bạn'], orders:['Đơn hàng & tiền hoàn','Theo dõi tiền hoàn theo tháng'], settings:['Cài đặt','Link affiliate & sao lưu dữ liệu'], cards:['Thẻ tín dụng','Kỳ sao kê, hạn thanh toán & dòng tiền'], deals:['Ưu đãi thẻ','Chọn thẻ có lợi nhất cho từng khoản chi']};
 function switchTab(t){
   document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active', b.dataset.tab===t));
   document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active', s.id==='scr-'+t));
   $('#hdrTitle').textContent=TITLES[t][0]; $('#hdrSub').textContent=TITLES[t][1];
-  if(t==='orders') renderOrders(); if(t==='cards') renderCards(); if(t==='settings'){ renderSettings(); renderDataInfo(); }
+  if(t==='orders') renderOrders(); if(t==='cards') renderCards(); if(t==='deals') renderDeals(); if(t==='settings'){ renderSettings(); renderDataInfo(); }
   window.scrollTo(0,0);
 }
 document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
 function renderAll(){ renderRecent(); renderOrders(); renderSettings(); renderDataInfo(); renderCards(); }
 renderAll();
+loadDealData();
 if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
 </body>

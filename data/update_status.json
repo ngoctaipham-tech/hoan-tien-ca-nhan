@@ -1,0 +1,86 @@
+{
+ "updated_at": "2026-11-21T10:32:00+07:00",
+ "runner": "local",
+ "banks": {
+  "vpbank": {
+   "bank": "VPBank",
+   "status": "ok",
+   "raw": 138,
+   "count": 20,
+   "message": "",
+   "last_success": "2026-11-21T10:26:01+07:00",
+   "seconds": 16.0,
+   "via": "http"
+  },
+  "techcombank": {
+   "bank": "Techcombank",
+   "status": "ok",
+   "raw": 108,
+   "count": 35,
+   "message": "",
+   "last_success": "2026-11-21T10:26:01+07:00",
+   "seconds": 3.5,
+   "via": "http"
+  },
+  "tpbank": {
+   "bank": "TPBank",
+   "status": "ok",
+   "raw": 178,
+   "count": 9,
+   "message": "",
+   "last_success": "2026-11-21T10:26:01+07:00",
+   "seconds": 13.4,
+   "via": "http"
+  },
+  "mbbank": {
+   "bank": "MB",
+   "status": "ok",
+   "raw": 15,
+   "count": 4,
+   "message": "",
+   "last_success": "2026-11-21T10:26:01+07:00",
+   "seconds": 99.6,
+   "via": "browser"
+  },
+  "vib": {
+   "bank": "VIB",
+   "status": "ok",
+   "raw": 40,
+   "count": 18,
+   "message": "",
+   "last_success": "2026-11-21T10:26:01+07:00",
+   "seconds": 12.6,
+   "via": "browser"
+  },
+  "vikki": {
+   "bank": "Vikki Bank",
+   "status": "ok",
+   "raw": 6,
+   "count": 5,
+   "message": "",
+   "last_success": "2026-11-21T10:26:01+07:00",
+   "seconds": 10.0,
+   "via": "http"
+  },
+  "hdbank": {
+   "bank": "HDBank",
+   "status": "ok",
+   "raw": 12,
+   "count": 9,
+   "message": "",
+   "last_success": "2026-11-21T10:32:00+07:00",
+   "seconds": 73.7,
+   "via": "browser"
+  },
+  "vietinbank": {
+   "bank": "VietinBank",
+   "status": "ok",
+   "raw": 8,
+   "count": 2,
+   "message": "",
+   "last_success": "2026-11-21T10:26:01+07:00",
+   "seconds": 174.9,
+   "via": "browser"
+  }
+ }
+}

@@ -1,0 +1,205 @@
+"""Sinh data/cards.json (danh mục thẻ + quyền lợi đã kiểm tra thủ công từ trang chính thức).
+Chạy lại khi cần sửa dữ liệu: python scripts/build_cards.py
+Quy tắc: không bịa số. Số nào chưa xác minh trên nguồn chính thức thì bỏ trống và ghi 'chưa xác minh'."""
+import json, pathlib
+CHECKED = "2026-11-21"
+CATS = ["an_uong","sieu_thi","xang_dau","du_lich","ve_may_bay","khach_san","mua_online","shopee","giao_duc","y_te","hoa_don","giai_tri","tra_gop","khac"]
+
+cards = [
+ {
+  "id": "vpbank-super-shopee-platinum", "bank": "VPBank", "bank_code": "VPB",
+  "name": "VPBank Super Shopee Platinum", "network": "Visa", "tier": "Platinum",
+  "sources": [
+    "https://www.vpbank.com.vn/-/media/vpbank-latest/1retail/files/cards/tbsct_the-le-uu-dai-super-shopee-platinum.pdf",
+    "https://www.vpbank.com.vn/-/media/vpbank-latest/1retail/cards/Cap-nhat-bieu-phi-the-tin-dung-tai-VPBANK---Khoi-KHCN-20261019-tt.pdf",
+    "https://www.vpbank.com.vn/ca-nhan/the-tin-dung/the-tin-dung-super-shopee-platinum"
+  ],
+  "checked_at": CHECKED,
+  "benefits": [
+    {"category": "shopee", "desc_vi": "Hoàn 10% giao dịch tại Shopee (và đồ ăn qua Shopee/ShopeeFood – thể lệ gốc ghi NowFood)", "rate_pct": 10, "cap_vnd": 400000, "cap_period": "ky",
+     "condition_vi": "Theo thể lệ ưu đãi dài hạn trên vpbank.com.vn. Bản thể lệ mới (2025–2030) được báo là yêu cầu tổng chi tiêu ≥ 4 triệu/kỳ – chưa xác minh trên trang VPBank."},
+    {"category": "an_uong", "desc_vi": "Hoàn 2% ăn uống, siêu thị (Co.op, BigC/GO!, Lotte Mart, WinMart), Grab/Be", "rate_pct": 2, "cap_vnd": 200000, "cap_period": "ky", "cap_group": "vpb_daily"},
+    {"category": "sieu_thi", "desc_vi": "Hoàn 2% siêu thị Co.op, BigC/GO!, Lotte Mart, WinMart (chung trần 200.000đ với ăn uống, Grab/Be)", "rate_pct": 2, "cap_vnd": 200000, "cap_period": "ky", "cap_group": "vpb_daily"},
+    {"category": "khac", "desc_vi": "Các giao dịch khác: có hoàn tiền nhưng tỷ lệ hiện hành chưa xác minh (thể lệ gốc ghi 0,3%, nguồn bên thứ ba ghi 0,1%)", "unverified": True},
+    {"category": "tra_gop", "desc_vi": "Giao dịch trả góp không được tính hoàn tiền theo thể lệ."}
+  ],
+  "exclude_categories": ["xang_dau", "hoa_don", "tra_gop"],
+  "excluded_vi": "Không hoàn: rút tiền mặt, xăng dầu, hóa đơn điện/nước/gas, viễn thông, trả góp, giao dịch hủy/hoàn.",
+  "fees": {"annual_vnd": 599000, "waiver_vi": "Miễn phí năm tiếp theo khi tổng chi tiêu năm liền trước ≥ 120.000.000đ (biểu phí VPBank cập nhật 19/10/2026)."},
+  "stmt_hint_vi": "Thể lệ ghi kỳ hoàn tiền từ ngày 26 đến hết ngày 25 tháng sau.",
+  "notes_vi": "VPBank đã ngừng mở mới dòng thẻ này (trang VPBank ghi 'This card is no longer available'); chủ thẻ hiện hữu vẫn dùng bình thường.",
+  "promo_match": {"include_any": ["thẻ tín dụng", "visa", "shopee", "tất cả thẻ"], "exclude_any": ["ghi nợ", "doanh nghiệp", "vpbiz", "mwg", " z jcb", "vpbank z", "mastercard", "flex", "stepup", "diamond", "mở mới", "mở thẻ", "phi vật lý", "unionpay", "lady", "s rewards"]}
+ },
+ {
+  "id": "techcombank-everyday", "bank": "Techcombank", "bank_code": "TCB",
+  "name": "Techcombank Everyday", "network": "Visa", "tier": "Platinum",
+  "sources": ["https://techcombank.com/khach-hang-ca-nhan/chi-tieu/the/the-tin-dung/techcombank-everyday"],
+  "checked_at": CHECKED,
+  "benefits": [
+    {"category": "mua_online", "desc_vi": "Tích 50 điểm/1.000đ (≈5%) cho giao dịch tiêu dùng online nội địa từ 200.000đ; online quốc tế 80 điểm/1.000đ (≈8%)", "rate_pct": 5, "reward": "diem", "cap_vnd": 500000, "cap_period": "thang",
+     "min_txn_vnd": 200000, "condition_vi": "Điểm thưởng Techcombank Rewards (trang ngân hàng quy đổi 'tích điểm tới 8%'). Tối đa 500.000 điểm/tháng; 700.000 điểm nếu tổng chi tiêu từ 30 triệu. Chi tiêu từ 15 triệu/tháng được thưởng thêm gấp đôi."},
+    {"category": "shopee", "desc_vi": "Shopee là giao dịch online nội địa: tích ≈5% điểm (giao dịch từ 200.000đ)", "rate_pct": 5, "reward": "diem", "cap_vnd": 500000, "cap_period": "thang", "cap_group": "tcb_online", "min_txn_vnd": 200000}
+  ],
+  "excluded_vi": "Xem danh sách MCC loại trừ trên trang Techcombank.",
+  "fees": {"annual_vnd": 599000, "waiver_vi": "Hoàn phí năm đầu khi chi ≥ 1.500.000đ trong tháng đầu; từ năm 2 hoàn phí nếu tổng chi tiêu năm trước đạt 120 triệu. Khách Priority/Private miễn phí."},
+  "notes_vi": "Phí giao dịch ngoại tệ 2,95%. Thưởng là điểm, không phải tiền mặt.",
+  "promo_match": {"tcb_card_type": "the-tin-dung/the-tin-dung-techcombank-everyday"}
+ },
+ {
+  "id": "tpbank-evo", "bank": "TPBank", "bank_code": "TPB",
+  "name": "TPBank EVO", "network": "Visa",
+  "sources": ["https://www.goevo.vn/tong-hop/spending/hoan-tien-theo-so-thich", "https://tpb.vn/khuyen-mai/the-tin-dung/tpbank-evo-so-thich", "https://www.goevo.vn/uudai/universal-offer/tra-gop-moi-noi"],
+  "checked_at": CHECKED,
+  "choices": [{"id": "evo_goi", "label_vi": "Gói danh mục đã chọn trên EVO App (chọn 1)", "pick": 1,
+               "options": [{"id": "g1", "label_vi": "Gói 1: Đi lại, ăn uống"}, {"id": "g2", "label_vi": "Gói 2: Siêu thị, giáo dục"}, {"id": "g3", "label_vi": "Gói 3: Du lịch, giải trí"}, {"id": "g4", "label_vi": "Gói 4: Làm đẹp, TMĐT"}]}],
+  "benefits": [
+    {"category": "an_uong", "choice": "evo_goi:g1", "desc_vi": "Gói 1 – ăn uống (gồm đặt đồ ăn): hoàn 10% nếu tổng chi tiêu kỳ ≥ 15 triệu, dưới 15 triệu hoàn 2%", "rate_pct": 10, "rate_below_min_pct": 2, "min_cycle_spend_vnd": 15000000, "cap_vnd": 250000, "cap_period": "ky"},
+    {"category": "sieu_thi", "choice": "evo_goi:g2", "desc_vi": "Gói 2 – siêu thị: hoàn 10% (kỳ ≥ 15 triệu) / 2%", "rate_pct": 10, "rate_below_min_pct": 2, "min_cycle_spend_vnd": 15000000, "cap_vnd": 250000, "cap_period": "ky"},
+    {"category": "giao_duc", "choice": "evo_goi:g2", "desc_vi": "Gói 2 – giáo dục: hoàn 10% (kỳ ≥ 15 triệu) / 2%", "rate_pct": 10, "rate_below_min_pct": 2, "min_cycle_spend_vnd": 15000000, "cap_vnd": 250000, "cap_period": "ky"},
+    {"category": "du_lich", "choice": "evo_goi:g3", "desc_vi": "Gói 3 – du lịch: hoàn 10% (kỳ ≥ 15 triệu) / 2%", "rate_pct": 10, "rate_below_min_pct": 2, "min_cycle_spend_vnd": 15000000, "cap_vnd": 250000, "cap_period": "ky"},
+    {"category": "giai_tri", "choice": "evo_goi:g3", "desc_vi": "Gói 3 – giải trí: hoàn 10% (kỳ ≥ 15 triệu) / 2%", "rate_pct": 10, "rate_below_min_pct": 2, "min_cycle_spend_vnd": 15000000, "cap_vnd": 250000, "cap_period": "ky"},
+    {"category": "mua_online", "choice": "evo_goi:g4", "desc_vi": "Gói 4 – TMĐT (và làm đẹp): hoàn 10% (kỳ ≥ 15 triệu) / 2%", "rate_pct": 10, "rate_below_min_pct": 2, "min_cycle_spend_vnd": 15000000, "cap_vnd": 250000, "cap_period": "ky"},
+    {"category": "shopee", "choice": "evo_goi:g4", "desc_vi": "Shopee thuộc TMĐT (gói 4): hoàn 10% (kỳ ≥ 15 triệu) / 2%", "rate_pct": 10, "rate_below_min_pct": 2, "min_cycle_spend_vnd": 15000000, "cap_vnd": 250000, "cap_period": "ky"}
+  ],
+  "program_valid_to": "2026-12-20",
+  "exclude_categories": ["tra_gop"],
+  "excluded_vi": "Không tính: rút tiền, trả góp, giao dịch qua ví/cổng (MoMo, ZaloPay, VNPay, Payoo…) trừ FPTShop, TGDĐ, Tiki, Baemin, Con Cưng, Viettel Store; chứng khoán, chuyển tiền, quảng cáo Facebook/Google.",
+  "fees": {"waiver_vi": "Blog goevo.vn ghi phí thường niên 495.000đ (hạng Bạc/Vàng) – chưa xác minh trên biểu phí chính thức của TPBank nên app không dùng số này."},
+  "interest_free_days": 45,
+  "notes_vi": "Tổng hoàn tối đa 500.000đ/kỳ, 250.000đ/danh mục; hoàn từ 10.000đ trở lên. Chương trình 'Hoàn tiền theo sở thích' có hiệu lực đến 20/12/2026 – sau ngày này cần kiểm tra lại thể lệ mới.",
+  "promo_match": {"include_any": ["evo", "thẻ tín dụng", "visa", "thẻ tpbank"], "exclude_any": ["ghi nợ", "doanh nghiệp", "mở mới", "mở thẻ", "jcb", "mastercard", "fest", "signature", "platinum", "vietnam airlines"]}
+ },
+ {
+  "id": "mb-priority-visa-signature", "bank": "MB", "bank_code": "MB",
+  "name": "MB Priority Visa Signature", "network": "Visa", "tier": "Signature",
+  "sources": ["https://www.mbbank.com.vn/ca-nhan/priority/the/the-tin-dung/the-tin-dung-quoc-te-mb-priority-visa-signature",
+              "https://www.mbbank.com.vn/ca-nhan/khach-hang-ca-nhan/uu-dai/the/dac-quyen-phong-cho-danh-cho-chu-the-mb-2026-6-11-14-58-0"],
+  "checked_at": CHECKED,
+  "choices": [
+    {"id": "mb10", "label_vi": "Lĩnh vực hoàn 10% (chọn 1)", "pick": 1, "options": [{"id": "dulich", "label_vi": "Du lịch"}, {"id": "giaitri", "label_vi": "Giải trí"}, {"id": "anuong", "label_vi": "Ăn uống"}, {"id": "dautu", "label_vi": "Đầu tư cuộc sống (Bảo hiểm & Giáo dục)"}]},
+    {"id": "mb2", "label_vi": "Lĩnh vực hoàn 2% (chọn 2)", "pick": 2, "options": [{"id": "sieuthi", "label_vi": "Siêu thị"}, {"id": "thoitrang", "label_vi": "Thời trang"}, {"id": "online", "label_vi": "Mua sắm online"}, {"id": "dichuyen", "label_vi": "Di chuyển"}, {"id": "suckhoe", "label_vi": "Sức khỏe"}]}
+  ],
+  "benefits": [
+    {"category": "du_lich", "choice": "mb10:dulich", "desc_vi": "Hoàn 10% lĩnh vực Du lịch (nếu đã chọn)", "rate_pct": 10, "cap_vnd": 400000, "cap_period": "ky", "cap_group": "mb10"},
+    {"category": "giai_tri", "choice": "mb10:giaitri", "desc_vi": "Hoàn 10% lĩnh vực Giải trí (nếu đã chọn)", "rate_pct": 10, "cap_vnd": 400000, "cap_period": "ky", "cap_group": "mb10"},
+    {"category": "an_uong", "choice": "mb10:anuong", "desc_vi": "Hoàn 10% lĩnh vực Ăn uống (nếu đã chọn)", "rate_pct": 10, "cap_vnd": 400000, "cap_period": "ky", "cap_group": "mb10"},
+    {"category": "giao_duc", "choice": "mb10:dautu", "desc_vi": "Hoàn 10% Đầu tư cuộc sống – giáo dục, bảo hiểm (nếu đã chọn)", "rate_pct": 10, "cap_vnd": 400000, "cap_period": "ky", "cap_group": "mb10"},
+    {"category": "sieu_thi", "choice": "mb2:sieuthi", "desc_vi": "Hoàn 2% Siêu thị (nếu đã chọn)", "rate_pct": 2, "cap_vnd": 400000, "cap_period": "ky", "cap_group": "mb2"},
+    {"category": "mua_online", "choice": "mb2:online", "desc_vi": "Hoàn 2% Mua sắm online (nếu đã chọn)", "rate_pct": 2, "cap_vnd": 400000, "cap_period": "ky", "cap_group": "mb2"},
+    {"category": "shopee", "choice": "mb2:online", "desc_vi": "Shopee thuộc Mua sắm online: hoàn 2% (nếu đã chọn)", "rate_pct": 2, "cap_vnd": 400000, "cap_period": "ky", "cap_group": "mb2"},
+    {"category": "y_te", "choice": "mb2:suckhoe", "desc_vi": "Hoàn 2% Sức khỏe (nếu đã chọn)", "rate_pct": 2, "cap_vnd": 400000, "cap_period": "ky", "cap_group": "mb2"},
+    {"category": "khac", "choice": "mb2:thoitrang", "desc_vi": "Hoàn 2% Thời trang (nếu đã chọn)", "rate_pct": 2, "cap_vnd": 400000, "cap_period": "ky", "cap_group": "mb2", "keywords": ["thời trang", "uniqlo", "zara", "canifa", "h&m"]},
+    {"category": "khac", "choice": "mb2:dichuyen", "desc_vi": "Hoàn 2% Di chuyển (nếu đã chọn)", "rate_pct": 2, "cap_vnd": 400000, "cap_period": "ky", "cap_group": "mb2", "keywords": ["grab", "be ", "xanh sm", "taxi", "gojek"]},
+    {"category": "du_lich", "desc_vi": "8 lượt phòng chờ sân bay nội địa khi kích hoạt (4 chủ thẻ + 4 người thân), +1 lượt cho mỗi 20 triệu chi tiêu/tháng (tối đa 2 lượt/tháng)"},
+    {"category": "an_uong", "desc_vi": "Ưu đãi chủ thẻ: giảm đến 1,5 triệu tại nhà hàng Michelin (đến 30/09/2027), giảm 400K Grab, giảm 500K Shopee Mall, giảm 500K sân golf"}
+  ],
+  "fees": {"waiver_vi": "Phí thường niên chưa xác minh trên biểu phí MB (trang MB chặn truy cập tự động); xem mục 'Phí dịch vụ' trên trang sản phẩm."},
+  "notes_vi": "Hoàn tối đa 800.000đ/thẻ/kỳ (400.000đ nhóm 10% + 400.000đ nhóm 2%). x2 tỷ lệ hoàn trong kỳ sao kê có sinh nhật. Thẻ dành cho khách MB Priority.",
+  "promo_match": {"include_any": ["visa", "priority", "signature", "thẻ tín dụng", "thẻ mb", "chủ thẻ mb"], "exclude_any": ["ghi nợ", "doanh nghiệp", "jcb", "mastercard", "mở mới", "mở thẻ", "hộ kinh doanh", "vetc", "tài khoản chạm", "tài khoản số đẹp"]}
+ }
+]
+
+vib_common = {
+  "bank": "VIB", "bank_code": "VIB", "network": "Visa",
+  "sources": ["https://www.vib.com.vn/vn/the-tin-dung/vib-one-card", "https://www.vib.com.vn/vn/cam-nang/the-tin-dung/tien-ich-the/mcc-vib-one-card"],
+  "checked_at": CHECKED,
+  "exclude_categories": ["hoa_don"],
+  "excluded_vi": "Không tính: thanh toán qua mã QR, thanh toán hóa đơn qua MyVIB, thuế, MCC 4900/4814. Giao dịch ngoài danh mục đã chọn: 0,1%.",
+  "promo_match": {"include_any": ["vib", "visa", "one card", "thẻ tín dụng"], "exclude_any": ["ghi nợ", "mastercard", "doanh nghiệp", "max card", "mở mới", "mở thẻ", "ivy card", "tài khoản vib", "lãi suất", "huy động", "vay", "junior", "lợi suất", "vib up", "thẻ thanh toán", "quảng cáo"]}
+}
+for tier, rate, cap, n, fee, lim in [("Gold", 3, 500000, 1, 999000, "đến 50 triệu"), ("Platinum", 6, 1000000, 2, 1999000, "trên 50–100 triệu"), ("Signature", 9, 1500000, 3, 2999000, "trên 100 triệu")]:
+    c = dict(vib_common)
+    c.update({
+      "id": f"vib-onecard-{tier.lower()}", "name": f"VIB One Card ({tier})", "tier": tier,
+      "limit_hint_vi": f"Hạng {tier}: hạn mức {lim}",
+      "choices": [{"id": "vib_dm", "label_vi": f"Danh mục hoàn tiền đã chọn trên MyVIB (chọn {n}/5)", "pick": n,
+                   "options": [{"id": "muasam", "label_vi": "Mua sắm"}, {"id": "dulich", "label_vi": "Du lịch"}, {"id": "giaoduc", "label_vi": "Giáo dục"}, {"id": "baohiem", "label_vi": "Bảo hiểm"}, {"id": "nuocngoai", "label_vi": "Chi tiêu nước ngoài"}]}],
+      "benefits": [
+        {"category": "mua_online", "choice": "vib_dm:muasam", "desc_vi": f"Hoàn {rate}% danh mục Mua sắm (bán lẻ, thời trang, mỹ phẩm…)", "rate_pct": rate, "cap_vnd": cap, "cap_period": "ky", "cap_group": "vib", "reward": "diem"},
+        {"category": "shopee", "choice": "vib_dm:muasam", "desc_vi": f"Hoàn {rate}% nếu giao dịch Shopee mang MCC thuộc nhóm Mua sắm", "rate_pct": rate, "cap_vnd": cap, "cap_period": "ky", "cap_group": "vib", "reward": "diem"},
+        {"category": "sieu_thi", "choice": "vib_dm:muasam", "desc_vi": f"Hoàn {rate}% nếu MCC siêu thị thuộc nhóm Mua sắm (xem danh sách MCC)", "rate_pct": rate, "cap_vnd": cap, "cap_period": "ky", "cap_group": "vib", "reward": "diem"},
+        {"category": "du_lich", "choice": "vib_dm:dulich", "desc_vi": f"Hoàn {rate}% danh mục Du lịch (hãng bay, khách sạn, đại lý lữ hành)", "rate_pct": rate, "cap_vnd": cap, "cap_period": "ky", "cap_group": "vib", "reward": "diem"},
+        {"category": "giao_duc", "choice": "vib_dm:giaoduc", "desc_vi": f"Hoàn {rate}% danh mục Giáo dục", "rate_pct": rate, "cap_vnd": cap, "cap_period": "ky", "cap_group": "vib", "reward": "diem"},
+        {"category": "khac", "choice": "vib_dm:baohiem", "desc_vi": f"Hoàn {rate}% danh mục Bảo hiểm", "rate_pct": rate, "cap_vnd": cap, "cap_period": "ky", "cap_group": "vib", "reward": "diem", "keywords": ["bảo hiểm", "prudential", "manulife", "aia", "bảo việt"]},
+        {"category": "khac", "desc_vi": "Giao dịch ngoài danh mục đã chọn: 0,1%", "rate_pct": 0.1, "reward": "diem", "fallback": True}
+      ] + ([{"category": "du_lich", "desc_vi": "4 lượt phòng chờ sân bay; phí ngoại tệ 0% trong 3 kỳ sao kê đầu, sau đó 1%"},
+            {"category": "tra_gop", "desc_vi": "01 giao dịch trả góp 0% cho giao dịch từ 5 triệu"}] if tier == "Signature" else []),
+      "fees": {"annual_vnd": fee},
+      "notes_vi": f"Hạng thẻ do hạn mức quyết định ({lim}); tối đa {cap:,}".replace(",", ".") + " điểm/kỳ sao kê."
+    })
+    cards.append(c)
+
+cards += [
+ {
+  "id": "vikkigo-credit", "bank": "Vikki Bank", "bank_code": "VIKKI",
+  "name": "Thẻ tín dụng VikkiGO", "network": "Mastercard",
+  "sources": ["https://vikkibank.vn/the-tin-dung-vikkigo/", "https://vikkibank.vn/phi-va-bieu-phi-su-dung-the-tin-dung-vikkigo/", "https://vikkibank.vn/uu-dai-vikki-deals-danh-cho-chu-the-tin-dung-vikkigo/"],
+  "checked_at": CHECKED,
+  "benefits": [
+    {"category": "khac", "desc_vi": "Không có chương trình hoàn tiền cố định được công bố trên trang sản phẩm (chưa xác minh tỷ lệ hoàn nào). Ưu đãi giảm giá tại đối tác Vikki & Mastercard theo từng đợt."}
+  ],
+  "fees": {"annual_vnd": 0, "waiver_vi": "Biểu phí VikkiGO: phí thường niên thẻ chính và thẻ phụ miễn phí."},
+  "interest_free_days": 45,
+  "notes_vi": "Vikki Bank (trước đây là DongA Bank). Nếu thẻ của bạn là 'Vikki Skyjoy' thì chọn mục đó trong danh sách.",
+  "promo_match": {"include_any": ["vikki", "mastercard", "thẻ tín dụng"], "exclude_any": ["ghi nợ", "trả trước", "doanh nghiệp", "vikkipro", "tiết kiệm"]}
+ },
+ {
+  "id": "vikki-skyjoy-credit", "bank": "Vikki Bank", "bank_code": "VIKKI",
+  "name": "Thẻ tín dụng Vikki Skyjoy", "network": "",
+  "sources": ["https://vikkibank.vn/uu-dai-the/"],
+  "checked_at": CHECKED,
+  "benefits": [{"category": "khac", "desc_vi": "Chưa xác minh quyền lợi (chỉ thấy tên thẻ trên trang Ưu đãi thẻ Vikki)."}],
+  "fees": {},
+  "notes_vi": "Chỉ dùng nếu thẻ Vikki của bạn là dòng Skyjoy.",
+  "promo_match": {"include_any": ["vikki", "skyjoy", "thẻ tín dụng"], "exclude_any": ["ghi nợ", "trả trước", "doanh nghiệp", "tiết kiệm"]}
+ },
+ {
+  "id": "hdbank-petrolimex-4in1", "bank": "HDBank", "bank_code": "HDB",
+  "name": "HDBank Petrolimex 4in1", "network": "Mastercard",
+  "sources": ["https://hdbank.com.vn/vi/personal/product/detail/the/the-tin-dung/hdbank-petrolimex-4in1"],
+  "checked_at": CHECKED,
+  "benefits": [
+    {"category": "xang_dau", "desc_vi": "Tích 3 điểm SkyPoint/100.000đ giao dịch xăng dầu", "reward": "diem", "condition_vi": "Giá trị quy đổi 1 điểm SkyPoint ra tiền chưa xác minh nên app không tính % hoàn."},
+    {"category": "khac", "desc_vi": "Tích 1 điểm SkyPoint/100.000đ giao dịch nội địa; 2 điểm/100.000đ giao dịch quốc tế. Thưởng 500 điểm khi chi 10–<20 triệu/tháng, 1.000 điểm khi ≥ 20 triệu/tháng", "reward": "diem"},
+    {"category": "tra_gop", "desc_vi": "Trả góp 0% lãi suất đến 12 tháng qua app HDBank cho giao dịch từ 2 triệu"}
+  ],
+  "fees": {"annual_vnd": 440000, "waiver_vi": "Miễn phí năm đầu; miễn từ năm 2 khi đạt doanh số giao dịch (mức doanh số chưa xác minh). Không có thẻ phụ."},
+  "interest_free_days": 45,
+  "notes_vi": "Thanh toán tối thiểu 3%, phí giao dịch ngoại tệ 3%.",
+  "promo_match": {"include_any": ["thẻ tín dụng", "petrolimex", "mastercard", "thẻ hdbank", "chủ thẻ hdbank"], "exclude_any": ["ghi nợ", "jcb", "visa", "doanh nghiệp", "khách hàng đặc biệt", "vay", "tiền gửi", "mở mới", "mở thẻ"]}
+ },
+ {
+  "id": "vietinbank-jcb-ultimate-saviy", "bank": "VietinBank", "bank_code": "CTG",
+  "name": "VietinBank JCB Ultimate SaviY", "network": "JCB", "tier": "Ultimate",
+  "sources": ["https://www.vietinbank.vn/ca-nhan/vietinbank-jcb-ultimate-saviy-20-html",
+              "https://www.vietinbank.vn/vi/20/vietinbank-jcb-ultimate-saviy-khi-phong-cach-duoc-nang-tam-10-html",
+              "https://www.vietinbank.vn/ca-nhan/cong-cu-tien-ich/bieu-phi-va-bieu-mau/bieu-phi-dich-vu-ap-dung-cho-san-pham-the-tin-dung-quoc-te-40-html"],
+  "checked_at": CHECKED,
+  "benefits": [
+    {"category": "an_uong", "desc_vi": "Giảm 300.000đ cho hóa đơn từ 1 triệu tại gian hàng ẩm thực AEON Mall (thứ 6–CN, POS Payoo, 2 lượt/tháng) – đến 31/01/2027"},
+    {"category": "an_uong", "desc_vi": "JCB Ultimate: giảm 1.000.000đ cho hóa đơn từ 2 triệu tại nhà hàng Nhật (JCB Diamond Dining)"},
+    {"category": "khac", "desc_vi": "Canifa: nâng hạng Diamond 1 năm (giảm đến 30%) + giảm 300.000đ cho hóa đơn từ 1 triệu (thứ 6–CN, 2 lượt/tháng) – đến 30/06/2027", "keywords": ["canifa", "thời trang"]},
+    {"category": "du_lich", "desc_vi": "Đặc quyền JCB Ultimate: phòng chờ sân bay, Fast-track (điều kiện theo trang VietinBank)"},
+    {"category": "khach_san", "desc_vi": "Đặc quyền JCB Ultimate: miễn phí 1 đêm khách sạn (điều kiện theo trang VietinBank)"},
+    {"category": "tra_gop", "desc_vi": "Trả góp lãi suất 0% cho mọi giao dịch chi tiêu từ 1 triệu"},
+    {"category": "khac", "desc_vi": "Không có tỷ lệ hoàn tiền cố định được công bố trên trang VietinBank (chưa xác minh)."}
+  ],
+  "fees": {"annual_vnd": 899000, "waiver_vi": "Mức 899.000đ là giá chưa VAT theo biểu phí VietinBank; điều kiện miễn phí chưa xác minh trên trang chính thức."},
+  "notes_vi": "Rút tiền mặt tại quầy VietinBank phí 2% (đã gồm VAT). Thẻ mới: tặng set menu khi chi tiêu 30 triệu trong 30 ngày (01/11/2026–31/12/2027). Phí ngoại tệ 1,82% + 0,91%; ứng tiền mặt tại ATM 3,64% (tối thiểu 50.000đ). Số ngày miễn lãi 55 ngày chỉ thấy trên nguồn bên thứ ba (chưa xác minh).",
+  "promo_match": {"include_any": ["jcb", "saviy", "thẻ tín dụng", "thẻ vietinbank", "chủ thẻ vietinbank", "tất cả thẻ"], "exclude_any": ["ghi nợ", "debit", "visa", "mastercard", "doanh nghiệp", "hộ kinh doanh", "mở tài khoản", "vay", "chuyển tiền", "kiều hối", "ipay", "giải pháp tài chính", "v-family"]}
+ }
+]
+
+for c in cards:
+    for b in c["benefits"]:
+        assert b["category"] in CATS, (c["id"], b["category"])
+
+out = {
+  "version": 1, "updated_at": CHECKED, "categories": CATS,
+  "my_card_ids": ["vpbank-super-shopee-platinum", "techcombank-everyday", "tpbank-evo", "mb-priority-visa-signature", "vib-onecard-gold", "vikkigo-credit", "hdbank-petrolimex-4in1", "vietinbank-jcb-ultimate-saviy"],
+  "note_vi": "Dữ liệu quyền lợi được đối chiếu thủ công với trang chính thức của ngân hàng ngày " + CHECKED + ". Mục có 'chưa xác minh' nghĩa là không tìm thấy số liệu trên nguồn chính thức.",
+  "cards": cards
+}
+p = pathlib.Path(__file__).resolve().parent.parent / "data" / "cards.json"
+p.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+print("wrote", p, len(cards), "cards")
