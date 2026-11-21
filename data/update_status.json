@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-21T10:32:00+07:00",
- "runner": "local",
+ "updated_at": "2026-11-21T10:35:33+07:00",
+ "runner": "github-actions",
  "banks": {
   "vpbank": {
    "bank": "VPBank",
@@ -8,8 +8,8 @@
    "raw": 138,
    "count": 20,
    "message": "",
-   "last_success": "2026-11-21T10:26:01+07:00",
-   "seconds": 16.0,
+   "last_success": "2026-11-21T10:35:33+07:00",
+   "seconds": 8.1,
    "via": "http"
   },
   "techcombank": {
@@ -18,8 +18,8 @@
    "raw": 108,
    "count": 35,
    "message": "",
-   "last_success": "2026-11-21T10:26:01+07:00",
-   "seconds": 3.5,
+   "last_success": "2026-11-21T10:35:33+07:00",
+   "seconds": 2.6,
    "via": "http"
   },
   "tpbank": {
@@ -28,8 +28,8 @@
    "raw": 178,
    "count": 9,
    "message": "",
-   "last_success": "2026-11-21T10:26:01+07:00",
-   "seconds": 13.4,
+   "last_success": "2026-11-21T10:35:33+07:00",
+   "seconds": 17.8,
    "via": "http"
   },
   "mbbank": {
@@ -38,8 +38,8 @@
    "raw": 15,
    "count": 4,
    "message": "",
-   "last_success": "2026-11-21T10:26:01+07:00",
-   "seconds": 99.6,
+   "last_success": "2026-11-21T10:35:33+07:00",
+   "seconds": 95.1,
    "via": "browser"
   },
   "vib": {
@@ -48,8 +48,8 @@
    "raw": 40,
    "count": 18,
    "message": "",
-   "last_success": "2026-11-21T10:26:01+07:00",
-   "seconds": 12.6,
+   "last_success": "2026-11-21T10:35:33+07:00",
+   "seconds": 11.9,
    "via": "browser"
   },
   "vikki": {
@@ -58,8 +58,8 @@
    "raw": 6,
    "count": 5,
    "message": "",
-   "last_success": "2026-11-21T10:26:01+07:00",
-   "seconds": 10.0,
+   "last_success": "2026-11-21T10:35:33+07:00",
+   "seconds": 8.2,
    "via": "http"
   },
   "hdbank": {
@@ -68,8 +68,8 @@
    "raw": 12,
    "count": 9,
    "message": "",
-   "last_success": "2026-11-21T10:32:00+07:00",
-   "seconds": 73.7,
+   "last_success": "2026-11-21T10:35:33+07:00",
+   "seconds": 70.6,
    "via": "browser"
   },
   "vietinbank": {
@@ -78,8 +78,8 @@
    "raw": 8,
    "count": 2,
    "message": "",
-   "last_success": "2026-11-21T10:26:01+07:00",
-   "seconds": 174.9,
+   "last_success": "2026-11-21T10:35:33+07:00",
+   "seconds": 65.1,
    "via": "browser"
   }
  }
