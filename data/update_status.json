@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T10:35:33+07:00",
+ "updated_at": "2026-11-22T09:56:21+07:00",
  "runner": "github-actions",
  "banks": {
   "vpbank": {
@@ -8,8 +8,8 @@
    "raw": 138,
    "count": 20,
    "message": "",
-   "last_success": "2026-11-21T10:35:33+07:00",
-   "seconds": 8.1,
+   "last_success": "2026-11-22T09:56:21+07:00",
+   "seconds": 6.9,
    "via": "http"
   },
   "techcombank": {
@@ -18,8 +18,8 @@
    "raw": 108,
    "count": 35,
    "message": "",
-   "last_success": "2026-11-21T10:35:33+07:00",
-   "seconds": 2.6,
+   "last_success": "2026-11-22T09:56:21+07:00",
+   "seconds": 1.1,
    "via": "http"
   },
   "tpbank": {
@@ -28,8 +28,8 @@
    "raw": 178,
    "count": 9,
    "message": "",
-   "last_success": "2026-11-21T10:35:33+07:00",
-   "seconds": 17.8,
+   "last_success": "2026-11-22T09:56:21+07:00",
+   "seconds": 21.1,
    "via": "http"
   },
   "mbbank": {
@@ -38,8 +38,8 @@
    "raw": 15,
    "count": 4,
    "message": "",
-   "last_success": "2026-11-21T10:35:33+07:00",
-   "seconds": 95.1,
+   "last_success": "2026-11-22T09:56:21+07:00",
+   "seconds": 92.1,
    "via": "browser"
   },
   "vib": {
@@ -48,8 +48,8 @@
    "raw": 40,
    "count": 18,
    "message": "",
-   "last_success": "2026-11-21T10:35:33+07:00",
-   "seconds": 11.9,
+   "last_success": "2026-11-22T09:56:21+07:00",
+   "seconds": 14.3,
    "via": "browser"
   },
   "vikki": {
@@ -58,8 +58,8 @@
    "raw": 6,
    "count": 5,
    "message": "",
-   "last_success": "2026-11-21T10:35:33+07:00",
-   "seconds": 8.2,
+   "last_success": "2026-11-22T09:56:21+07:00",
+   "seconds": 10.4,
    "via": "http"
   },
   "hdbank": {
@@ -68,18 +68,18 @@
    "raw": 12,
    "count": 9,
    "message": "",
-   "last_success": "2026-11-21T10:35:33+07:00",
-   "seconds": 70.6,
+   "last_success": "2026-11-22T09:56:21+07:00",
+   "seconds": 71.1,
    "via": "browser"
   },
   "vietinbank": {
    "bank": "VietinBank",
-   "status": "ok",
-   "raw": 8,
+   "status": "error",
    "count": 2,
-   "message": "",
+   "message": "BankError: không thấy ưu đãi trên trang VietinBank",
+   "kept_old": 2,
    "last_success": "2026-11-21T10:35:33+07:00",
-   "seconds": 65.1,
+   "seconds": 27.3,
    "via": "browser"
   }
  }
