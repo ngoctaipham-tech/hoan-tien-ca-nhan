@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T12:20:35+07:00",
+ "updated_at": "2026-11-26T11:50:37+07:00",
  "runner": "github-actions",
  "banks": {
   "vpbank": {
@@ -8,28 +8,28 @@
    "raw": 138,
    "count": 20,
    "message": "",
-   "last_success": "2026-11-25T12:20:35+07:00",
-   "seconds": 8.0,
+   "last_success": "2026-11-26T11:50:37+07:00",
+   "seconds": 7.5,
    "via": "http"
   },
   "techcombank": {
    "bank": "Techcombank",
    "status": "ok",
-   "raw": 110,
+   "raw": 109,
    "count": 35,
    "message": "",
-   "last_success": "2026-11-25T12:20:35+07:00",
-   "seconds": 1.4,
+   "last_success": "2026-11-26T11:50:37+07:00",
+   "seconds": 1.8,
    "via": "http"
   },
   "tpbank": {
    "bank": "TPBank",
    "status": "ok",
-   "raw": 178,
-   "count": 9,
+   "raw": 179,
+   "count": 10,
    "message": "",
-   "last_success": "2026-11-25T12:20:35+07:00",
-   "seconds": 5.0,
+   "last_success": "2026-11-26T11:50:37+07:00",
+   "seconds": 18.4,
    "via": "http"
   },
   "mbbank": {
@@ -38,8 +38,8 @@
    "raw": 15,
    "count": 4,
    "message": "",
-   "last_success": "2026-11-25T12:20:35+07:00",
-   "seconds": 89.4,
+   "last_success": "2026-11-26T11:50:37+07:00",
+   "seconds": 90.4,
    "via": "browser"
   },
   "vib": {
@@ -48,8 +48,8 @@
    "raw": 40,
    "count": 18,
    "message": "",
-   "last_success": "2026-11-25T12:20:35+07:00",
-   "seconds": 13.1,
+   "last_success": "2026-11-26T11:50:37+07:00",
+   "seconds": 13.8,
    "via": "browser"
   },
   "vikki": {
@@ -58,8 +58,8 @@
    "raw": 6,
    "count": 5,
    "message": "",
-   "last_success": "2026-11-25T12:20:35+07:00",
-   "seconds": 9.7,
+   "last_success": "2026-11-26T11:50:37+07:00",
+   "seconds": 10.2,
    "via": "http"
   },
   "hdbank": {
@@ -68,8 +68,8 @@
    "raw": 12,
    "count": 9,
    "message": "",
-   "last_success": "2026-11-25T12:20:35+07:00",
-   "seconds": 71.1,
+   "last_success": "2026-11-26T11:50:37+07:00",
+   "seconds": 71.0,
    "via": "browser"
   },
   "vietinbank": {
