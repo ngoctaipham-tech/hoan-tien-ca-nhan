@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-27T11:53:41+07:00",
- "count": 103,
+ "updated_at": "2026-11-28T11:38:53+07:00",
+ "count": 105,
  "promos": [
   {
    "id": "techcombank-6f114f15fa",
@@ -16,7 +16,7 @@
    "valid_from": "2026-09-12",
    "valid_to": "2026-11-30",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/giam-den-3-trieu-khi-mua-dong-iphone-18-bang-the-tin-dung-techcombank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-19f64c271b",
@@ -32,23 +32,7 @@
    "valid_from": "2026-11-03",
    "valid_to": "2026-11-30",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/chuong-trinh-giao-dich-thang-11-nhan-qua-lien-tay",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
-  },
-  {
-   "id": "hdbank-055862245d",
-   "bank": "HDBank",
-   "bank_key": "hdbank",
-   "card_ids": [
-    "hdbank-petrolimex-4in1"
-   ],
-   "title_vi": "NGÀY HỘI HDAY HƯỞNG TRỌN ĐẶC QUYỀN THẺ",
-   "category": "tra_gop",
-   "merchant": null,
-   "discount_desc_vi": "Trả góp 0% lãi suất",
-   "valid_from": "2026-01-04",
-   "valid_to": "2026-12-05",
-   "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/ngay-hoi-hday-huong-tron-dac-quyen-the",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-9f70823eb8",
@@ -64,7 +48,7 @@
    "valid_from": "2026-02-10",
    "valid_to": "2026-12-11",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/vpbank-travel-day-2026",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-ef6cd18763",
@@ -80,7 +64,7 @@
    "valid_from": "2026-09-16",
    "valid_to": "2026-12-15",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/giam-den-100-usd-khi-mua-ve-singapore-airlines-bang-the-tin-dung-techcombank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "tpbank-aee4607b04",
@@ -96,7 +80,7 @@
    "valid_from": "2026-11-20",
    "valid_to": "2026-12-20",
    "url": "https://tpb.vn/khuyen-mai/the-tin-dung/ct-san-ve-sh-2027-cho-chu-the-qt-tpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-7ea201c731",
@@ -114,7 +98,7 @@
    "valid_from": "2026-01-16",
    "valid_to": "2026-12-20",
    "url": "https://www.vib.com.vn/vn/promotion/details/ngay-hoi-chi-tieu-the-tin-dung-2026",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "mbbank-91741fc33d",
@@ -146,7 +130,7 @@
    "valid_from": "2026-11-06",
    "valid_to": "2026-12-31",
    "url": "https://tpb.vn/khuyen-mai/the-tin-dung/giam-500000-vnd-cho-hoa-don-tu-2000000-vnd-voi-the-tpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "tpbank-3122ddc264",
@@ -162,7 +146,7 @@
    "valid_from": "2026-01-01",
    "valid_to": "2026-12-31",
    "url": "https://tpb.vn/khuyen-mai/the-tin-dung/chuong-trinh-mien-phi-su-dung-phong-cho-danh-cho-the-tin-dung-tpbank-2026",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "tpbank-fb4c714205",
@@ -178,7 +162,7 @@
    "valid_from": "2026-10-16",
    "valid_to": "2026-12-31",
    "url": "https://tpb.vn/khuyen-mai/the-tin-dung/giam-6-trieu-khi-mua-iphone-duo-voi-the-tpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "tpbank-6c3417feb3",
@@ -194,7 +178,7 @@
    "valid_from": "2026-09-18",
    "valid_to": "2026-12-31",
    "url": "https://tpb.vn/khuyen-mai/the-tin-dung/giam-den-2-trieu-cung-the-tpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "tpbank-88349f9f7d",
@@ -210,7 +194,7 @@
    "valid_from": "2026-01-01",
    "valid_to": "2026-12-31",
    "url": "https://tpb.vn/khuyen-mai/the-tin-dung/viettel-evo-2026",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "tpbank-1ee480e717",
@@ -226,7 +210,7 @@
    "valid_from": "2026-01-01",
    "valid_to": "2026-12-31",
    "url": "https://tpb.vn/khuyen-mai/the-tin-dung/evo-tgdd-2026",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "tpbank-5aed60756e",
@@ -242,7 +226,7 @@
    "valid_from": "2026-01-01",
    "valid_to": "2026-12-31",
    "url": "https://tpb.vn/khuyen-mai/the-tin-dung/the-evo-fpt-shop-2026",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "tpbank-fe633909ad",
@@ -258,7 +242,7 @@
    "valid_from": "2026-01-01",
    "valid_to": "2026-12-31",
    "url": "https://tpb.vn/khuyen-mai/the-tin-dung/thecredit-tpbank-visa",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "tpbank-b622be9755",
@@ -274,7 +258,7 @@
    "valid_from": "2026-01-01",
    "valid_to": "2026-12-31",
    "url": "https://tpb.vn/khuyen-mai/the-tin-dung/ticketbox-giam-50-voi-the-mastercard-fest",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-78e26ebed7",
@@ -290,7 +274,7 @@
    "valid_from": "2026-06-08",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/0-dong-phi-giao-dich-ngoai-te-khi-chi-tieu-tai-chau-a",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-f240a97006",
@@ -306,7 +290,7 @@
    "valid_from": "2026-04-24",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-khi-lam-dep-mua-sam-tai-han-quoc",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-dc783317af",
@@ -322,7 +306,7 @@
    "valid_from": "2026-04-24",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-cung-the-techcombank-cho-mua-sam-an-uong-tai-nhat-ban",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-43b73370e7",
@@ -338,7 +322,7 @@
    "valid_from": "2026-11-18",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-moi-tai-khoan-mua-sam-hoan-diem-thuong",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-bbacdcfdd2",
@@ -354,7 +338,7 @@
    "valid_from": "2026-10-21",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-khi-tra-gop-tai-dien-may-xanh-the-gioi-di-dong-topzone-bang-the-tin-dung-techcombank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-a4ad04c14b",
@@ -370,7 +354,7 @@
    "valid_from": "2026-10-14",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/giam-ngay-500000-vnd-khi-tra-gop-bang-the-tin-dung-techcombank-tai-cellphones",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-e3b15762b5",
@@ -386,7 +370,7 @@
    "valid_from": "2026-09-30",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/nhan-uu-dai-den-700000d-khi-tra-gop-tren-shopee-bang-the-tin-dung-techcombank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-d312f7748d",
@@ -402,7 +386,7 @@
    "valid_from": "2026-09-08",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/du-lich-trung-quoc-sieu-uu-dai-thu-ba",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-855ea7052e",
@@ -418,7 +402,7 @@
    "valid_from": "2026-07-31",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tra-gop-tai-doi-tac-shopee-cho-chu-the-tin-dung-techcombank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-a531a5098c",
@@ -434,7 +418,7 @@
    "valid_from": "2026-07-21",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-techcombank-khi-mua-ve-may-bay-tai-china-airlines-072026",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-1d334a919d",
@@ -450,7 +434,7 @@
    "valid_from": "2026-07-16",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/chuong-trinh-thuc-day-chi-tieu-gia-tang-gan-ket",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-589513c3f0",
@@ -466,7 +450,7 @@
    "valid_from": "2026-06-08",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/mien-phi-phi-chuyen-doi-tra-gop-cho-chu-the-tin-dung-techcombank-tai-panasonic",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-6e18d2f924",
@@ -482,7 +466,7 @@
    "valid_from": "2026-06-08",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-chuyen-doi-tra-gop-tai-oneway-mobile",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-d46e4d9d53",
@@ -498,7 +482,7 @@
    "valid_from": "2026-06-08",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/hoan-phi-chuyen-doi-tra-gop-nhan-trieu-u-point-danh-cho-hoi-vien-inspire",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-7c9144467a",
@@ -514,7 +498,7 @@
    "valid_from": "2026-06-08",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/mo-the-tin-dung-nhan-hoan-diem-upoint-072026",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-91ec96cd6b",
@@ -530,7 +514,7 @@
    "valid_from": "2026-05-20",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-phi-chuyen-doi-tra-gop-cho-chu-the-tin-dung-techcombank-tai-fuji-luxury",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-bc0b97bbd8",
@@ -546,7 +530,7 @@
    "valid_from": "2026-05-20",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-phi-chuyen-doi-tra-gop-cho-chu-the-tin-dung-techcombank-tai-galle-watch",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-358e0a0f40",
@@ -562,7 +546,7 @@
    "valid_from": "2026-05-06",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-cung-the-techcombank-cho-mua-sam-an-uong-tai-singapore",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-e75693b704",
@@ -578,7 +562,7 @@
    "valid_from": "2026-04-29",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/shopdunk-tra-gop-lai-suat-0-mien-phi-phi-chuyen-doi-tra-gop-cho-chu-the-tin-dung-techcombank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-02885ddae9",
@@ -594,7 +578,7 @@
    "valid_from": "2026-04-24",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-cung-the-techcombank-cho-mua-sam-an-uong-tai-trung-quoc-dai-loan-hong-kong",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-fb5d41d0b3",
@@ -610,7 +594,7 @@
    "valid_from": "2026-04-24",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tai-thai-lan-cho-di-chuyen-spa-an-uong-bang-the-techcombank-visa",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-56e8a535ca",
@@ -626,7 +610,7 @@
    "valid_from": "2026-03-24",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/mien-phi-tra-gop-va-chuyen-doi-tai-phong-kham-nguyen-mai-chau",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-aebbc9b877",
@@ -642,7 +626,7 @@
    "valid_from": "2026-01-21",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/giam-khong-gioi-han-5-khi-dat-ve-may-bay-tai-starlux-airlines",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-608b3e4e2d",
@@ -658,7 +642,7 @@
    "valid_from": "2025-11-26",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tra-gop-0-phan-tram-lai-suat-0-phan-tram-phi-tai-doi-tac-digibox",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-38e728d3aa",
@@ -674,7 +658,7 @@
    "valid_from": "2025-11-22",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tra-gop-0-phan-tram-lai-suat-0-phan-tram-phi-tai-doi-tac-apollo",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-97b0c590b4",
@@ -690,7 +674,7 @@
    "valid_from": "2025-11-22",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tra-gop-0-phan-tram-lai-suat-0-phan-tram-phi-tai-doi-tac-lazada",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-3c63f8373d",
@@ -706,7 +690,7 @@
    "valid_from": "2025-11-22",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tra-gop-0-phan-tram-lai-suat-0-phan-tram-phi-tai-doi-tac-cellphones",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-9a1bcb0d01",
@@ -722,7 +706,7 @@
    "valid_from": "2025-11-20",
    "valid_to": "2026-12-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-tra-gop-0-phan-tram-lai-suat-0-phan-tram-phi-tai-doi-tac-dien-may-cho-lon",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-e317010667",
@@ -740,7 +724,7 @@
    "valid_from": "2026-10-09",
    "valid_to": "2026-12-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/mua-1-tang-1-ve-xem-phim-tren-myvib-cung-vib-x-vnpay",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-118b3c05e1",
@@ -758,7 +742,7 @@
    "valid_from": "2026-09-18",
    "valid_to": "2026-12-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/giao-dich-quoc-te-0-phi-voi-the-vib",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-06ccd1bfec",
@@ -776,7 +760,7 @@
    "valid_from": "2026-09-12",
    "valid_to": "2026-12-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/giam-den-2-trieu-dong-khi-mua-iphone-18-series-bang-the-tin-dung-vib",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-0a8e4bf948",
@@ -794,7 +778,7 @@
    "valid_from": "2026-08-04",
    "valid_to": "2026-12-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/chi-tieu-the-tin-dung-vib-nhan-hoan-tien-den-2500000-vnd",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-9ea8626697",
@@ -812,7 +796,7 @@
    "valid_from": "2026-07-01",
    "valid_to": "2026-12-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/lien-ket-vi-thanh-toan-khong-cham-cung-the-vib-hoan-tien-den-300000-vnd",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-41efcfda79",
@@ -830,7 +814,7 @@
    "valid_from": "2026-06-01",
    "valid_to": "2026-12-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/giam-den-30-khi-thanh-toan-dich-vu-green-sm-bang-the-tin-dung-vib",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-74025fbf30",
@@ -848,7 +832,7 @@
    "valid_from": "2026-05-29",
    "valid_to": "2026-12-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/giam-50000-vnd-tren-shopeefood-cho-the-tin-dung-vib",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-329402f246",
@@ -866,7 +850,7 @@
    "valid_from": "2026-04-03",
    "valid_to": "2026-12-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/giam-20-phan-tram-khi-mua-sam-tren-shopee-2026-bang-the-tin-dung-vib",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-ed53100331",
@@ -884,7 +868,7 @@
    "valid_from": "2025-02-05",
    "valid_to": "2026-12-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/4394318",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-6b01ffedb7",
@@ -900,7 +884,7 @@
    "valid_from": "2026-09-22",
    "valid_to": "2026-12-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/tra-gop-re-hon-tra-thang-giam-1000000d-cho-don-hang-tra-gop-tu-30000000d-cung-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-71dfe61758",
@@ -916,7 +900,7 @@
    "valid_from": "2026-09-22",
    "valid_to": "2026-12-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/chia-nho-de-chill-to-tra-gop-0-lai-suat-giam-truc-tiep-den-2000000d-cung-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-83b8af8fc5",
@@ -932,7 +916,7 @@
    "valid_from": "2026-09-18",
    "valid_to": "2026-12-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/cham-tay-sieu-pham-iphone-18-pro-18-pro-max-tai-the-gioi-di-dong-dien-may-xanh-topzone-fpt-shop-viettel-store-cellphones-shopdunk-hoang-ha-mobile-shopee-va-lazada-cung-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-b7d6e0840e",
@@ -948,7 +932,7 @@
    "valid_from": "2026-09-18",
    "valid_to": "2026-12-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/len-doi-dang-cap-iphone-18-pro-iphone-18-pro-max-voi-uu-dai-hap-dan-tai-hoang-ha-mobile-cung-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-4e7a5a0f0d",
@@ -964,7 +948,7 @@
    "valid_from": "2026-09-18",
    "valid_to": "2026-12-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/so-huu-iphone-18-pro-iphone-18-pro-max-tai-fpt-shop-dac-quyen-danh-rieng-cho-chu-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-8ecd9909c0",
@@ -980,7 +964,7 @@
    "valid_from": "2026-09-18",
    "valid_to": "2026-12-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/san-iphone-18-pro-iphone-18-pro-max-tai-viettel-store-nhan-uu-dai-ngay-cung-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-80bc3f29d9",
@@ -996,7 +980,7 @@
    "valid_from": "2026-09-18",
    "valid_to": "2026-12-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/so-huu-sieu-pham-cong-nghe-iphone-18-tai-shopdunk-cung-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-0f8dd6b7e4",
@@ -1012,7 +996,7 @@
    "valid_from": "2026-09-12",
    "valid_to": "2026-12-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/len-doi-iphone-18-tai-the-gioi-di-dong-dien-may-xanh-topzone-cung-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-09189f7746",
@@ -1028,7 +1012,7 @@
    "valid_from": "2026-09-18",
    "valid_to": "2026-12-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/dac-quyen-uu-dai-iphone-18-series-tai-cellphones-cung-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-e67a3710db",
@@ -1044,7 +1028,7 @@
    "valid_from": "2026-08-20",
    "valid_to": "2026-12-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/exclusive/tan-huong-tron-ven-moi-hanh-trinh-cung-the-tin-dung-vpbank-tren-be",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-6813d1b4c5",
@@ -1060,7 +1044,7 @@
    "valid_from": "2026-06-01",
    "valid_to": "2026-12-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/other/uu-dai-the-tin-dung-vpbank-shopee-2026",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vietinbank-617d4b1f21",
@@ -1109,7 +1093,7 @@
    "valid_from": "2026-09-18",
    "valid_to": "2026-12-31",
    "url": "https://vikkibank.vn/wp-content/uploads/2026/09/260826_Vikki_TnC_iPhone18_updated-reviewed-by-Vikki-v2.pdf",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vikki-0c08219aa4",
@@ -1126,7 +1110,7 @@
    "valid_from": "2026-09-18",
    "valid_to": "2026-12-31",
    "url": "https://vikkibank.vn/wp-content/uploads/2026/10/Vikki_TnC_Viettel_Store_PY-comment.pdf",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vikki-63972ece59",
@@ -1143,7 +1127,7 @@
    "valid_from": "2026-09-18",
    "valid_to": "2026-12-31",
    "url": "https://vikkibank.vn/wp-content/uploads/2026/10/Vikki_TnC_FPT-Shop_PY-comment.pdf",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vikki-5f57239202",
@@ -1160,7 +1144,7 @@
    "valid_from": "2026-09-18",
    "valid_to": "2026-12-31",
    "url": "https://vikkibank.vn/wp-content/uploads/2026/09/Vikki_TnC_Cellphones_PY-comment.pdf",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vikki-e6b65f302e",
@@ -1177,7 +1161,7 @@
    "valid_from": "2026-09-18",
    "valid_to": "2026-12-31",
    "url": "https://vikkibank.vn/wp-content/uploads/2026/10/Vikki_TnC_Hoang-Ha-Mobile_PY-comment.pdf",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-62679ce2ab",
@@ -1195,7 +1179,7 @@
    "valid_from": "2026-11-16",
    "valid_to": "2027-01-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/uu-dai-giam-gia-khi-mua-sam-tai-dien-may-cho-lon-cung-the-vib-visa",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-3b71cfce33",
@@ -1213,7 +1197,7 @@
    "valid_from": "2026-11-03",
    "valid_to": "2027-01-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/uu-dai-giam-gia-tai-traveloka-cung-the-vib-visa",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-a470b5ac4d",
@@ -1231,7 +1215,7 @@
    "valid_from": "2026-11-03",
    "valid_to": "2027-01-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/uu-dai-giam-gia-khi-mua-sam-tai-dien-may-xanh-cung-the-vib-visa",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-c35c820042",
@@ -1249,7 +1233,7 @@
    "valid_from": "2026-11-01",
    "valid_to": "2027-01-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/hoan-den-500000-vnd-khi-dat-ve-tai-vietnam-airlines-cung-the-vib-visa",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-ff546b26eb",
@@ -1267,7 +1251,7 @@
    "valid_from": "2026-10-16",
    "valid_to": "2027-01-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/uu-dai-dat-ve-may-bay-khach-san-tren-myvib",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-ef0d181168",
@@ -1283,7 +1267,7 @@
    "valid_from": "2026-08-10",
    "valid_to": "2027-02-09",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/health-and-beauty/mua-sam-tha-ga-tai-moi-cosmetics-cung-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-942bd6eeeb",
@@ -1299,7 +1283,7 @@
    "valid_from": "2026-05-28",
    "valid_to": "2027-02-25",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/gioi-thieu-mo-the-nhan-ngay-uu-dai",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-ec09c4b971",
@@ -1317,7 +1301,7 @@
    "valid_from": "2026-11-02",
    "valid_to": "2027-02-28",
    "url": "https://www.vib.com.vn/vn/promotion/details/sieu-tiec-dang-gia-mua-sam-gia-tot-voi-the-vib",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-57ddaf039a",
@@ -1333,7 +1317,7 @@
    "valid_from": "2026-06-01",
    "valid_to": "2027-02-28",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/sieu-hoi-mua-sam-online-san-deal-giam-den-2000000-vnd-tra-gop-0-cung-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-5dfd7d1b91",
@@ -1349,7 +1333,7 @@
    "valid_from": "2026-09-07",
    "valid_to": "2027-02-28",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/giam-them-den-2000000-dong-khi-chi-tieu-tai-lazada-bang-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-7bfd0c3063",
@@ -1367,7 +1351,7 @@
    "valid_from": "2026-11-25",
    "valid_to": "2027-03-10",
    "url": "https://www.vib.com.vn/vn/promotion/details/giam-den-100000-d-khi-thanh-toan-vnpay-qr-voi-the-vib-visa",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-7159cd1106",
@@ -1383,7 +1367,7 @@
    "valid_from": "2026-10-01",
    "valid_to": "2027-03-13",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/giam-den-10-cac-chuyen-bay-quoc-te-tai-emirates-cung-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-c5677a1f90",
@@ -1399,7 +1383,7 @@
    "valid_from": "2026-11-08",
    "valid_to": "2027-03-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-danh-cho-chu-the-techcombank-khi-thanh-toan-tai-nha-hang-nikusho-va-ushinokura",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-78cfed3c61",
@@ -1415,7 +1399,7 @@
    "valid_from": "2026-10-23",
    "valid_to": "2027-03-31",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-danh-cho-chu-the-visa-techcombank-khi-chi-tieu-dat-phong-khach-san-tai-agoda",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-8604e48ae6",
@@ -1431,7 +1415,7 @@
    "valid_from": "2026-06-25",
    "valid_to": "2027-03-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/other/uu-dai-smcc-2026",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-285c495546",
@@ -1447,7 +1431,7 @@
    "valid_from": "2026-01-01",
    "valid_to": "2027-03-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/nang-tam-trai-nghiem-tron-ven-moi-hanh-trinh-cung-the-tin-dung-vpbank",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "techcombank-ab5f2dad4c",
@@ -1463,7 +1447,7 @@
    "valid_from": "2026-07-23",
    "valid_to": "2027-05-07",
    "url": "https://techcombank.com/khach-hang-ca-nhan/uu-dai/uu-dai-giam-gia-cho-chu-the-techcombank-khi-mua-hang-tai-galle-watch",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-21d513ef1b",
@@ -1479,7 +1463,55 @@
    "valid_from": "2025-06-20",
    "valid_to": "2027-06-20",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/bay-hotel-2025",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
+  },
+  {
+   "id": "hdbank-0bcc6433f3",
+   "bank": "HDBank",
+   "bank_key": "hdbank",
+   "card_ids": [
+    "hdbank-petrolimex-4in1"
+   ],
+   "title_vi": "NHÀ HÀNG SPICE VIET GIẢM 10% HÓA ĐƠN",
+   "category": "khac",
+   "merchant": null,
+   "discount_desc_vi": "Giảm 10% hóa đơn tại nhà hàng Space Viet khi thanh toán bằng thẻ tín dụng HDBank",
+   "valid_from": null,
+   "valid_to": "2027-11-30",
+   "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/nha-hang-spice-viet-giam-10-hoa-don",
+   "fetched_at": "2026-11-28T11:38:53+07:00"
+  },
+  {
+   "id": "hdbank-50d22adb25",
+   "bank": "HDBank",
+   "bank_key": "hdbank",
+   "card_ids": [
+    "hdbank-petrolimex-4in1"
+   ],
+   "title_vi": "VICTORIA HOTELS & RESORTS GIẢM ĐẾN 10% DỊCH VỤ",
+   "category": "khach_san",
+   "merchant": null,
+   "discount_desc_vi": "Giảm đến 10% hóa đơn dịch vụ tại Victoria Hotels & Resorts khi thanh toán bằng thẻ tín dụng HDBank",
+   "valid_from": null,
+   "valid_to": "2027-11-30",
+   "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/victoria-hotels-resorts-giam-den-10-dich-vu",
+   "fetched_at": "2026-11-28T11:38:53+07:00"
+  },
+  {
+   "id": "hdbank-6835972367",
+   "bank": "HDBank",
+   "bank_key": "hdbank",
+   "card_ids": [
+    "hdbank-petrolimex-4in1"
+   ],
+   "title_vi": "ÊMM HOTELS GIẢM ĐẾN 10% DỊCH VỤ",
+   "category": "khach_san",
+   "merchant": null,
+   "discount_desc_vi": "Giảm đến 10% hóa đơn dịch vụ tại ÊMM Hotels khi thanh toán bằng thẻ tín dụng HDBank",
+   "valid_from": null,
+   "valid_to": "2027-11-30",
+   "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/emm-hotels-giam-den-10-dich-vu",
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "hdbank-b98eb722f9",
@@ -1495,7 +1527,7 @@
    "valid_from": null,
    "valid_to": "2027-12-31",
    "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/he-thong-le-monde-steak-giam-100000d-cho-hoa-don-tu-500000d",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "hdbank-10c8fa6739",
@@ -1511,7 +1543,7 @@
    "valid_from": null,
    "valid_to": "2027-12-31",
    "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/he-thong-shangchi-giam-100000d-cho-hoa-don-tu-500000d",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "hdbank-58cead7695",
@@ -1527,7 +1559,7 @@
    "valid_from": null,
    "valid_to": "2027-12-31",
    "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/he-thong-ssamjang-giam-100000d-cho-hoa-don-tu-500000d",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "hdbank-0cbf195089",
@@ -1543,7 +1575,7 @@
    "valid_from": null,
    "valid_to": "2027-12-31",
    "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/he-thong-yakimono-giam-100000d-cho-hoa-don-tu-500000d",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "hdbank-fbc7eea3aa",
@@ -1559,7 +1591,7 @@
    "valid_from": null,
    "valid_to": "2027-12-31",
    "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/ila-vietnam-giam-them-5-khi-thanh-toan-khoa-hoc",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vib-b3d8ca52f3",
@@ -1577,7 +1609,7 @@
    "valid_from": "2025-12-31",
    "valid_to": "2027-12-31",
    "url": "https://www.vib.com.vn/vn/promotion/details/mien-phi-thuong-nien-nam-tiep-theo-danh-cho-the-tin-dung-vib",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "vpbank-e0603bad98",
@@ -1593,7 +1625,7 @@
    "valid_from": "2026-01-08",
    "valid_to": "2027-12-31",
    "url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/shopping/bat-mode-xe-dich-toi-uu-trai-nghiem-cham-the-vpbank-visa-giam-toi-20",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "hdbank-7db69fdf9c",
@@ -1609,7 +1641,7 @@
    "valid_from": null,
    "valid_to": "2029-08-30",
    "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/giam-den-30-tai-furama-resort-villas-danang",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "hdbank-f8ff1065a5",
@@ -1625,7 +1657,7 @@
    "valid_from": null,
    "valid_to": null,
    "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/tra-gop-0-lai-suat",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "hdbank-8e71908400",
@@ -1641,7 +1673,7 @@
    "valid_from": null,
    "valid_to": null,
    "url": "https://hdbank.com.vn/vi/personal/promotion/detail/the/giam-truc-tiep-15-tai-lalya-ninh-van-bay",
-   "fetched_at": "2026-11-27T11:53:41+07:00"
+   "fetched_at": "2026-11-28T11:38:53+07:00"
   },
   {
    "id": "mbbank-95787dfcd3",
